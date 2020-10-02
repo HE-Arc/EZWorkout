@@ -10,6 +10,8 @@ Elle se décompose en 3 parties :
 
 Les données des entraînements seront synchronisées depuis une app mobile à l'aide d'une api.
 
+[![Laravel Actions Status](https://github.com/HE-Arc/EZWorkout/workflows/Laravel/badge.svg)](https://github.com/HE-Arc/EZWorkout/actions)
+
 ## Dev Installation
 1. clone repo
 2. copy .env.exemple .env

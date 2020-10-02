@@ -1,7 +1,7 @@
 FROM php:7.4-fpm
 
 RUN apt-get update && apt-get install -y libmcrypt-dev \
-libmagickwand-dev --no-install-recommends \
+libmagickwand-dev php7.4-mcrypt --no-install-recommends \
 && docker-php-ext-install mcrypt pdo_mysql
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer

@@ -6,7 +6,7 @@ on:
   pull_request:
   
 env:
-  IMAGE_NAME: EZWorkout
+  IMAGE_NAME: ezworkout
 
 jobs:
   laravel-tests:

@@ -12,7 +12,7 @@ EXPOSE 8000
 
 COPY app /app
 
-RUN cd /app && cp .env.exemple .env
+RUN cd /app && cp .env.example .env
 RUN cd /app && composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
 CMD cd /app && php artisan generate:key && php artisan migrate && php artisan serve

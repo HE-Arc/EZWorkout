@@ -20,4 +20,4 @@ COPY app /app
 RUN cd /app && cp .env.example .env
 RUN cd /app && composer install
 
-CMD cd /app && php artisan generate:key && php artisan migrate && php artisan serve
+CMD cd /app && php artisan key:generate && php artisan migrate && php artisan serve

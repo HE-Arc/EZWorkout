@@ -16,6 +16,6 @@ Les données des entraînements seront synchronisées depuis une app mobile à l
 1. clone repo
 2. copy .env.exemple .env
 3. run composer installer 
-4. run php artisan generate:key
+4. run php artisan key:generate
 5. run php artisan migrate
 6. you're ready

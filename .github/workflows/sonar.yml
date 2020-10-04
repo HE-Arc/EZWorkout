@@ -4,22 +4,19 @@ name: sonar
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
-on:
-  push:
+on: push
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  sonar:
-    # The type of runner that the job will run on
+  
+  sonarQubeTrigger:
+    name: SonarQube Trigger
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Setup sonarqube
-        uses: warchant/setup-sonar-scanner@v1
-      - name: Run sonarqube
-        run: ls && sonar-scanner
-          -Dsonar.projectKey=ezworkout
-          -Dsonar.host.url=https://sonar.jojoc4.ch
-          -Dsonar.login=49c42497c339d1be8bcdfa019897928124cda7bb
+    - uses: actions/checkout@master
+    - name: SonarQube Scan
+      uses: kitabisa/sonarqube-action@master
+      with:
+        host: https://sonar.jojoc4.ch
+        login: 49c42497c339d1be8bcdfa019897928124cda7bb
+        projectKey: ezworkout

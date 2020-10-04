@@ -11,6 +11,7 @@ Elle se décompose en 3 parties :
 Les données des entraînements seront synchronisées depuis une app mobile à l'aide d'une api.
 
 [![Laravel Actions Status](https://github.com/HE-Arc/EZWorkout/workflows/Laravel/badge.svg)](https://github.com/HE-Arc/EZWorkout/actions)
+[![Quality Gate Status](https://sonar.jojoc4.ch/api/project_badges/measure?project=ezworkout&metric=alert_status)](https://sonar.jojoc4.ch/dashboard?id=ezworkout)
 
 ## Dev Installation
 1. clone repo

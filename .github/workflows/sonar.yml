@@ -19,8 +19,7 @@ jobs:
       - name: Setup sonarqube
         uses: warchant/setup-sonar-scanner@v1
       - name: Run sonarqube
-        run: sonar-scanner
+        run: ls && sonar-scanner
           -Dsonar.projectKey=ezworkout
-          -Dsonar.sources=./app
           -Dsonar.host.url=https://sonar.jojoc4.ch
           -Dsonar.login=49c42497c339d1be8bcdfa019897928124cda7bb

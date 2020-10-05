@@ -17,7 +17,7 @@ EXPOSE 8000
 COPY app /app
 WORKDIR /app
 
-RUN cp .env.example .env
+#RUN cp .env.example .env
 RUN composer install
 RUN chmod +x run.sh
 

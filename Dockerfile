@@ -19,5 +19,6 @@ WORKDIR /app
 
 RUN cp .env.example .env
 RUN composer install
+RUN chmod +x run.sh
 
 CMD ./run.sh

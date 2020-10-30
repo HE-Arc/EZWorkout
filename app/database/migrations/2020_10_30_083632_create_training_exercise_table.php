@@ -16,10 +16,8 @@ class CreateTrainingExerciseTable extends Migration
         Schema::create('training_exercise', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->bigInteger("exercise_id")->unsigned();
-            $table->bigInteger("training_id")->unsigned();
-            $table->foreign("exercise_id")->references("id")->on("exercises");
-            $table->foreign("training_id")->references("id")->on("trainings");
+            $table->foreignId('exercise_id')->constrained();
+            $table->foreignId('training_id')->constrained();
         });
     }
 

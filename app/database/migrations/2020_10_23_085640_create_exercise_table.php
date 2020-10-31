@@ -17,7 +17,7 @@ class CreateExerciseTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->string('comment');
+            $table->string('comment')->nullable();
             $table->integer('nbSerie');
             $table->integer('repMin');
             $table->integer('repMax');

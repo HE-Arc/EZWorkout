@@ -13,11 +13,11 @@ class CreateLogbookPageTable extends Migration
      */
     public function up()
     {
-        Schema::create('logbookPages', function (Blueprint $table) {
+        Schema::create('logbook_pages', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->foreignId('user_id')->nullable();
-            $table->foreignId('trainingPlan_id')->constrained();
+            $table->foreignId('training_plan_id')->constrained();
         });
     }
 
@@ -28,6 +28,6 @@ class CreateLogbookPageTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('logbookPages');
+        Schema::dropIfExists('logbook_pages');
     }
 }

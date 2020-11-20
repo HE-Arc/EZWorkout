@@ -13,4 +13,9 @@ class TrainingEff extends Model
     {
         return $this->hasMany("App\Models\ExerciseEff");
     }
+
+    public function logbook_pages()
+    {
+        return $this->belongsTo('App\Models\LogbookPage');
+    }
 }

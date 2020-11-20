@@ -9,5 +9,8 @@ class TrainingPlan extends Model
 {
     use HasFactory;
     
-    protected $table = "trainingPlans";
+    public function logbook_pages()
+    {
+        return $this->hasMany('App\Models\LogbookPage');
+    }
 }

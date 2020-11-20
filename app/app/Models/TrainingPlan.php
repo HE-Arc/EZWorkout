@@ -13,4 +13,9 @@ class TrainingPlan extends Model
     {
         return $this->hasMany('App\Models\LogbookPage');
     }
+
+    public function trainings()
+    {
+        return $this->belongsToMany('App\Models\Training', 'training_plan_trainings');
+    }
 }

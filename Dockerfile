@@ -25,5 +25,7 @@ WORKDIR /app
 RUN cp .env.example .env
 RUN composer install
 RUN chmod +x run.sh
+RUN npm install
+RUN npm run dev
 
 CMD ./run.sh

@@ -16,7 +16,7 @@ class CreateLogbookPageTable extends Migration
         Schema::create('logbook_pages', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('user_id')->nullable();
+            #$table->foreignId('user_id')->nullable();
             $table->foreignId('training_plan_id')->constrained();
         });
     }

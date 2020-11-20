@@ -18,4 +18,9 @@ class TrainingPlan extends Model
     {
         return $this->belongsToMany('App\Models\Training', 'training_plan_trainings');
     }
+
+    public function users()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }

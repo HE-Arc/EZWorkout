@@ -16,7 +16,7 @@ class CreateExerciseEffTable extends Migration
         Schema::create('exercise_effs', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('exercise_id')->constrained();
+            #$table->foreignId('exercise_id')->constrained();
             $table->foreignId('training_eff_id')->constrained();
             $table->boolean("skipped");
             $table->integer('pause');

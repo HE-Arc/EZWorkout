@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Training;
+use App\Models\TrainingPlan;
 use Illuminate\Http\Request;
 
 class TrainingController extends Controller
@@ -12,9 +13,9 @@ class TrainingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return response()->json(Training::getAll());
+        return response()->json(TrainingPlan::where('user_id', $request->user()->id)->with('trainings')->get());
     }
 
     /**
@@ -26,12 +27,13 @@ class TrainingController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'name' => 'string'
+            'name' => 'string',
+            'trainigPlan' => 'integer|min:1'
         ]);
+        $p = TrainingPlan::find($data['trainingPlan']);
         $t = new Training();
         $t->name = $data['name'];
-        $t->user_id = $request->user()->id;
-        $t->save();
+        $p->trainings()->save($t);
         return response()->json($t);
     }
 

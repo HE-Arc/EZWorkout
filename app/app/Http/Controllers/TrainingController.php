@@ -2,28 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Training;
 use Illuminate\Http\Request;
 
 class TrainingController extends Controller
 {
-    /**
+   /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return response()->json(Training::getAll());
     }
 
     /**
@@ -34,7 +25,14 @@ class TrainingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'name' => 'string'
+        ]);
+        $t = new Training();
+        $t->name = $data['name'];
+        $t->user_id = $request->user()->id;
+        $t->save();
+        return response()->json($t);
     }
 
     /**
@@ -45,18 +43,7 @@ class TrainingController extends Controller
      */
     public function show($id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+        return response()->json(Training::find($id));
     }
 
     /**
@@ -68,7 +55,13 @@ class TrainingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->validate([
+            'name' => 'string'
+        ]);
+        $t = Training::find($id);
+        $t->name = $data['name'];
+        $t->save();
+        return response()->json($t);
     }
 
     /**
@@ -79,6 +72,7 @@ class TrainingController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $t = Training::destroy($id);
+        return response()->json(['delete' => 'ok']);
     }
 }

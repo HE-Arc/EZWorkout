@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Training;
+use App\Models\TrainingPlan;
 use Illuminate\Http\Request;
 
 class TrainingPlanController extends Controller
@@ -14,7 +15,7 @@ class TrainingPlanController extends Controller
      */
     public function index()
     {
-        return response()->json(Training::getAll());
+        return response()->json(TrainingPlan::getAll());
     }
 
     /**
@@ -28,7 +29,7 @@ class TrainingPlanController extends Controller
         $data = $request->validate([
             'name' => 'string'
         ]);
-        $t = new Training();
+        $t = new TrainingPlan();
         $t->name = $data['name'];
         $t->user_id = $request->user()->id;
         $t->save();
@@ -43,7 +44,7 @@ class TrainingPlanController extends Controller
      */
     public function show($id)
     {
-        return response()->json(Training::find($id));
+        return response()->json(TrainingPlan::find($id));
     }
 
     /**
@@ -58,7 +59,7 @@ class TrainingPlanController extends Controller
         $data = $request->validate([
             'name' => 'string'
         ]);
-        $t = Training::find($id);
+        $t = TrainingPlan::find($id);
         $t->name = $data['name'];
         $t->save();
         return response()->json($t);
@@ -72,7 +73,7 @@ class TrainingPlanController extends Controller
      */
     public function destroy($id)
     {
-        $t = Training::destroy($id);
+        $t = TrainingPlan::destroy($id);
         return response()->json(['delete' => 'ok']);
     }
 }

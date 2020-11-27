@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TrainingEff;
+use App\Models\TrainingPlan;
 use Illuminate\Http\Request;
 
 class TrainingEffController extends Controller
@@ -11,19 +13,9 @@ class TrainingEffController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return response()->json(TrainingPlan::where('user_id', $request->user()->id)->with('logbookPages')->with('traing_effs')->get());
     }
 
     /**
@@ -34,7 +26,19 @@ class TrainingEffController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'logbookPage' => 'integer|min:1',
+            'date'=> 'Date',
+            'skipped' => 'Boolean',
+            'training' => 'integer|min:1'
+        ]);
+        $t = new TrainingEff();
+        $t->date = $data['date'];
+        $t->logbookPage_id = $data['logbookPage'];
+        $t->skipped = $data['skipped'];
+        $t->training_id = $data['training'];
+        $t->save();
+        return response()->json($t);
     }
 
     /**
@@ -45,18 +49,7 @@ class TrainingEffController extends Controller
      */
     public function show($id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+        return response()->json(TrainingEff::find($id));
     }
 
     /**
@@ -68,7 +61,19 @@ class TrainingEffController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->validate([
+            'logbookPage' => 'integer|min:1',
+            'date'=> 'Date',
+            'skipped' => 'Boolean',
+            'training' => 'integer|min:1'
+        ]);
+        $t = TrainingEff::find($id);
+        $t->date = $data['date'];
+        $t->logbookPage_id = $data['logbookPage'];
+        $t->skipped = $data['skipped'];
+        $t->training_id = $data['training'];
+        $t->save();
+        return response()->json($t);
     }
 
     /**
@@ -79,6 +84,7 @@ class TrainingEffController extends Controller
      */
     public function destroy($id)
     {
-        //
+        TrainingEff::destroy($id);
+        return response()->json(['delete' => 'ok']);
     }
 }

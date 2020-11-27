@@ -3,6 +3,7 @@
 use App\Http\Controllers\ExerciseController;
 use App\Http\Controllers\LogbookPageController;
 use App\Http\Controllers\TrainingController;
+use App\Http\Controllers\TrainingEffController;
 use App\Http\Controllers\TrainingPlanController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -28,4 +29,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('training', TrainingController::class);
     Route::apiResource('exercice', ExerciseController::class);
     Route::apiResource('logbookPage', LogbookPageController::class);
+    Route::apiResource('trainingEff', TrainingEffController::class);
 });

@@ -23,7 +23,7 @@ accès au site: [ezw.dev.jojoc4.ch](https://ezw.dev.jojoc4.ch)
 5. run php artisan migrate
 6. you're ready
 
-## Prod deployment
+## Dev deployment
 You can deploy our application using docker,
 simply run this command:
 

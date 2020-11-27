@@ -37,7 +37,7 @@ class ExerciseController extends Controller
             'pauseExercice' => 'integer|min:0',
             'trainig' => 'integer|min:1'
         ]);
-        $e = Training::find($data['training']);
+        $t = Training::find($data['training']);
         $e = new Exercise();
         $e->name = $data['name'];
         $e->comment = $data['comment'];
@@ -46,7 +46,7 @@ class ExerciseController extends Controller
         $e->repMax = $data['repMax'];
         $e->pauseSerie = $data['pauseSerie'];
         $e->pauseExercice = $data['pauseExercice'];
-        $e->exercises()->save($e);
+        $t->exercises()->save($e);
         return response()->json($e);
     }
 

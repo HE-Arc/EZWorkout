@@ -18,4 +18,9 @@ class TrainingEff extends Model
     {
         return $this->belongsTo('App\Models\LogbookPage');
     }
+
+    public function trainings()
+    {
+        return $this->belongsTo('App\Models\Training');
+    }
 }

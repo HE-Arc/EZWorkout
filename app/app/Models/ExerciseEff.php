@@ -19,4 +19,9 @@ class ExerciseEff extends Model
         return $this->belongsTo('App\Models\TrainingEff');
     }
 
+    public function exercises()
+    {
+        return $this->belongsTo('App\Models\Exercise');
+    }
+
 }

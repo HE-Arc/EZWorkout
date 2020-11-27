@@ -18,4 +18,9 @@ class Training extends Model
     {
         return $this->belongsToMany('App\Models\Exercise', 'training_exercises');
     }
+
+    public function training_effs()
+    {
+        return $this->hasMany("App\Models\TrainingEff");
+    }
 }

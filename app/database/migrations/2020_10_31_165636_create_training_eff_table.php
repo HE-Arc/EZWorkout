@@ -17,7 +17,7 @@ class CreateTrainingEffTable extends Migration
             $table->id();
             $table->timestamps();
             $table->foreignId('logbook_page_id')->constrained();
-            #$table->foreignId('training_id')->constrained();
+            $table->foreignId('training_id')->constrained();
             $table->date("date");
             $table->boolean("skipped");
         });

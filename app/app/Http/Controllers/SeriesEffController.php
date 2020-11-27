@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SeriesEff;
+use App\Models\TrainingPlan;
 use Illuminate\Http\Request;
 
 class SeriesEffController extends Controller
@@ -11,19 +13,9 @@ class SeriesEffController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return response()->json(TrainingPlan::where('user_id', $request->user()->id)->with('logbookPages')->with('training_effs')->with('exercise_effs')->with('serie_effs')->get());
     }
 
     /**
@@ -34,7 +26,19 @@ class SeriesEffController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'rep' => 'integer|min:1',
+            'weight'=> 'numeric|min:0.0',
+            'pause' => 'integer|min:0',
+            'exercise_eff' => 'integer|min:1',
+        ]);
+        $e = new SeriesEff();
+        $e->rep = $data['rep'];
+        $e->weight = $data['weight'];
+        $e->pause = $data['pause'];
+        $e->exercise_eff = $data['exercise_eff'];
+        $e->save();
+        return response()->json($e);
     }
 
     /**
@@ -45,18 +49,7 @@ class SeriesEffController extends Controller
      */
     public function show($id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+        return response()->json(SeriesEff::find($id));
     }
 
     /**
@@ -68,7 +61,19 @@ class SeriesEffController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->validate([
+            'rep' => 'integer|min:1',
+            'weight'=> 'numeric|min:0.0',
+            'pause' => 'integer|min:0',
+            'exercise_eff' => 'integer|min:1',
+        ]);
+        $e = SeriesEff::find($id);
+        $e->rep = $data['rep'];
+        $e->weight = $data['weight'];
+        $e->pause = $data['pause'];
+        $e->exercise_eff = $data['exercise_eff'];
+        $e->save();
+        return response()->json($e);
     }
 
     /**
@@ -79,6 +84,7 @@ class SeriesEffController extends Controller
      */
     public function destroy($id)
     {
-        //
+        SeriesEff::destroy($id);
+        return response()->json(['delete' => 'ok']);
     }
 }

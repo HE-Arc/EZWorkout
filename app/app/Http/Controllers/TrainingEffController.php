@@ -15,7 +15,7 @@ class TrainingEffController extends Controller
      */
     public function index(Request $request)
     {
-        return response()->json(TrainingPlan::where('user_id', $request->user()->id)->with('logbookPages')->with('traing_effs')->get());
+        return response()->json(TrainingPlan::where('user_id', $request->user()->id)->with('logbookPages')->with('training_effs')->get());
     }
 
     /**

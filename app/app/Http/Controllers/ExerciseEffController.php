@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ExerciseEff;
+use App\Models\TrainingPlan;
 use Illuminate\Http\Request;
 
 class ExerciseEffController extends Controller
@@ -11,19 +13,9 @@ class ExerciseEffController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return response()->json(TrainingPlan::where('user_id', $request->user()->id)->with('logbookPages')->with('training_effs')->with('exercise_effs')->get());
     }
 
     /**
@@ -34,7 +26,21 @@ class ExerciseEffController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'training_eff' => 'integer|min:1',
+            'pause'=> 'integer|min:0',
+            'skipped' => 'Boolean',
+            'exercise' => 'integer|min:1',
+            'rating' => 'integer|min:1|max:5|nullable'
+        ]);
+        $e = new ExerciseEff();
+        $e->training_eff_id = $data['training_eff'];
+        $e->pause = $data['pause'];
+        $e->skipped = $data['skipped'];
+        $e->exercise_id = $data['exercise'];
+        $e->rating = $data['rating'];
+        $e->save();
+        return response()->json($e);
     }
 
     /**
@@ -45,18 +51,7 @@ class ExerciseEffController extends Controller
      */
     public function show($id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+        return response()->json(ExerciseEff::find($id));
     }
 
     /**
@@ -68,7 +63,21 @@ class ExerciseEffController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->validate([
+            'training_eff' => 'integer|min:1',
+            'pause'=> 'integer|min:0',
+            'skipped' => 'Boolean',
+            'exercise' => 'integer|min:1',
+            'rating' => 'integer|min:1|max:5|nullable'
+        ]);
+        $e = ExerciseEff::find($id);
+        $e->training_eff_id = $data['training_eff'];
+        $e->pause = $data['pause'];
+        $e->skipped = $data['skipped'];
+        $e->exercise_id = $data['exercise'];
+        $e->rating = $data['rating'];
+        $e->save();
+        return response()->json($e);
     }
 
     /**
@@ -79,6 +88,7 @@ class ExerciseEffController extends Controller
      */
     public function destroy($id)
     {
-        //
+        ExerciseEff::destroy($id);
+        return response()->json(['delete' => 'ok']);
     }
 }

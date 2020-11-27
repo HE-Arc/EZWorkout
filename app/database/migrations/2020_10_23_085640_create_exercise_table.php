@@ -23,7 +23,7 @@ class CreateExerciseTable extends Migration
             $table->integer('repMax');
             $table->integer('pauseSerie');
             $table->integer('pauseExercise');
-            $table->foreignId('user_id')->nullable();
+            #$table->foreignId('user_id')->nullable();
             
         });
     }

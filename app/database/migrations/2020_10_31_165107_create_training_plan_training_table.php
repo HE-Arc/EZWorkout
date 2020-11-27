@@ -13,10 +13,10 @@ class CreateTrainingPlanTrainingTable extends Migration
      */
     public function up()
     {
-        Schema::create('trainingPlan_trainings', function (Blueprint $table) {
+        Schema::create('training_plan_trainings', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('trainingPlan_id')->constrained();
+            $table->foreignId('training_plan_id')->constrained();
             $table->foreignId('training_id')->constrained();
         });
     }
@@ -28,6 +28,6 @@ class CreateTrainingPlanTrainingTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trainingPlan_trainings');
+        Schema::dropIfExists('training_plan_trainings');
     }
 }

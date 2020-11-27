@@ -18,11 +18,6 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
-    public function training_plans()
-    {
-        return $this->hasMany('App\Models\TrainingPlan');
-    }
-
     /**
      * The attributes that are mass assignable.
      *

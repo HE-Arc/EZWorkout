@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ExerciseController;
+use App\Http\Controllers\LogbookPageController;
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\TrainingPlanController;
 use Illuminate\Http\Request;
@@ -24,5 +26,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('trainingPlan', TrainingPlanController::class);
     Route::apiResource('training', TrainingController::class);
-    Route::apiResource('exercice', TrainingController::class);
+    Route::apiResource('exercice', ExerciseController::class);
+    Route::apiResource('logbookPage', LogbookPageController::class);
 });

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\LogbookPage;
+use App\Models\TrainingPlan;
 use Illuminate\Http\Request;
 
 class LogbookPageController extends Controller
@@ -11,19 +13,9 @@ class LogbookPageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return response()->json(TrainingPlan::where('user_id', $request->user()->id)->with('logbookPages')->get());
     }
 
     /**
@@ -34,7 +26,13 @@ class LogbookPageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'trainigPlan' => 'integer|min:1'
+        ]);
+        $l = new LogbookPage();
+        $l->trainingPlan_id = $data['trainigPlan'];
+        $l->save();
+        return response()->json($l);
     }
 
     /**
@@ -45,18 +43,7 @@ class LogbookPageController extends Controller
      */
     public function show($id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+        return response()->json(LogbookPage::find($id));
     }
 
     /**
@@ -68,7 +55,9 @@ class LogbookPageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $l = LogbookPage::find($id);
+        $l->save();
+        return response()->json($l);
     }
 
     /**
@@ -79,6 +68,7 @@ class LogbookPageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        LogbookPage::destroy($id);
+        return response()->json(['delete' => 'ok']);
     }
 }

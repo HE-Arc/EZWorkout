@@ -99,7 +99,7 @@ class ExerciseController extends Controller
      */
     public function destroy($id)
     {
-        $e = Exercise::destroy($id);
+        Exercise::destroy($id);
         return response()->json(['delete' => 'ok']);
     }
 }

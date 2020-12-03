@@ -26,7 +26,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 //authentificated routes
-Route::middleware('auth:sanctum')->group(function () {
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::apiResource('trainingPlan', TrainingPlanController::class);
     Route::apiResource('training', TrainingController::class);
     Route::apiResource('exercice', ExerciseController::class);
@@ -34,4 +34,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('trainingEff', TrainingEffController::class);
     Route::apiResource('exerciseEff', ExerciseEffController::class);
     Route::apiResource('seriesEff', SeriesEffController::class);
+
+    Route::get('test', function (Request $r) {
+        return $r->user();
+    });
 });

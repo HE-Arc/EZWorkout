@@ -3962,7 +3962,7 @@ __webpack_require__.r(__webpack_exports__);
     getTrainingPlans: function getTrainingPlans() {
       var _this = this;
 
-      return axios.get('/api/trainingPlan').then(function (res) {
+      axios.get('/trainingPlan').then(function (res) {
         _this.training_plans = res.data;
       })["catch"](function (err) {
         console.log(err);

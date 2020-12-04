@@ -96,7 +96,7 @@
         },
         methods:{
             getTrainingPlans(){
-                return axios.get('/api/trainingPlan')
+                axios.get('/trainingPlan')
                 .then((res) => {
                     this.training_plans = res.data
                 }).catch((err) => {

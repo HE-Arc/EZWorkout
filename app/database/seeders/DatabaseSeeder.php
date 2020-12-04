@@ -75,33 +75,35 @@ class DatabaseSeeder extends Seeder
         ]);
         $lb = new LogbookPage();
         $tp->logbook_pages()->save($lb);
-        $lb->trainingEffs()->saveMany([
+        $lb->training_effs()->saveMany([
             new TrainingEff([
-                'date' => '12-02-2020',
+                'date' => '2020-12-02',
                 'skipped' => false,
                 'training_id' => 1
             ]),
             new TrainingEff([
-                'date' => '14-02-2020',
+                'date' => '2020-12-04',
                 'skipped' => true,
                 'training_id' => 2
             ])
         ]);
         $te = TrainingEff::all();
-        $te[0]->exerciseEffs()->saveMany([
+        $te[0]->exercise_effs()->saveMany([
             new ExerciseEff([
                 'pause' => 30,
                 'skipped' => false,
-                'exercice_id' => 0,
+                'exercise_id' => 1,
                 'rating' => 10
             ]),
             new ExerciseEff([
                 'skipped' => true,
-                'exercice_id' => 1,
+                'exercise_id' => 2,
+                'pause' => 0,
+                'rating' => 0
             ])
         ]);
         $ef = ExerciseEff::all();
-        $ef[0]->seriesEffs()->saveMany([
+        $ef[0]->series_effs()->saveMany([
             new SeriesEff([
                 'rep' => 8,
                 'weight' => 50,

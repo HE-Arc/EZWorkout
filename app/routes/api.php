@@ -35,6 +35,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::apiResource('exerciseEff', ExerciseEffController::class);
     Route::apiResource('seriesEff', SeriesEffController::class);
 
+    //test
+    Route::apiResource('seriesEff', SeriesEffController::class);
+
     Route::get('test', function (Request $r) {
         return $r->user();
     });

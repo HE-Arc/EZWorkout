@@ -23,9 +23,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');
 })->name('dashboard');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/results', function () {
-    return Inertia\Inertia::render('Results');
-})->name('results');
+Route::middleware(['auth:sanctum', 'verified'])->get('/selectresults', function () {
+    return Inertia\Inertia::render('SelectResults');
+})->name('selectresults');
 
 
 

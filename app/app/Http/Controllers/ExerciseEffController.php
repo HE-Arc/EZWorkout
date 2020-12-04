@@ -15,7 +15,17 @@ class ExerciseEffController extends Controller
      */
     public function index(Request $request)
     {
-        return response()->json(TrainingPlan::where('user_id', $request->user()->id)->with('logbookPages')->with('training_effs')->with('exercise_effs')->get());
+        $a = array();
+        foreach (TrainingPlan::where('user_id', $request->user()->id)->get() as $tp) {
+            foreach ($tp->logbook_pages()->get() as $lbp) {
+                foreach ($lbp->training_effs()->get() as $te) {
+                    foreach ($te->exercise_effs()->get() as $ee) {
+                        $a[] = $ee;
+                    }
+                }
+            }
+        }
+        return response()->json($a);
     }
 
     /**
@@ -28,7 +38,7 @@ class ExerciseEffController extends Controller
     {
         $data = $request->validate([
             'training_eff' => 'integer|min:1',
-            'pause'=> 'integer|min:0',
+            'pause' => 'integer|min:0',
             'skipped' => 'Boolean',
             'exercise' => 'integer|min:1',
             'rating' => 'integer|min:1|max:10|nullable'
@@ -65,7 +75,7 @@ class ExerciseEffController extends Controller
     {
         $data = $request->validate([
             'training_eff' => 'integer|min:1',
-            'pause'=> 'integer|min:0',
+            'pause' => 'integer|min:0',
             'skipped' => 'Boolean',
             'exercise' => 'integer|min:1',
             'rating' => 'integer|min:1|max:10|nullable'

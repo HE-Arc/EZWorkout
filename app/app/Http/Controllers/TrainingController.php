@@ -15,7 +15,13 @@ class TrainingController extends Controller
      */
     public function index(Request $request)
     {
-        return response()->json(TrainingPlan::where('user_id', $request->user()->id)->with('trainings')->get());
+        $a = array();
+        foreach(TrainingPlan::where('user_id', $request->user()->id)->get() as $tp){
+            foreach($tp->trainings()->get() as $t){
+                $a[] = $t;
+            }
+        }
+        return response()->json($a);
     }
 
     /**
@@ -35,6 +41,14 @@ class TrainingController extends Controller
         $t->name = $data['name'];
         $p->trainings()->save($t);
         return response()->json($t);
+    }
+
+    public function attach(Request $request, $id){
+        $data = $request->validate([
+            'trainingPlan' => 'integer|min:1'
+        ]);
+        $p = TrainingPlan::find($data['trainingPlan']);
+        $p->trainings()->attach($id);
     }
 
     /**

@@ -29,14 +29,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::apiResource('trainingPlan', TrainingPlanController::class);
     Route::apiResource('training', TrainingController::class);
-    Route::apiResource('exercice', ExerciseController::class);
+    Route::apiResource('exercise', ExerciseController::class);
     Route::apiResource('logbookPage', LogbookPageController::class);
     Route::apiResource('trainingEff', TrainingEffController::class);
     Route::apiResource('exerciseEff', ExerciseEffController::class);
     Route::apiResource('seriesEff', SeriesEffController::class);
 
-    //test
-    Route::apiResource('seriesEff', SeriesEffController::class);
+    Route::post('training/{id}/addToTrainingPlan', [TrainingController::class, 'attach']);
+    Route::post('exercise/{id}/addToTraining', [ExerciseController::class, 'attach']);
 
     Route::get('test', function (Request $r) {
         return $r->user();

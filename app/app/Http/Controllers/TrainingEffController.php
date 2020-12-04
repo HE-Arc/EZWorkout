@@ -15,7 +15,15 @@ class TrainingEffController extends Controller
      */
     public function index(Request $request)
     {
-        return response()->json(TrainingPlan::where('user_id', $request->user()->id)->with('logbookPages')->with('training_effs')->get());
+        $a = array();
+        foreach (TrainingPlan::where('user_id', $request->user()->id)->get() as $tp) {
+            foreach ($tp->logbook_pages()->get() as $lbp) {
+                foreach ($lbp->training_effs()->get() as $te) {
+                    $a[] = $te;
+                }
+            }
+        }
+        return response()->json($a);
     }
 
     /**
@@ -28,7 +36,7 @@ class TrainingEffController extends Controller
     {
         $data = $request->validate([
             'logbookPage' => 'integer|min:1',
-            'date'=> 'Date',
+            'date' => 'Date',
             'skipped' => 'Boolean',
             'training' => 'integer|min:1'
         ]);
@@ -63,7 +71,7 @@ class TrainingEffController extends Controller
     {
         $data = $request->validate([
             'logbookPage' => 'integer|min:1',
-            'date'=> 'Date',
+            'date' => 'Date',
             'skipped' => 'Boolean',
             'training' => 'integer|min:1'
         ]);

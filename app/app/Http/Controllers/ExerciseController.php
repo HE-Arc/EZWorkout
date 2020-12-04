@@ -16,7 +16,15 @@ class ExerciseController extends Controller
      */
     public function index(Request $request)
     {
-        return response()->json(TrainingPlan::where('user_id', $request->user()->id)->with('trainings')->with('exercice')->get());
+        $a = array();
+        foreach(TrainingPlan::where('user_id', $request->user()->id)->get() as $tp){
+            foreach($tp->trainings()->get() as $t){
+                foreach($t->exercises()->get() as $e){
+                    $a[] = $e;
+                }
+            }
+        }
+        return response()->json($a);
     }
 
     /**
@@ -48,6 +56,15 @@ class ExerciseController extends Controller
         $e->pauseExercice = $data['pauseExercice'];
         $t->exercises()->save($e);
         return response()->json($e);
+    }
+
+
+    public function attach(Request $request, $id){
+        $data = $request->validate([
+            'training' => 'integer|min:1'
+        ]);
+        $p = Training::find($data['training']);
+        $p->exercises()->attach($id);
     }
 
     /**

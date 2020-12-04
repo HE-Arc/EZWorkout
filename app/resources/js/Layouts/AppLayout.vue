@@ -17,6 +17,9 @@
                             <jet-nav-link href="/dashboard" :active="$page.currentRouteName == 'dashboard'">
                                 EZWorkout
                             </jet-nav-link>
+                            <jet-nav-link href="/results" :active="$page.currentRouteName == 'results'">
+                                Results
+                            </jet-nav-link>
                         </div>
                     </div>
 

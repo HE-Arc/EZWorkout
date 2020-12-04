@@ -15,7 +15,13 @@ class LogbookPageController extends Controller
      */
     public function index(Request $request)
     {
-        return response()->json(TrainingPlan::where('user_id', $request->user()->id)->with('logbookPages')->get());
+        $a = array();
+        foreach(TrainingPlan::where('user_id', $request->user()->id)->get() as $tp){
+            foreach($tp->logbook_pages()->get() as $lbp){
+                $a[] = $lbp;
+            }
+        }
+        return response()->json($a);
     }
 
     /**

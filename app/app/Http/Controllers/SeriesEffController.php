@@ -15,7 +15,19 @@ class SeriesEffController extends Controller
      */
     public function index(Request $request)
     {
-        return response()->json(TrainingPlan::where('user_id', $request->user()->id)->with('logbookPages')->with('training_effs')->with('exercise_effs')->with('serie_effs')->get());
+        $a = array();
+        foreach (TrainingPlan::where('user_id', $request->user()->id)->get() as $tp) {
+            foreach ($tp->logbook_pages()->get() as $lbp) {
+                foreach ($lbp->training_effs()->get() as $te) {
+                    foreach ($te->exercise_effs()->get() as $ee) {
+                        foreach ($ee->series_effs()->get() as $se) {
+                            $a[] = $se;
+                        }
+                    }
+                }
+            }
+        }
+        return response()->json($a);
     }
 
     /**
@@ -36,7 +48,7 @@ class SeriesEffController extends Controller
         $e->rep = $data['rep'];
         $e->weight = $data['weight'];
         $e->pause = $data['pause'];
-        $e->exercise_eff = $data['exercise_eff'];
+        $e->exercise_eff_id = $data['exercise_eff'];
         $e->save();
         return response()->json($e);
     }
@@ -71,7 +83,7 @@ class SeriesEffController extends Controller
         $e->rep = $data['rep'];
         $e->weight = $data['weight'];
         $e->pause = $data['pause'];
-        $e->exercise_eff = $data['exercise_eff'];
+        $e->exercise_eff_id = $data['exercise_eff'];
         $e->save();
         return response()->json($e);
     }

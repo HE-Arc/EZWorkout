@@ -3,8 +3,12 @@
 namespace Database\Seeders;
 
 use App\Models\Exercise;
+use App\Models\ExerciseEff;
+use App\Models\LogbookPage;
+use App\Models\SeriesEff;
 use App\Models\TrainingPlan;
 use App\Models\Training;
+use App\Models\TrainingEff;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -68,6 +72,46 @@ class DatabaseSeeder extends Seeder
                 'pauseSerie' => 60,
                 'pauseExercise' => 120
             ]),
+        ]);
+        $lb = new LogbookPage();
+        $tp->logbook_pages()->save($lb);
+        $lb->trainingEffs()->saveMany([
+            new TrainingEff([
+                'date' => '12-02-2020',
+                'skipped' => false,
+                'training_id' => 1
+            ]),
+            new TrainingEff([
+                'date' => '14-02-2020',
+                'skipped' => true,
+                'training_id' => 2
+            ])
+        ]);
+        $te = TrainingEff::all();
+        $te[0]->exerciseEffs()->saveMany([
+            new ExerciseEff([
+                'pause' => 30,
+                'skipped' => false,
+                'exercice_id' => 0,
+                'rating' => 10
+            ]),
+            new ExerciseEff([
+                'skipped' => true,
+                'exercice_id' => 1,
+            ])
+        ]);
+        $ef = ExerciseEff::all();
+        $ef[0]->seriesEffs()->saveMany([
+            new SeriesEff([
+                'rep' => 8,
+                'weight' => 50,
+                'pause' => 60
+            ]),
+            new SeriesEff([
+                'rep' => 10,
+                'weight' => 500,
+                'pause' => 58
+            ])
         ]);
     }
     

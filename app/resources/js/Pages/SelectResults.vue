@@ -35,12 +35,12 @@
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
-                                <tr> <!-- TODO: v-for here -->
+                                <tr v-for="plan in training_plans" :key="plan.id"> <!-- TODO: v-for here -->
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
                                     <div class="ml-4">
                                         <div class="text-sm font-medium text-gray-900">
-                                        Jane Cooper
+                                        {{plan.name}}
                                         </div>
                                     </div>
                                     </div>
@@ -85,6 +85,27 @@
             Welcome,
         },
 
-        
+        data(){
+            return{
+                training_plans:[],
+                training_plan:{
+                    name:''
+
+                }
+            }
+        },
+        methods:{
+            getTrainingPlans(){
+                return axios.get('/api/trainingPlan')
+                .then((res) => {
+                    this.training_plans = res.data
+                }).catch((err) => {
+                    console.log(err)
+                });
+            },
+        },
+        created(){
+            this.getTrainingPlans()
+        }
     }
 </script>

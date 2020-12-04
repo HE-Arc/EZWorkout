@@ -3949,6 +3949,28 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
     Welcome: _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  data: function data() {
+    return {
+      training_plans: [],
+      training_plan: {
+        name: ''
+      }
+    };
+  },
+  methods: {
+    getTrainingPlans: function getTrainingPlans() {
+      var _this = this;
+
+      return axios.get('/api/trainingPlan').then(function (res) {
+        _this.training_plans = res.data;
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    }
+  },
+  created: function created() {
+    this.getTrainingPlans();
   }
 });
 
@@ -26763,8 +26785,10 @@ var render = function() {
                                         staticClass:
                                           "bg-white divide-y divide-gray-200"
                                       },
-                                      [
-                                        _c("tr", [
+                                      _vm._l(_vm.training_plans, function(
+                                        plan
+                                      ) {
+                                        return _c("tr", { key: plan.id }, [
                                           _c(
                                             "td",
                                             {
@@ -26791,7 +26815,11 @@ var render = function() {
                                                         },
                                                         [
                                                           _vm._v(
-                                                            "\n                                    Jane Cooper\n                                    "
+                                                            "\n                                    " +
+                                                              _vm._s(
+                                                                plan.name
+                                                              ) +
+                                                              "\n                                    "
                                                           )
                                                         ]
                                                       )
@@ -26887,7 +26915,8 @@ var render = function() {
                                             ]
                                           )
                                         ])
-                                      ]
+                                      }),
+                                      0
                                     )
                                   ]
                                 )

@@ -31,7 +31,7 @@ class ExerciseEffController extends Controller
             'pause'=> 'integer|min:0',
             'skipped' => 'Boolean',
             'exercise' => 'integer|min:1',
-            'rating' => 'integer|min:1|max:5|nullable'
+            'rating' => 'integer|min:1|max:10|nullable'
         ]);
         $e = new ExerciseEff();
         $e->training_eff_id = $data['training_eff'];
@@ -68,7 +68,7 @@ class ExerciseEffController extends Controller
             'pause'=> 'integer|min:0',
             'skipped' => 'Boolean',
             'exercise' => 'integer|min:1',
-            'rating' => 'integer|min:1|max:5|nullable'
+            'rating' => 'integer|min:1|max:10|nullable'
         ]);
         $e = ExerciseEff::find($id);
         $e->training_eff_id = $data['training_eff'];

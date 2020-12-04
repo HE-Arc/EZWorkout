@@ -15,7 +15,7 @@ class TrainingPlanController extends Controller
      */
     public function index()
     {
-        return response()->json(TrainingPlan::getAll());
+        return response()->json(TrainingPlan::all());
     }
 
     /**

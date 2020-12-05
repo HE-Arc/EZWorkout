@@ -4065,25 +4065,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -4108,10 +4089,18 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (err) {
         console.log(err);
       });
+    },
+    goToTrainingPlanResults: function goToTrainingPlanResults(id) {
+      window.location.href = "/selectTrainings/" + id;
     }
   },
   created: function created() {
     this.getTrainingPlans();
+  },
+  computed: {
+    tp_present: function tp_present() {
+      return this.training_plans.length > 0;
+    }
   }
 });
 
@@ -27480,229 +27469,144 @@ var render = function() {
                                   "shadow overflow-hidden border-b border-gray-200 sm:rounded-lg"
                               },
                               [
-                                _c(
-                                  "table",
-                                  {
-                                    staticClass:
-                                      "min-w-full divide-y divide-gray-200"
-                                  },
-                                  [
-                                    _c("thead", [
-                                      _c("tr", [
-                                        _c(
-                                          "th",
-                                          {
-                                            staticClass:
-                                              "px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
-                                            attrs: { scope: "col" }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                Name\n                            "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "th",
-                                          {
-                                            staticClass:
-                                              "px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
-                                            attrs: { scope: "col" }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                Title\n                            "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "th",
-                                          {
-                                            staticClass:
-                                              "px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
-                                            attrs: { scope: "col" }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                Status\n                            "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "th",
-                                          {
-                                            staticClass:
-                                              "px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
-                                            attrs: { scope: "col" }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                Role\n                            "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "th",
-                                          {
-                                            staticClass: "px-6 py-3 bg-gray-50",
-                                            attrs: { scope: "col" }
-                                          },
-                                          [
-                                            _c(
-                                              "span",
-                                              { staticClass: "sr-only" },
-                                              [_vm._v("Edit")]
-                                            )
-                                          ]
-                                        )
-                                      ])
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "tbody",
+                                _vm.tp_present
+                                  ? _c(
+                                      "table",
                                       {
                                         staticClass:
-                                          "bg-white divide-y divide-gray-200"
+                                          "min-w-full divide-y divide-gray-200"
                                       },
-                                      _vm._l(_vm.training_plans, function(
-                                        plan
-                                      ) {
-                                        return _c("tr", { key: plan.id }, [
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass:
-                                                "px-6 py-4 whitespace-nowrap"
-                                            },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "flex items-center"
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "ml-4" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "text-sm font-medium text-gray-900"
-                                                        },
-                                                        [
-                                                          _vm._v(
-                                                            "\n                                    " +
-                                                              _vm._s(
-                                                                plan.name
-                                                              ) +
-                                                              "\n                                    "
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass:
-                                                "px-6 py-4 whitespace-nowrap"
-                                            },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "text-sm text-gray-900"
-                                                },
-                                                [
-                                                  _vm._v(
-                                                    "Regional Paradigm Technician"
-                                                  )
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "text-sm text-gray-500"
-                                                },
-                                                [_vm._v("Optimization")]
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass:
-                                                "px-6 py-4 whitespace-nowrap"
-                                            },
-                                            [
-                                              _c(
-                                                "span",
-                                                {
-                                                  staticClass:
-                                                    "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
-                                                },
-                                                [
-                                                  _vm._v(
-                                                    "\n                                Active\n                                "
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass:
-                                                "px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                                Admin\n                            "
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass:
-                                                "px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
-                                            },
-                                            [
-                                              _c(
-                                                "a",
-                                                {
-                                                  staticClass:
-                                                    "text-indigo-600 hover:text-indigo-900",
-                                                  attrs: { href: "#" }
-                                                },
-                                                [_vm._v("Edit")]
-                                              )
-                                            ]
-                                          )
-                                        ])
-                                      }),
-                                      0
+                                      [
+                                        !_vm.tp_present
+                                          ? _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8"
+                                              },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "text-3xl font-bold leading-tight text-gray-900"
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      "\n                                    Vous n'avez aucun entraînement pour le moment.\n                                "
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            )
+                                          : _vm._e(),
+                                        _vm._v(" "),
+                                        _c("thead", [
+                                          _c("tr", [
+                                            _c(
+                                              "th",
+                                              {
+                                                staticClass:
+                                                  "px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider ",
+                                                attrs: { scope: "col" }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                Nom\n                            "
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "th",
+                                              {
+                                                staticClass:
+                                                  "px-6 py-3 bg-gray-50",
+                                                attrs: { scope: "col" }
+                                              },
+                                              [
+                                                _c(
+                                                  "span",
+                                                  { staticClass: "sr-only" },
+                                                  [_vm._v("Edit")]
+                                                )
+                                              ]
+                                            )
+                                          ])
+                                        ]),
+                                        _vm._v(" "),
+                                        _c(
+                                          "tbody",
+                                          {
+                                            staticClass:
+                                              "bg-white divide-y divide-gray-200 hover:bg-gray-200"
+                                          },
+                                          _vm._l(_vm.training_plans, function(
+                                            plan
+                                          ) {
+                                            return _c(
+                                              "tr",
+                                              {
+                                                key: plan.id,
+                                                on: {
+                                                  click: function($event) {
+                                                    return _vm.goToTrainingPlanResults(
+                                                      plan.id
+                                                    )
+                                                  }
+                                                }
+                                              },
+                                              [
+                                                _c(
+                                                  "td",
+                                                  {
+                                                    staticClass:
+                                                      "px-6 py-4 whitespace-nowrap"
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "flex items-center"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass: "ml-4"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                staticClass:
+                                                                  "text-sm font-medium text-gray-900"
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  "\n                                        " +
+                                                                    _vm._s(
+                                                                      plan.name
+                                                                    ) +
+                                                                    "\n                                        "
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            )
+                                          }),
+                                          0
+                                        )
+                                      ]
                                     )
-                                  ]
-                                )
+                                  : _vm._e()
                               ]
                             )
                           ]
@@ -42908,8 +42812,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/jojoc4/dev/EZWorkout/app/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/jojoc4/dev/EZWorkout/app/resources/css/app.css */"./resources/css/app.css");
+__webpack_require__(/*! /var/www/html/EZWorkout/app/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /var/www/html/EZWorkout/app/resources/css/app.css */"./resources/css/app.css");
 
 
 /***/ })

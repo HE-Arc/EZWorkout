@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Training;
 use App\Models\TrainingPlan;
+use Facade\FlareClient\Http\Response;
 use Illuminate\Http\Request;
 
 class TrainingController extends Controller
@@ -22,6 +23,16 @@ class TrainingController extends Controller
             }
         }
         return response()->json($a);
+    }
+
+    /**
+     * Return trainings that are part of a training plan
+     * 
+     * @param int $id
+     * @return Response
+     */
+    public function getFromTrainingPlan($id){
+        return response()->json(TrainingPlan::find($id)->trainings()->get());
     }
 
     /**

@@ -17,6 +17,9 @@
                             <jet-nav-link href="/dashboard" :active="$page.currentRouteName == 'dashboard'">
                                 EZWorkout
                             </jet-nav-link>
+                            <jet-nav-link href="/selectTrainingPlans" :active="$page.currentRouteName == 'trainingPlans'">
+                                Plans d'entraînement
+                            </jet-nav-link>
                             <jet-nav-link href="/selectresults" :active="$page.currentRouteName == 'results'">
                                 Results
                             </jet-nav-link>

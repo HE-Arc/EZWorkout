@@ -3,7 +3,7 @@
         <app-layout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Vos plans d'entraînement
+                Vos entraînements
             </h2>
         </template>
 
@@ -14,51 +14,41 @@
                     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                         <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                            <table class="min-w-full divide-y divide-gray-200">
+                            <div v-if="!t_present" class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                                <div class="text-3xl font-bold leading-tight text-gray-900">
+                                    Vous n'avez aucun entraînement pour le moment.
+                                </div>
+                            </div>
+                            <table v-if="t_present" class="min-w-full divide-y divide-gray-200">
                             <thead>
                                 <tr>
                                 <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Name
-                                </th>
-                                <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Title
-                                </th>
-                                <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Status
-                                </th>
-                                <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Role
+                                    Nom
                                 </th>
                                 <th scope="col" class="px-6 py-3 bg-gray-50">
-                                    <span class="sr-only">Edit</span>
+                                    <span class="sr-only">Voir</span>
+                                </th>
+                                <th scope="col" class="px-6 py-3 bg-gray-50">
+                                    <span class="sr-only">Éditer</span>
                                 </th>
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
-                                <tr v-for="plan in training_plans" :key="plan.id"> <!-- TODO: v-for here -->
+                                <tr v-for="training in trainings" :key="training.id">
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
                                     <div class="ml-4">
                                         <div class="text-sm font-medium text-gray-900">
-                                        {{plan.name}}
+                                        {{training.name}}
                                         </div>
                                     </div>
                                     </div>
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm text-gray-900">Regional Paradigm Technician</div>
-                                    <div class="text-sm text-gray-500">Optimization</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                    Active
-                                    </span>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                    Admin
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <a :href="getExerciseLink(training.id)" class="text-indigo-600 hover:text-indigo-900">Voir</a>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                    <a :href="editTrainingLink(training.id)" class="text-indigo-600 hover:text-indigo-900">Éditer</a>
                                 </td>
                                 </tr>
                             </tbody>
@@ -87,21 +77,32 @@
 
         data(){
             return{
-                training_plans:[],
+                trainings:[],
             }
         },
         methods:{
-            getTrainingPlans(){
-                axios.get('/trainingPlan')
+            getTrainings(){
+                axios.get('/training/fromTP/'+ this.$parent.props.id)
                 .then((res) => {
-                    this.training_plans = res.data
+                    this.trainings = res.data
                 }).catch((err) => {
                     console.log(err)
                 });
             },
+            getExerciseLink(id){
+                return "/selectExercises/" + id
+            },
+            editTrainingLink(id){
+                return "/editTraining/" + id
+            }
         },
         created(){
-            this.getTrainingPlans()
+            this.getTrainings()
+        },
+        computed: {
+            t_present: function(){
+                return this.trainings.length > 0
+            }
         }
     }
 </script>

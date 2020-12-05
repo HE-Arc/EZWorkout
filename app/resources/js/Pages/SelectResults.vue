@@ -6,7 +6,6 @@
                 Results
             </h2>
         </template>
-
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
@@ -19,14 +18,11 @@
                                     <div class="text-3xl font-bold leading-tight text-gray-900">
                                         Vous n'avez aucun entraînement pour le moment.
                                     </div>
-                            </div>
+                                </div>
                             <thead>
                                 <tr>
                                 <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider ">
                                     Nom
-                                </th>
-                                <th scope="col" class="px-6 py-3 bg-gray-50">
-                                    <span class="sr-only">Edit</span>
                                 </th>
                                 </tr>
                             </thead>
@@ -69,10 +65,6 @@
         data(){
             return{
                 training_plans:[],
-                training_plan:{
-                    name:''
-
-                }
             }
         },
         methods:{
@@ -85,7 +77,7 @@
                 });
             },
             goToTrainingPlanResults(id){
-                window.location.href = "/selectTrainings/" + id
+                window.location.href = "/results/" + id
             },
         },
         created(){

@@ -28,6 +28,16 @@ class ExerciseController extends Controller
     }
 
     /**
+     * Return exercises that are part of a training
+     * 
+     * @param int $id
+     * @return Response
+     */
+    public function getFromTraining($id){
+        return response()->json(Training::find($id)->exercises()->get());
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request

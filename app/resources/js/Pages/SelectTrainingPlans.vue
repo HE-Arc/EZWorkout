@@ -26,16 +26,13 @@
                                     Nom
                                 </th>
                                 <th scope="col" class="px-6 py-3 bg-gray-50">
-                                    <span class="sr-only">Voir</span>
-                                </th>
-                                <th scope="col" class="px-6 py-3 bg-gray-50">
-                                    <span class="sr-only">Éditer</span>
+                                    <span class="sr-only">Voir / Éditer</span>
                                 </th>
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
                                 <tr v-for="plan in training_plans" :key="plan.id">
-                                <td class="px-6 py-4 whitespace-nowrap">
+                                <td class="px-18 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
                                     <div class="ml-4">
                                         <div class="text-sm font-medium text-gray-900">
@@ -45,10 +42,8 @@
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <a :href="getTrainingLink(plan.id)" :active="$page.currentRouteName == 'trainings'" class="text-indigo-600 hover:text-indigo-900">Voir</a>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <a :href="editTrainingPlanLink(plan.id)" :active="$page.currentRouteName == 'trainingPlanEdit'" class="text-indigo-600 hover:text-indigo-900">Éditer</a>
+                                    <a :href="getTrainingLink(plan.id)" class="text-indigo-600 hover:text-indigo-900">Voir</a> 
+                                    <a :href="editTrainingPlanLink(plan.id)" class="text-indigo-600 hover:text-indigo-900">Éditer</a>
                                 </td>
                                 </tr>
                             </tbody>

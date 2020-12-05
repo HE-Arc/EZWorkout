@@ -47,6 +47,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::post('exercise/{id}/addToTraining', [ExerciseController::class, 'attach']);
 
     Route::get('training/fromTP/{id}', [TrainingController::class, 'getFromTrainingPlan']);
+    Route::get('exercise/fromT/{id}', [ExerciseController::class, 'getFromTraining']);
 
     //vue
     Route::get('/selectresults', function () {
@@ -60,6 +61,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/selectTrainings/{id}', function ($id) {
         return Inertia\Inertia::render('SelectTrainings', ['id' => $id]);
     })->name('selectTrainings');
+
+    Route::get('/selectExercises/{id}', function ($id) {
+        return Inertia\Inertia::render('SelectExercises', ['id' => $id]);
+    })->name('selectExercises');
 
     Route::get('/dashboard', function () {
         return Inertia\Inertia::render('Dashboard');

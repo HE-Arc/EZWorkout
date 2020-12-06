@@ -44,7 +44,7 @@
                                 </td>
                                 </a>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <a :href="editTrainingLink(training.id)" class="text-indigo-600 hover:text-indigo-900">Éditer</a>
+                                    <a :href="editTrainingLink(training.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="edit" /></a>
                                 </td>
                                 </tr>
                             </tbody>

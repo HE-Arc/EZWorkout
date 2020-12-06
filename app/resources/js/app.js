@@ -12,6 +12,13 @@ import 'vue-select/dist/vue-select.css';
 
 Vue.component('v-select', vSelect)
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faEdit } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+library.add(faEdit)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+
 Vue.use(InertiaApp);
 Vue.use(InertiaForm);
 Vue.use(PortalVue);

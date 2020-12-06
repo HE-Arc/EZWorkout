@@ -32,7 +32,7 @@
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
                                 <tr v-for="plan in training_plans" :key="plan.id">
-                                <a :href="getTrainingLink(plan.id)" class="text-indigo-600 hover:text-indigo-900">
+                                <a :href="getTrainingLink(plan.id)">
                                 <td class="px-18 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
                                     <div class="ml-4">
@@ -44,7 +44,7 @@
                                 </td>
                                 </a>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"> 
-                                    <a :href="editTrainingPlanLink(plan.id)" class="text-indigo-600 hover:text-indigo-900">Éditer</a>
+                                    <a :href="editTrainingPlanLink(plan.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="edit" /></a>
                                 </td>
                                 </tr>
                             </tbody>

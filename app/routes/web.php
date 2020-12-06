@@ -75,9 +75,14 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return Inertia\Inertia::render('EditTraining', ['id' => $id]);
     })->name('editTraining');
 
+
     Route::get('/newTrainingPlan', function () {
         return Inertia\Inertia::render('NewTrainingPlan');
     })->name('newTrainingPlan');
+
+    Route::get('/newTraining/{idTP}', function ($idTP) {
+        return Inertia\Inertia::render('NewTraining', ['idTP' => $idTP]);
+    })->name('newTraining');
 
 
     Route::get('/dashboard', function () {

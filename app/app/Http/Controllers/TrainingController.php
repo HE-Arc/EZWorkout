@@ -45,7 +45,7 @@ class TrainingController extends Controller
     {
         $data = $request->validate([
             'name' => 'string',
-            'trainigPlan' => 'integer|min:1'
+            'trainingPlan' => 'integer|min:1'
         ]);
         $p = TrainingPlan::find($data['trainingPlan']);
         $t = new Training();

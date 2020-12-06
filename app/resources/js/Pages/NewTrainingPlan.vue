@@ -3,7 +3,7 @@
         <app-layout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Modifiez votre plan d'entraînement
+                Créez un plan d'entraînement
             </h2>
         </template>
 
@@ -19,7 +19,7 @@
                                 <div class="md:col-span-1">
                                     <div class="px-4 sm:px-0">
                                         <h3 class="text-lg font-medium text-gray-900">
-                                            Changer le nom de votre plan d'entraînement
+                                            Créez un plan d'entraînement
                                         </h3>
 
                                         <p class="mt-1 text-sm text-gray-600">
@@ -82,21 +82,9 @@
         },
         methods:{
             updateTP() {
-                let id = this.$parent.props.id;
-                this.$inertia.put('/trainingPlan/' + id, this.form);
-                window.location.href = '/selectTrainings/' + id;
+                this.$inertia.post('/trainingPlan/', this.form);
+                window.location.href = '/selectTrainingPlans/';
             },
-            getTrainingPlan(){
-                axios.get('/trainingPlan/'+ this.$parent.props.id)
-                .then((res) => {
-                    this.form.name = res.data.name
-                }).catch((err) => {
-                    console.log(err)
-                });
-            },
-        },
-        created(){
-            this.getTrainingPlan()
         },
     }
 </script>

@@ -3290,22 +3290,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     updateTP: function updateTP() {
-      var id = this.$parent.props.id;
-      this.$inertia.put('/trainingPlan/' + id, this.form);
-      window.location.href = '/selectTrainings/' + id;
-    },
-    getTrainingPlan: function getTrainingPlan() {
-      var _this = this;
-
-      axios.get('/trainingPlan/' + this.$parent.props.id).then(function (res) {
-        _this.form.name = res.data.name;
-      })["catch"](function (err) {
-        console.log(err);
-      });
+      this.$inertia.post('/trainingPlan/', this.form);
+      window.location.href = '/selectTrainingPlans/';
     }
-  },
-  created: function created() {
-    this.getTrainingPlan();
   }
 });
 
@@ -26344,7 +26331,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n            Modifiez votre plan d'entraînement\n        "
+                        "\n            Créez un plan d'entraînement\n        "
                       )
                     ]
                   )
@@ -26416,7 +26403,7 @@ var render = function() {
                                                   },
                                                   [
                                                     _vm._v(
-                                                      "\n                                        Changer le nom de votre plan d'entraînement\n                                    "
+                                                      "\n                                        Créez un plan d'entraînement\n                                    "
                                                     )
                                                   ]
                                                 ),

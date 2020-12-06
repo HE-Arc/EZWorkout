@@ -7,13 +7,13 @@
             </h2>
         </template>
 
-        <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                    <div class="flex flex-col">
-                    <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                        <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+        <div class="overflow-visible py-12">
+            <div class="overflow-visible max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="bg-white overflow-visible shadow-xl sm:rounded-lg">
+                    <div class="overflow-visible flex flex-col">
+                    <div class="overflow-visible -my-2 sm:-mx-6 lg:-mx-8">
+                        <div class="overflow-visible py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                        <div class="overflow-visible shadow  border-b border-gray-200 sm:rounded-lg">
                             <div v-if="!t_present" class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                                 <div class="text-3xl font-bold leading-tight text-gray-900">
                                     Vous n'avez aucun entraînement pour le moment.
@@ -48,12 +48,16 @@
                                 </tr>
                             </tbody>
                             </table>
-                            <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
-                                <a :href="newLink()">
+                            <div class="overflow-visible flex items-center w-full justify-evenly px-2 py-7 bg-gray-50 text-right sm:px-6">
+                                <a :href="newLink()" class="pr-12">
                                     <button class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150">
                                         Créer un nouvel entraînement
                                     </button>
                                 </a>
+                                <v-select class=" px-2 py-2" style="min-width: 500px" label="name" :options="AllTrainings" :reduce="tr => tr.id" v-model="newSelected" />
+                                <button @click="addExisting" :disabled="btnDisabled" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150">
+                                        Ajouter un entraînement exsistant
+                                </button>
                             </div>
                         </div>
                         </div>
@@ -80,6 +84,8 @@
         data(){
             return{
                 trainings:[],
+                AllTrainings: [],
+                newSelected: null,
             }
         },
         methods:{
@@ -87,6 +93,12 @@
                 axios.get('/training/fromTP/'+ this.$parent.props.id)
                 .then((res) => {
                     this.trainings = res.data
+                }).catch((err) => {
+                    console.log(err)
+                });
+                axios.get('/training/')
+                .then((res) => {
+                    this.AllTrainings = res.data
                 }).catch((err) => {
                     console.log(err)
                 });
@@ -99,6 +111,10 @@
             },
             newLink(){
                 return "/newTraining/" + this.$parent.props.id
+            },
+            addExisting(){
+                axios.post('/training/' + this.newSelected + '/addToTrainingPlan', {trainingPlan: this.$parent.props.id});
+                this.getTrainings();
             }
         },
         created(){
@@ -107,6 +123,9 @@
         computed: {
             t_present: function(){
                 return this.trainings.length > 0
+            },
+            btnDisabled: function(){
+                return this.newSelected == null
             }
         }
     }

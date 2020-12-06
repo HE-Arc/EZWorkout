@@ -6,6 +6,12 @@ import { InertiaApp } from '@inertiajs/inertia-vue';
 import { InertiaForm } from 'laravel-jetstream';
 import PortalVue from 'portal-vue';
 
+import vSelect from 'vue-select'
+import 'vue-select/dist/vue-select.css';
+
+
+Vue.component('v-select', vSelect)
+
 Vue.use(InertiaApp);
 Vue.use(InertiaForm);
 Vue.use(PortalVue);

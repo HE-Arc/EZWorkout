@@ -4722,6 +4722,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -4731,7 +4735,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      exercises: []
+      exercises: [],
+      AllExercises: [],
+      newSelected: null
     };
   },
   methods: {
@@ -4743,12 +4749,23 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (err) {
         console.log(err);
       });
+      axios.get('/exercise/').then(function (res) {
+        _this.AllExercises = res.data;
+      })["catch"](function (err) {
+        console.log(err);
+      });
     },
     editExerciseLink: function editExerciseLink(id) {
       return "/editExercise/" + id;
     },
     newLink: function newLink() {
       return "/newExercise/" + this.$parent.props.id;
+    },
+    addExisting: function addExisting() {
+      axios.post('/exercise/' + this.newSelected + '/addToTraining', {
+        training: this.$parent.props.id
+      });
+      this.getExercises();
     }
   },
   created: function created() {
@@ -4757,6 +4774,9 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     e_present: function e_present() {
       return this.exercises.length > 0;
+    },
+    btnDisabled: function btnDisabled() {
+      return this.newSelected == null;
     }
   }
 });
@@ -4895,6 +4915,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
 /* harmony import */ var _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Jetstream/Welcome */ "./resources/js/Jetstream/Welcome.vue");
+//
 //
 //
 //
@@ -31441,14 +31462,14 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "bg-white overflow-hidden shadow-xl sm:rounded-lg"
+                    "bg-white overflow-visible shadow-xl sm:rounded-lg"
                 },
                 [
                   _c("div", { staticClass: "flex flex-col" }, [
                     _c(
                       "div",
                       {
-                        staticClass: "-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8"
+                        staticClass: "-my-2 overflow-visible sm:-mx-6 lg:-mx-8"
                       },
                       [
                         _c(
@@ -31462,7 +31483,7 @@ var render = function() {
                               "div",
                               {
                                 staticClass:
-                                  "shadow overflow-hidden border-b border-gray-200 sm:rounded-lg"
+                                  "shadow overflow-visible border-b border-gray-200 sm:rounded-lg"
                               },
                               [
                                 !_vm.e_present
@@ -31773,7 +31794,7 @@ var render = function() {
                                   "div",
                                   {
                                     staticClass:
-                                      "flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6"
+                                      "flex overflow-visible items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6"
                                   },
                                   [
                                     _c(
@@ -31793,8 +31814,43 @@ var render = function() {
                                           ]
                                         )
                                       ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("v-select", {
+                                      staticClass: " px-2 py-2",
+                                      staticStyle: { "min-width": "500px" },
+                                      attrs: {
+                                        label: "name",
+                                        options: _vm.AllExercises,
+                                        reduce: function(ex) {
+                                          return ex.id
+                                        }
+                                      },
+                                      model: {
+                                        value: _vm.newSelected,
+                                        callback: function($$v) {
+                                          _vm.newSelected = $$v
+                                        },
+                                        expression: "newSelected"
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass:
+                                          "inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150",
+                                        attrs: { disabled: _vm.btnDisabled },
+                                        on: { click: _vm.addExisting }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                    Ajouter un exercice exsistant\n                            "
+                                        )
+                                      ]
                                     )
-                                  ]
+                                  ],
+                                  1
                                 )
                               ]
                             )
@@ -32270,7 +32326,7 @@ var render = function() {
                                                 _c(
                                                   "span",
                                                   { staticClass: "sr-only" },
-                                                  [_vm._v("Voir / Éditer")]
+                                                  [_vm._v("Éditer")]
                                                 )
                                               ]
                                             )
@@ -32288,36 +32344,53 @@ var render = function() {
                                           ) {
                                             return _c("tr", { key: plan.id }, [
                                               _c(
-                                                "td",
+                                                "a",
                                                 {
                                                   staticClass:
-                                                    "px-18 py-4 whitespace-nowrap"
+                                                    "text-indigo-600 hover:text-indigo-900",
+                                                  attrs: {
+                                                    href: _vm.getTrainingLink(
+                                                      plan.id
+                                                    )
+                                                  }
                                                 },
                                                 [
                                                   _c(
-                                                    "div",
+                                                    "td",
                                                     {
                                                       staticClass:
-                                                        "flex items-center"
+                                                        "px-18 py-4 whitespace-nowrap"
                                                     },
                                                     [
                                                       _c(
                                                         "div",
-                                                        { staticClass: "ml-4" },
+                                                        {
+                                                          staticClass:
+                                                            "flex items-center"
+                                                        },
                                                         [
                                                           _c(
                                                             "div",
                                                             {
                                                               staticClass:
-                                                                "text-sm font-medium text-gray-900"
+                                                                "ml-4"
                                                             },
                                                             [
-                                                              _vm._v(
-                                                                "\n                                    " +
-                                                                  _vm._s(
-                                                                    plan.name
-                                                                  ) +
-                                                                  "\n                                    "
+                                                              _c(
+                                                                "div",
+                                                                {
+                                                                  staticClass:
+                                                                    "text-sm font-medium text-gray-900"
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "\n                                    " +
+                                                                      _vm._s(
+                                                                        plan.name
+                                                                      ) +
+                                                                      "\n                                    "
+                                                                  )
+                                                                ]
                                                               )
                                                             ]
                                                           )
@@ -32335,20 +32408,6 @@ var render = function() {
                                                     "px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
                                                 },
                                                 [
-                                                  _c(
-                                                    "a",
-                                                    {
-                                                      staticClass:
-                                                        "text-indigo-600 hover:text-indigo-900",
-                                                      attrs: {
-                                                        href: _vm.getTrainingLink(
-                                                          plan.id
-                                                        )
-                                                      }
-                                                    },
-                                                    [_vm._v("Voir")]
-                                                  ),
-                                                  _vm._v(" "),
                                                   _c(
                                                     "a",
                                                     {

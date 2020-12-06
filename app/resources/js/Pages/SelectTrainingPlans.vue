@@ -26,12 +26,13 @@
                                     Nom
                                 </th>
                                 <th scope="col" class="px-6 py-3 bg-gray-50">
-                                    <span class="sr-only">Voir / Éditer</span>
+                                    <span class="sr-only">Éditer</span>
                                 </th>
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
                                 <tr v-for="plan in training_plans" :key="plan.id">
+                                <a :href="getTrainingLink(plan.id)" class="text-indigo-600 hover:text-indigo-900">
                                 <td class="px-18 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
                                     <div class="ml-4">
@@ -41,8 +42,8 @@
                                     </div>
                                     </div>
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <a :href="getTrainingLink(plan.id)" class="text-indigo-600 hover:text-indigo-900">Voir</a> 
+                                </a>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"> 
                                     <a :href="editTrainingPlanLink(plan.id)" class="text-indigo-600 hover:text-indigo-900">Éditer</a>
                                 </td>
                                 </tr>

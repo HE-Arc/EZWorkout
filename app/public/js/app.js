@@ -4715,6 +4715,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -4739,6 +4746,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     editExerciseLink: function editExerciseLink(id) {
       return "/editExercise/" + id;
+    },
+    newLink: function newLink() {
+      return "/newExercise/" + this.$parent.props.id;
     }
   },
   created: function created() {
@@ -4947,6 +4957,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -5061,6 +5078,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -5088,6 +5112,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     editTrainingLink: function editTrainingLink(id) {
       return "/editTraining/" + id;
+    },
+    newLink: function newLink() {
+      return "/newTraining/" + this.$parent.props.id;
     }
   },
   created: function created() {
@@ -31105,7 +31132,35 @@ var render = function() {
                                         )
                                       ]
                                     )
-                                  : _vm._e()
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6"
+                                  },
+                                  [
+                                    _c(
+                                      "a",
+                                      { attrs: { href: _vm.newLink() } },
+                                      [
+                                        _c(
+                                          "button",
+                                          {
+                                            staticClass:
+                                              "inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150"
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                    Créer un nouvel exercice\n                                "
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                )
                               ]
                             )
                           ]
@@ -31680,7 +31735,35 @@ var render = function() {
                                         )
                                       ]
                                     )
-                                  : _vm._e()
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6"
+                                  },
+                                  [
+                                    _c(
+                                      "a",
+                                      { attrs: { href: "/newTrainingPlan" } },
+                                      [
+                                        _c(
+                                          "button",
+                                          {
+                                            staticClass:
+                                              "inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150"
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                    Créer un nouveau plan d'entraînement\n                                "
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                )
                               ]
                             )
                           ]
@@ -31942,7 +32025,35 @@ var render = function() {
                                         )
                                       ]
                                     )
-                                  : _vm._e()
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6"
+                                  },
+                                  [
+                                    _c(
+                                      "a",
+                                      { attrs: { href: _vm.newLink() } },
+                                      [
+                                        _c(
+                                          "button",
+                                          {
+                                            staticClass:
+                                              "inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150"
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                    Créer un nouvel entraînement\n                                "
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                )
                               ]
                             )
                           ]

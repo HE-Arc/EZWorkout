@@ -53,7 +53,7 @@ class ExerciseController extends Controller
             'repMax' => 'integer|min:1',
             'pauseSerie' => 'integer|min:0',
             'pauseExercise' => 'integer|min:0',
-            'trainig' => 'integer|min:1'
+            'training' => 'integer|min:1'
         ]);
         $t = Training::find($data['training']);
         $e = new Exercise();

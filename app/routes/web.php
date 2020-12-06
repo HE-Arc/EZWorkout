@@ -88,6 +88,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return Inertia\Inertia::render('NewTraining', ['idTP' => $idTP]);
     })->name('newTraining');
 
+    Route::get('/newExercise/{idTraining}', function ($idTraining) {
+        return Inertia\Inertia::render('NewExercise', ['idTraining' => $idTraining]);
+    })->name('newExercise');
+
 
     Route::get('/dashboard', function () {
         return Inertia\Inertia::render('Dashboard');

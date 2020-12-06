@@ -5110,6 +5110,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -32625,7 +32626,7 @@ var render = function() {
                                                       {
                                                         staticClass: "sr-only"
                                                       },
-                                                      [_vm._v("Voir/Éditer")]
+                                                      [_vm._v("Éditer")]
                                                     )
                                                   ]
                                                 )
@@ -32646,39 +32647,53 @@ var render = function() {
                                                   { key: training.id },
                                                   [
                                                     _c(
-                                                      "td",
+                                                      "a",
                                                       {
                                                         staticClass:
-                                                          "px-18 py-4 whitespace-nowrap"
+                                                          "text-indigo-600 hover:text-indigo-900",
+                                                        attrs: {
+                                                          href: _vm.getExerciseLink(
+                                                            training.id
+                                                          )
+                                                        }
                                                       },
                                                       [
                                                         _c(
-                                                          "div",
+                                                          "td",
                                                           {
                                                             staticClass:
-                                                              "flex items-center"
+                                                              "px-18 py-4 whitespace-nowrap"
                                                           },
                                                           [
                                                             _c(
                                                               "div",
                                                               {
                                                                 staticClass:
-                                                                  "ml-4"
+                                                                  "flex items-center"
                                                               },
                                                               [
                                                                 _c(
                                                                   "div",
                                                                   {
                                                                     staticClass:
-                                                                      "text-sm font-medium text-gray-900"
+                                                                      "ml-4"
                                                                   },
                                                                   [
-                                                                    _vm._v(
-                                                                      "\n                                    " +
-                                                                        _vm._s(
-                                                                          training.name
-                                                                        ) +
-                                                                        "\n                                    "
+                                                                    _c(
+                                                                      "div",
+                                                                      {
+                                                                        staticClass:
+                                                                          "text-sm font-medium text-gray-900"
+                                                                      },
+                                                                      [
+                                                                        _vm._v(
+                                                                          "\n                                    " +
+                                                                            _vm._s(
+                                                                              training.name
+                                                                            ) +
+                                                                            "\n                                    "
+                                                                        )
+                                                                      ]
                                                                     )
                                                                   ]
                                                                 )
@@ -32696,20 +32711,6 @@ var render = function() {
                                                           "px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
                                                       },
                                                       [
-                                                        _c(
-                                                          "a",
-                                                          {
-                                                            staticClass:
-                                                              "text-indigo-600 hover:text-indigo-900",
-                                                            attrs: {
-                                                              href: _vm.getExerciseLink(
-                                                                training.id
-                                                              )
-                                                            }
-                                                          },
-                                                          [_vm._v("Voir")]
-                                                        ),
-                                                        _vm._v(" "),
                                                         _c(
                                                           "a",
                                                           {

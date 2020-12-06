@@ -3,7 +3,7 @@
         <app-layout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Modifiez votre plan d'entraînement
+                Modifiez votre entraînement
             </h2>
         </template>
 
@@ -19,7 +19,7 @@
                                 <div class="md:col-span-1">
                                     <div class="px-4 sm:px-0">
                                         <h3 class="text-lg font-medium text-gray-900">
-                                            Changer le nom de votre plan d'entraînement
+                                            Changer le nom de votre entraînement
                                         </h3>
 
                                         <p class="mt-1 text-sm text-gray-600">
@@ -28,7 +28,7 @@
                                     </div>
                                 </div>
                                 <div class="mt-5 md:mt-0 md:col-span-2">
-                                    <form @submit.prevent="updateTP">
+                                    <form @submit.prevent="updateTraining">
                                         <div class="shadow overflow-hidden sm:rounded-md">
                                             <div class="px-4 py-5 bg-white sm:p-6">
                                                 <div class="grid grid-cols-6 gap-6">
@@ -81,13 +81,13 @@
             }
         },
         methods:{
-            updateTP() {
+            updateTraining() {
                 let id = this.$parent.props.id;
-                this.$inertia.put('/trainingPlan/' + id, this.form);
-                window.location.href = '/selectTrainingPlans/';
+                this.$inertia.put('/training/' + id, this.form);
+                window.location.href = '/selectTrainings/' + id;
             },
-            getTrainingPlan(){
-                axios.get('/trainingPlan/'+ this.$parent.props.id)
+            getTraining(){
+                axios.get('/training/'+ this.$parent.props.id)
                 .then((res) => {
                     this.form.name = res.data.name
                 }).catch((err) => {
@@ -96,7 +96,7 @@
             },
         },
         created(){
-            this.getTrainingPlan()
+            this.getTraining()
         },
     }
 </script>

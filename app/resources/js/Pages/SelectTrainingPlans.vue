@@ -44,7 +44,8 @@
                                 </td>
                                 </a>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"> 
-                                    <a :href="editTrainingPlanLink(plan.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="edit" /></a>
+                                    <a :href="editTrainingPlanLink(plan.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="edit" /></a> 
+                                    <a :href="delTrainingPlanLink(plan.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="trash-alt" /></a>
                                 </td>
                                 </tr>
                             </tbody>
@@ -97,6 +98,9 @@
             },
             editTrainingPlanLink(id){
                 return "/editTrainingPlan/" + id
+            },
+            delTrainingPlanLink(id){
+                return "";
             }
         },
         created(){

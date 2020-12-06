@@ -14830,6 +14830,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -14870,6 +14871,9 @@ __webpack_require__.r(__webpack_exports__);
         training: this.$parent.props.id
       });
       this.getExercises();
+    },
+    delExerciseLink: function delExerciseLink(id) {
+      return "";
     }
   },
   created: function created() {
@@ -15089,6 +15093,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -15116,6 +15121,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     editTrainingPlanLink: function editTrainingPlanLink(id) {
       return "/editTrainingPlan/" + id;
+    },
+    delTrainingPlanLink: function delTrainingPlanLink(id) {
+      return "";
     }
   },
   created: function created() {
@@ -15141,6 +15149,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
 /* harmony import */ var _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Jetstream/Welcome */ "./resources/js/Jetstream/Welcome.vue");
+//
 //
 //
 //
@@ -15258,6 +15267,9 @@ __webpack_require__.r(__webpack_exports__);
         trainingPlan: this.$parent.props.id
       });
       this.getTrainings();
+    },
+    delTrainingLink: function delTrainingLink(id) {
+      return "";
     }
   },
   created: function created() {
@@ -41893,6 +41905,30 @@ var render = function() {
                                                         )
                                                       ],
                                                       1
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "a",
+                                                      {
+                                                        staticClass:
+                                                          "text-indigo-600 hover:text-indigo-900",
+                                                        attrs: {
+                                                          href: _vm.delExerciseLink(
+                                                            exercise.id
+                                                          )
+                                                        }
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "font-awesome-icon",
+                                                          {
+                                                            attrs: {
+                                                              icon: "trash-alt"
+                                                            }
+                                                          }
+                                                        )
+                                                      ],
+                                                      1
                                                     )
                                                   ]
                                                 )
@@ -42538,6 +42574,27 @@ var render = function() {
                                                       })
                                                     ],
                                                     1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "a",
+                                                    {
+                                                      staticClass:
+                                                        "text-indigo-600 hover:text-indigo-900",
+                                                      attrs: {
+                                                        href: _vm.delTrainingPlanLink(
+                                                          plan.id
+                                                        )
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("font-awesome-icon", {
+                                                        attrs: {
+                                                          icon: "trash-alt"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
                                                   )
                                                 ]
                                               )
@@ -42845,6 +42902,31 @@ var render = function() {
                                                               {
                                                                 attrs: {
                                                                   icon: "edit"
+                                                                }
+                                                              }
+                                                            )
+                                                          ],
+                                                          1
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "a",
+                                                          {
+                                                            staticClass:
+                                                              "text-indigo-600 hover:text-indigo-900",
+                                                            attrs: {
+                                                              href: _vm.delTrainingLink(
+                                                                training.id
+                                                              )
+                                                            }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "font-awesome-icon",
+                                                              {
+                                                                attrs: {
+                                                                  icon:
+                                                                    "trash-alt"
                                                                 }
                                                               }
                                                             )
@@ -58042,6 +58124,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('v-select', vue_select__WEB
 
 
 _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_6__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faEdit"]);
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_6__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faTrashAlt"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('font-awesome-icon', _fortawesome_vue_fontawesome__WEBPACK_IMPORTED_MODULE_8__["FontAwesomeIcon"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(_inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_1__["InertiaApp"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(laravel_jetstream__WEBPACK_IMPORTED_MODULE_2__["InertiaForm"]);

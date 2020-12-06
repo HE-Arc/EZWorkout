@@ -44,7 +44,8 @@
                                 </td>
                                 </a>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <a :href="editTrainingLink(training.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="edit" /></a>
+                                    <a :href="editTrainingLink(training.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="edit" /></a> 
+                                    <a :href="delTrainingLink(training.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="trash-alt" /></a>
                                 </td>
                                 </tr>
                             </tbody>
@@ -116,6 +117,9 @@
             addExisting(){
                 axios.post('/training/' + this.newSelected + '/addToTrainingPlan', {trainingPlan: this.$parent.props.id});
                 this.getTrainings();
+            },
+            delTrainingLink(id){
+                return "";
             }
         },
         created(){

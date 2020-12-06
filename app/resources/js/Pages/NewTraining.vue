@@ -67,7 +67,6 @@
 <script>
     import AppLayout from './../Layouts/AppLayout'
     import Welcome from './../Jetstream/Welcome'
-import Input from '../Jetstream/Input.vue'
 
     export default {
         components: {

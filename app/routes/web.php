@@ -75,6 +75,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return Inertia\Inertia::render('EditTraining', ['id' => $id]);
     })->name('editTraining');
 
+    Route::get('/editExercise/{id}', function ($id) {
+        return Inertia\Inertia::render('EditExercise', ['id' => $id]);
+    })->name('editExercise');
+
 
     Route::get('/newTrainingPlan', function () {
         return Inertia\Inertia::render('NewTrainingPlan');

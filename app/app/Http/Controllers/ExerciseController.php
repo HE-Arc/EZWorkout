@@ -52,7 +52,7 @@ class ExerciseController extends Controller
             'repMin' => 'integer|min:1',
             'repMax' => 'integer|min:1',
             'pauseSerie' => 'integer|min:0',
-            'pauseExercice' => 'integer|min:0',
+            'pauseExercise' => 'integer|min:0',
             'trainig' => 'integer|min:1'
         ]);
         $t = Training::find($data['training']);
@@ -63,7 +63,7 @@ class ExerciseController extends Controller
         $e->repMin = $data['repMin'];
         $e->repMax = $data['repMax'];
         $e->pauseSerie = $data['pauseSerie'];
-        $e->pauseExercice = $data['pauseExercice'];
+        $e->pauseExercise = $data['pauseExercise'];
         $t->exercises()->save($e);
         return response()->json($e);
     }
@@ -104,7 +104,7 @@ class ExerciseController extends Controller
             'repMin' => 'integer|min:1',
             'repMax' => 'integer|min:1',
             'pauseSerie' => 'integer|min:0',
-            'pauseExercice' => 'integer|min:0'
+            'pauseExercise' => 'integer|min:0'
         ]);
         $e = Exercise::find($id);
         $e->name = $data['name'];
@@ -113,7 +113,7 @@ class ExerciseController extends Controller
         $e->repMin = $data['repMin'];
         $e->repMax = $data['repMax'];
         $e->pauseSerie = $data['pauseSerie'];
-        $e->pauseExercice = $data['pauseExercice'];
+        $e->pauseExercise = $data['pauseExercise'];
         $e->save();
         return response()->json($e);
     }

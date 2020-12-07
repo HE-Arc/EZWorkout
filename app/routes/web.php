@@ -68,7 +68,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return Inertia\Inertia::render('SelectExercises', ['id' => $id]);
     })->name('selectExercises');
 
-
     Route::get('/editTrainingPlan/{id}', function ($id) {
         return Inertia\Inertia::render('EditTrainingPlan', ['id' => $id]);
     })->name('editTrainingPlan');
@@ -94,8 +93,14 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return Inertia\Inertia::render('NewExercise', ['idTraining' => $idTraining]);
     })->name('newExercise');
 
+    Route::get('/results/{id}', function ($id) {
+        return Inertia\Inertia::render('Results', ['id' => $id]);
+    })->name('results');
 
     Route::get('/dashboard', function () {
         return Inertia\Inertia::render('Dashboard');
     })->name('dashboard');
+
+
+    
 });

@@ -22,7 +22,19 @@ class TrainingController extends Controller
                 $a[] = $t;
             }
         }
-        return response()->json($a);
+
+        $final  = array();
+        $ids = array();
+
+        foreach ($a as $current) {
+            if ( ! in_array($current->id, $ids)) {
+                $final[] = $current;
+                $ids[] = $current->id;
+            }
+        }
+        
+
+        return response()->json($final);
     }
 
     /**

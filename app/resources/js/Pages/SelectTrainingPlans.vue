@@ -26,12 +26,13 @@
                                     Nom
                                 </th>
                                 <th scope="col" class="px-6 py-3 bg-gray-50">
-                                    <span class="sr-only">Voir / Éditer</span>
+                                    <span class="sr-only">Éditer</span>
                                 </th>
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
                                 <tr v-for="plan in training_plans" :key="plan.id">
+                                <a :href="getTrainingLink(plan.id)">
                                 <td class="px-18 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
                                     <div class="ml-4">
@@ -41,13 +42,21 @@
                                     </div>
                                     </div>
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <a :href="getTrainingLink(plan.id)" class="text-indigo-600 hover:text-indigo-900">Voir</a> 
-                                    <a :href="editTrainingPlanLink(plan.id)" class="text-indigo-600 hover:text-indigo-900">Éditer</a>
+                                </a>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"> 
+                                    <a :href="editTrainingPlanLink(plan.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="edit" /></a> 
+                                    <a @click="delTP(plan.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="trash-alt" /></a>
                                 </td>
                                 </tr>
                             </tbody>
                             </table>
+                            <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
+                                <a href="/newTrainingPlan">
+                                    <button class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150">
+                                        Créer un nouveau plan d'entraînement
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                         </div>
                     </div>
@@ -56,6 +65,7 @@
                 </div>
             </div>
         </div>
+        <v-dialog />
     </app-layout>
     </div>
 </template>
@@ -73,6 +83,7 @@
         data(){
             return{
                 training_plans:[],
+                delId: null,
             }
         },
         methods:{
@@ -89,6 +100,31 @@
             },
             editTrainingPlanLink(id){
                 return "/editTrainingPlan/" + id
+            },
+            delTP(id){
+                this.delId = id;
+                this.$modal.show('dialog', {
+                    title: 'Supprimer un plan d\'entraînement',
+                    text: 'êtes-vous sûr de vouloir supprimer ce plan d\'entraînement?<br>Cette action est définitive.',
+                    buttons: [
+                        {
+                            title: 'Annuler',
+                            handler: () => {
+                                this.delId = null;
+                                this.$modal.hide('dialog');
+                            }
+                        },
+                        {
+                            title: 'Supprimer',
+                            handler: () => {
+                                axios.delete('/trainingPlan/' + this.delId)
+                                this.delId = null;
+                                this.getTrainingPlans();
+                                this.$modal.hide('dialog');
+                            }
+                        }
+                    ]
+                })
             }
         },
         created(){

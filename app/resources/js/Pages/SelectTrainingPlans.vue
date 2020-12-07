@@ -45,7 +45,7 @@
                                 </a>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"> 
                                     <a :href="editTrainingPlanLink(plan.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="edit" /></a> 
-                                    <a :href="delTrainingPlanLink(plan.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="trash-alt" /></a>
+                                    <a @click="delTP(plan.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="trash-alt" /></a>
                                 </td>
                                 </tr>
                             </tbody>
@@ -65,6 +65,7 @@
                 </div>
             </div>
         </div>
+        <v-dialog />
     </app-layout>
     </div>
 </template>
@@ -82,6 +83,7 @@
         data(){
             return{
                 training_plans:[],
+                delId: null,
             }
         },
         methods:{
@@ -99,8 +101,30 @@
             editTrainingPlanLink(id){
                 return "/editTrainingPlan/" + id
             },
-            delTrainingPlanLink(id){
-                return "";
+            delTP(id){
+                this.delId = id;
+                this.$modal.show('dialog', {
+                    title: 'Supprimer un plan d\'entraînement',
+                    text: 'êtes-vous sûr de vouloir supprimer ce plan d\'entraînement?<br>Cette action est définitive.',
+                    buttons: [
+                        {
+                            title: 'Annuler',
+                            handler: () => {
+                                this.delId = null;
+                                this.$modal.hide('dialog');
+                            }
+                        },
+                        {
+                            title: 'Supprimer',
+                            handler: () => {
+                                axios.delete('/trainingPlan/' + this.delId)
+                                this.delId = null;
+                                this.getTrainingPlans();
+                                this.$modal.hide('dialog');
+                            }
+                        }
+                    ]
+                })
             }
         },
         created(){

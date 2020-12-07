@@ -83,7 +83,11 @@
         methods:{
             createTraining() {
                 this.$inertia.post('/training/', this.form);
+                if(this.$parent.props.idTP == 0){
+                //window.location.href = '/selectAllTrainings/';
+                }else{
                 window.location.href = '/selectTrainings/' + this.form.trainingPlan;
+                }
             },
         },
     }

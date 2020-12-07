@@ -108,7 +108,7 @@
                         {
                             title: 'Supprimer',
                             handler: () => {
-                                axios.delete('/training/' + this.delId)
+                                axios.delete('/training/' + this.delId + "/all")
                                 this.delId = null;
                                 this.getTrainings();
                                 this.$modal.hide('dialog');

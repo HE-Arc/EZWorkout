@@ -45,8 +45,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::apiResource('seriesEff', SeriesEffController::class);
     Route::post('training/{id}/addToTrainingPlan', [TrainingController::class, 'attach']);
     Route::post('training/{id}/removeFromTrainingPlan', [TrainingController::class, 'detach']);
+    Route::delete('training/{id}/all', [TrainingController::class, 'detachAll']);
     Route::post('exercise/{id}/addToTraining', [ExerciseController::class, 'attach']);
     Route::post('exercise/{id}/removeFromTraining', [ExerciseController::class, 'detach']);
+    Route::delete('exercise/{id}/all', [ExerciseController::class, 'detachAll']);
 
     Route::get('training/fromTP/{id}', [TrainingController::class, 'getFromTrainingPlan']);
     Route::get('exercise/fromT/{id}', [ExerciseController::class, 'getFromTraining']);
@@ -70,7 +72,11 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     Route::get('/selectAllTrainings', function () {
         return Inertia\Inertia::render('SelectAllTrainings');
-    })->name('selectTrainings');
+    })->name('selectAllTrainings');
+
+    Route::get('/selectAllExercises', function () {
+        return Inertia\Inertia::render('SelectAllExercises');
+    })->name('selectAllExercises');
 
 
     Route::get('/editTrainingPlan/{id}', function ($id) {
@@ -94,9 +100,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return Inertia\Inertia::render('NewTraining', ['idTP' => $idTP]);
     })->name('newTraining');
 
-    Route::get('/newTraining/{idTP}', function ($idTP) {
-        return Inertia\Inertia::render('NewTraining', ['idTP' => $idTP, 'attach' => true]);
-    })->name('newTraining');
+    Route::get('/newExercise/{idTraining}', function ($idTraining) {
+        return Inertia\Inertia::render('NewExercise', ['idTraining' => $idTraining]);
+    })->name('newExercise');
 
 
     Route::get('/results/{id}', function ($id) {

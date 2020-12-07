@@ -27629,7 +27629,7 @@ var render = function() {
                                           "tbody",
                                           {
                                             staticClass:
-                                              "bg-white divide-y divide-gray-200 hover:bg-gray-200"
+                                              "bg-white divide-y divide-gray-200"
                                           },
                                           _vm._l(_vm.training_plans, function(
                                             plan
@@ -27638,6 +27638,8 @@ var render = function() {
                                               "tr",
                                               {
                                                 key: plan.id,
+                                                staticClass:
+                                                  "hover:bg-gray-200",
                                                 on: {
                                                   click: function($event) {
                                                     return _vm.goToTrainingPlanResults(

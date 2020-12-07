@@ -12994,6 +12994,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -36476,32 +36482,19 @@ var render = function() {
       },
       [
         _c("div", { staticClass: "p-6" }, [
-          _c("div", { staticClass: "flex items-center" }, [
-            _c(
-              "svg",
-              {
+          _c(
+            "div",
+            { staticClass: "flex items-center" },
+            [
+              _c("font-awesome-icon", {
                 staticClass: "w-8 h-8 text-gray-400",
-                attrs: {
-                  fill: "none",
-                  stroke: "currentColor",
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round",
-                  "stroke-width": "2",
-                  viewBox: "0 0 24 24"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                  }
-                })
-              ]
-            ),
-            _vm._v(" "),
-            _vm._m(1)
-          ]),
+                attrs: { icon: "ruler-combined" }
+              }),
+              _vm._v(" "),
+              _vm._m(1)
+            ],
+            1
+          ),
           _vm._v(" "),
           _vm._m(2)
         ]),
@@ -36513,107 +36506,58 @@ var render = function() {
               "p-6 border-t border-gray-200 md:border-t-0 md:border-l"
           },
           [
-            _c("div", { staticClass: "flex items-center" }, [
-              _c(
-                "svg",
-                {
+            _c(
+              "div",
+              { staticClass: "flex items-center" },
+              [
+                _c("font-awesome-icon", {
                   staticClass: "w-8 h-8 text-gray-400",
-                  attrs: {
-                    fill: "none",
-                    stroke: "currentColor",
-                    "stroke-linecap": "round",
-                    "stroke-linejoin": "round",
-                    "stroke-width": "2",
-                    viewBox: "0 0 24 24"
-                  }
-                },
-                [
-                  _c("path", {
-                    attrs: {
-                      d:
-                        "M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-                    }
-                  }),
-                  _c("path", {
-                    attrs: { d: "M15 13a3 3 0 11-6 0 3 3 0 016 0z" }
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _vm._m(3)
-            ]),
+                  attrs: { icon: "chart-line" }
+                }),
+                _vm._v(" "),
+                _vm._m(3)
+              ],
+              1
+            ),
             _vm._v(" "),
             _vm._m(4)
           ]
         ),
         _vm._v(" "),
         _c("div", { staticClass: "p-6 border-t border-gray-200" }, [
-          _c("div", { staticClass: "flex items-center" }, [
-            _c(
-              "svg",
-              {
+          _c(
+            "div",
+            { staticClass: "flex items-center" },
+            [
+              _c("font-awesome-icon", {
                 staticClass: "w-8 h-8 text-gray-400",
-                attrs: {
-                  fill: "none",
-                  stroke: "currentColor",
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round",
-                  "stroke-width": "2",
-                  viewBox: "0 0 24 24"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  }
-                })
-              ]
-            ),
-            _vm._v(" "),
-            _vm._m(5)
-          ]),
+                attrs: { icon: "book" }
+              }),
+              _vm._v(" "),
+              _vm._m(5)
+            ],
+            1
+          ),
           _vm._v(" "),
           _vm._m(6)
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "p-6 border-t border-gray-200 md:border-l" }, [
-          _c("div", { staticClass: "flex items-center" }, [
-            _c(
-              "svg",
-              {
+          _c(
+            "div",
+            { staticClass: "flex items-center" },
+            [
+              _c("font-awesome-icon", {
                 staticClass: "w-8 h-8 text-gray-400",
-                attrs: {
-                  fill: "none",
-                  stroke: "currentColor",
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round",
-                  "stroke-width": "2",
-                  viewBox: "0 0 24 24"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                  }
-                })
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "ml-4 text-lg text-gray-600 leading-7 font-semibold"
-              },
-              [_vm._v("Authentication")]
-            )
-          ]),
+                attrs: { icon: "dumbbell" }
+              }),
+              _vm._v(" "),
+              _vm._m(7)
+            ],
+            1
+          ),
           _vm._v(" "),
-          _vm._m(7)
+          _vm._m(8)
         ])
       ]
     )
@@ -36682,7 +36626,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "ml-12" }, [
+    return _c("div", { staticClass: "ml-8" }, [
       _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
         _vm._v(
           "\n                    Cette section vous permet de gèrer vos plan d'entraînement, vous pourrez les créer, les modifier et y ajouter des entraîenements et des exercices.\n                "
@@ -36708,7 +36652,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "ml-12" }, [
+    return _c("div", { staticClass: "ml-8" }, [
       _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
         _vm._v(
           "\n                    Vous pourrez içi visualiser les résultats de vos précédents entraînements.\n                "
@@ -36724,8 +36668,8 @@ var staticRenderFns = [
       "div",
       { staticClass: "ml-4 text-lg text-gray-600 leading-7 font-semibold" },
       [
-        _c("a", { attrs: { href: "https://tailwindcss.com/" } }, [
-          _vm._v("Tailwind")
+        _c("a", { attrs: { href: "/selectAllTrainings" } }, [
+          _vm._v("Bibliothèque des entraînements")
         ])
       ]
     )
@@ -36734,10 +36678,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "ml-12" }, [
+    return _c("div", { staticClass: "ml-8" }, [
       _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
         _vm._v(
-          "\n                    Laravel Jetstream is built with Tailwind, an amazing utility first CSS framework that doesn't get in your way. You'll be amazed how easily you can build and maintain fresh, modern designs with this wonderful framework at your fingertips.\n                "
+          "\n                    Içi, vous pourrez parcourire tous vos entrainements.\n                "
         )
       ])
     ])
@@ -36746,10 +36690,24 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "ml-12" }, [
+    return _c(
+      "div",
+      { staticClass: "ml-4 text-lg text-gray-600 leading-7 font-semibold" },
+      [
+        _c("a", { attrs: { href: "/selectAllExercise" } }, [
+          _vm._v("Bibliothèque des exercices")
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "ml-8" }, [
       _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
         _vm._v(
-          "\n                    Authentication and registration views are included with Laravel Jetstream, as well as support for user email verification and resetting forgotten passwords. So, you're free to get started what matters most: building your application.\n                "
+          "\n                    Cette dernière section vous permet de parcourir tous vos exercices.\n                "
         )
       ])
     ])
@@ -36827,6 +36785,36 @@ var render = function() {
                     [
                       _vm._v(
                         "\n                            Plans d'entraînement\n                        "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "jet-nav-link",
+                    {
+                      attrs: {
+                        href: "/selectAllTrainings",
+                        active: _vm.$page.currentRouteName == "Alltrainings"
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\n                            Entraînements\n                        "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "jet-nav-link",
+                    {
+                      attrs: {
+                        href: "/selectAllExercises",
+                        active: _vm.$page.currentRouteName == "allExercises"
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\n                            Exercices\n                        "
                       )
                     ]
                   ),
@@ -58230,6 +58218,10 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('v-select', vue_select__WEB
 
 _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_6__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faEdit"]);
 _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_6__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faTrashAlt"]);
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_6__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faRulerCombined"]);
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_6__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faChartLine"]);
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_6__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faBook"]);
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_6__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faDumbbell"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('font-awesome-icon', _fortawesome_vue_fontawesome__WEBPACK_IMPORTED_MODULE_8__["FontAwesomeIcon"]); //vue-modal
 
 

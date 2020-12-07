@@ -20,6 +20,12 @@
                             <jet-nav-link href="/selectTrainingPlans" :active="$page.currentRouteName == 'trainingPlans'">
                                 Plans d'entraînement
                             </jet-nav-link>
+                            <jet-nav-link href="/selectAllTrainings" :active="$page.currentRouteName == 'Alltrainings'">
+                                Entraînements
+                            </jet-nav-link>
+                            <jet-nav-link href="/selectAllExercises" :active="$page.currentRouteName == 'allExercises'">
+                                Exercices
+                            </jet-nav-link>
                             <jet-nav-link href="/selectresults" :active="$page.currentRouteName == 'results'">
                                 Results
                             </jet-nav-link>

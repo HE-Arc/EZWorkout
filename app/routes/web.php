@@ -51,6 +51,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('training/fromTP/{id}', [TrainingController::class, 'getFromTrainingPlan']);
     Route::get('exercise/fromT/{id}', [ExerciseController::class, 'getFromTraining']);
 
+    Route::get('trainingPlan/{id}/results', [TrainingPlanController::class, 'getAllInTrainingPlan']);
+
     //vue
     Route::get('/selectresults', function () {
         return Inertia\Inertia::render('SelectResults');

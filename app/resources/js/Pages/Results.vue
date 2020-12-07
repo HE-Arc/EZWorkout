@@ -3,7 +3,7 @@
         <app-layout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Results
+                Results ?
             </h2>
         </template>
     </app-layout>
@@ -12,12 +12,10 @@
 
 <script>
     import AppLayout from './../Layouts/AppLayout'
-    import Welcome from './../Jetstream/Welcome'
 
     export default {
         components: {
             AppLayout,
-            Welcome,
         },
 
         data(){
@@ -31,7 +29,7 @@
         },
         methods:{
             getTrainingPlans(){
-                axios.get('/trainingPlan')
+                axios.get("/trainingPlan/"+this.$parent.props.id+"/results")
                 .then((res) => {
                     this.training_plans = res.data
                 }).catch((err) => {

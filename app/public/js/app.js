@@ -14729,7 +14729,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
-/* harmony import */ var _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Jetstream/Welcome */ "./resources/js/Jetstream/Welcome.vue");
 //
 //
 //
@@ -14742,12 +14741,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Welcome: _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__["default"]
+    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {
@@ -14761,7 +14758,7 @@ __webpack_require__.r(__webpack_exports__);
     getTrainingPlans: function getTrainingPlans() {
       var _this = this;
 
-      axios.get('/trainingPlan').then(function (res) {
+      axios.get("/trainingPlan/" + this.$parent.props.id + "/results").then(function (res) {
         _this.training_plans = res.data;
       })["catch"](function (err) {
         console.log(err);
@@ -41701,7 +41698,7 @@ var render = function() {
                     staticClass:
                       "font-semibold text-xl text-gray-800 leading-tight"
                   },
-                  [_vm._v("\n            Results\n        ")]
+                  [_vm._v("\n            Results ?\n        ")]
                 )
               ]
             },

@@ -56,7 +56,7 @@
             <div class="p-6 border-t border-gray-200 md:border-l">
                 <div class="flex items-center">
                     <font-awesome-icon icon="dumbbell" class="w-8 h-8 text-gray-400"/>
-                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="/selectAllExercise">Bibliothèque des exercices</a></div>
+                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="/selectAllExercises">Bibliothèque des exercices</a></div>
                 </div>
 
                 <div class="ml-8">

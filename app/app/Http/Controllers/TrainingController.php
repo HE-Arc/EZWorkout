@@ -96,6 +96,15 @@ class TrainingController extends Controller
     }
 
     /**
+     * detach a training from all trainingPlans
+     */
+    public function detachAll($id)
+    {
+        $t = Training::find($id);
+        $t->training_plans()->detach();
+    }
+
+    /**
      * Display the specified resource.
      *
      * @param  int  $id

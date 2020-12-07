@@ -103,6 +103,14 @@ class ExerciseController extends Controller
     }
 
     /**
+     * detach exercise from all training
+     */
+    public function detachAll($id){
+        $p = Exercise::find($id);
+        $p->trainings()->detach();
+    }
+
+    /**
      * Display the specified resource.
      *
      * @param  int  $id

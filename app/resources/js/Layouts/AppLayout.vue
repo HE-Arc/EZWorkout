@@ -15,10 +15,16 @@
                         <!-- Navigation Links -->
                         <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                             <jet-nav-link href="/dashboard" :active="$page.currentRouteName == 'dashboard'">
-                                EZWorkout
+                                Accueil
                             </jet-nav-link>
                             <jet-nav-link href="/selectTrainingPlans" :active="$page.currentRouteName == 'trainingPlans'">
                                 Plans d'entraînement
+                            </jet-nav-link>
+                            <jet-nav-link href="/selectAllTrainings" :active="$page.currentRouteName == 'Alltrainings'">
+                                Entraînements
+                            </jet-nav-link>
+                            <jet-nav-link href="/selectAllExercises" :active="$page.currentRouteName == 'allExercises'">
+                                Exercices
                             </jet-nav-link>
                             <jet-nav-link href="/selectresults" :active="$page.currentRouteName == 'results'">
                                 Results

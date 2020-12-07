@@ -45,7 +45,7 @@
                                 </a>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                     <a :href="editTrainingLink(training.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="edit" /></a> 
-                                    <a :href="delTrainingLink(training.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="trash-alt" /></a>
+                                    <a @click="delTraining(training.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="trash-alt" /></a>
                                 </td>
                                 </tr>
                             </tbody>
@@ -69,6 +69,7 @@
                 </div>
             </div>
         </div>
+        <v-dialog />
     </app-layout>
     </div>
 </template>
@@ -88,6 +89,7 @@
                 trainings:[],
                 AllTrainings: [],
                 newSelected: null,
+                delId: null
             }
         },
         methods:{
@@ -118,8 +120,30 @@
                 axios.post('/training/' + this.newSelected + '/addToTrainingPlan', {trainingPlan: this.$parent.props.id});
                 this.getTrainings();
             },
-            delTrainingLink(id){
-                return "";
+            delTraining(id){
+                this.delId = id;
+                this.$modal.show('dialog', {
+                    title: 'Supprimer un entraînement',
+                    text: 'êtes-vous sûr de vouloir supprimer cet entraînement?<br>Cette action est définitive.',
+                    buttons: [
+                        {
+                            title: 'Annuler',
+                            handler: () => {
+                                this.delId = null;
+                                this.$modal.hide('dialog');
+                            }
+                        },
+                        {
+                            title: 'Supprimer',
+                            handler: () => {
+                                axios.post('/training/' + this.delId + '/removeFromTrainingPlan',  {trainingPlan: this.$parent.props.id})
+                                this.delId = null;
+                                this.getTrainings();
+                                this.$modal.hide('dialog');
+                            }
+                        }
+                    ]
+                })
             }
         },
         created(){

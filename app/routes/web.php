@@ -44,6 +44,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::apiResource('exerciseEff', ExerciseEffController::class);
     Route::apiResource('seriesEff', SeriesEffController::class);
     Route::post('training/{id}/addToTrainingPlan', [TrainingController::class, 'attach']);
+    Route::post('training/{id}/removeFromTrainingPlan', [TrainingController::class, 'detach']);
     Route::post('exercise/{id}/addToTraining', [ExerciseController::class, 'attach']);
 
     Route::get('training/fromTP/{id}', [TrainingController::class, 'getFromTrainingPlan']);

@@ -66,12 +66,26 @@ class TrainingController extends Controller
         return response()->json($t);
     }
 
+    /**
+     * attach a training to a trainingPlan
+     */
     public function attach(Request $request, $id){
         $data = $request->validate([
             'trainingPlan' => 'integer|min:1'
         ]);
         $p = TrainingPlan::find($data['trainingPlan']);
         $p->trainings()->attach($id);
+    }
+
+    /**
+     * detach a training from a trainingPlan
+     */
+    public function detach(Request $request, $id){
+        $data = $request->validate([
+            'trainingPlan' => 'integer|min:1'
+        ]);
+        $p = TrainingPlan::find($data['trainingPlan']);
+        $p->trainings()->detach($id);
     }
 
     /**

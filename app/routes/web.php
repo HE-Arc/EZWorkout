@@ -46,6 +46,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::post('training/{id}/addToTrainingPlan', [TrainingController::class, 'attach']);
     Route::post('training/{id}/removeFromTrainingPlan', [TrainingController::class, 'detach']);
     Route::post('exercise/{id}/addToTraining', [ExerciseController::class, 'attach']);
+    Route::post('exercise/{id}/removeFromTraining', [ExerciseController::class, 'detach']);
 
     Route::get('training/fromTP/{id}', [TrainingController::class, 'getFromTrainingPlan']);
     Route::get('exercise/fromT/{id}', [ExerciseController::class, 'getFromTraining']);

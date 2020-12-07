@@ -80,13 +80,26 @@ class ExerciseController extends Controller
         return response()->json($e);
     }
 
-
+    /**
+     * attach exercise to training
+     */
     public function attach(Request $request, $id){
         $data = $request->validate([
             'training' => 'integer|min:1'
         ]);
         $p = Training::find($data['training']);
         $p->exercises()->attach($id);
+    }
+
+    /**
+     * detach exercise from training
+     */
+    public function detach(Request $request, $id){
+        $data = $request->validate([
+            'training' => 'integer|min:1'
+        ]);
+        $p = Training::find($data['training']);
+        $p->exercises()->detach($id);
     }
 
     /**

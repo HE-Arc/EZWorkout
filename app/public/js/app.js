@@ -14831,6 +14831,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -14842,7 +14843,8 @@ __webpack_require__.r(__webpack_exports__);
     return {
       exercises: [],
       AllExercises: [],
-      newSelected: null
+      newSelected: null,
+      delId: null
     };
   },
   methods: {
@@ -14872,8 +14874,34 @@ __webpack_require__.r(__webpack_exports__);
       });
       this.getExercises();
     },
-    delExerciseLink: function delExerciseLink(id) {
-      return "";
+    delExercise: function delExercise(id) {
+      var _this2 = this;
+
+      this.delId = id;
+      this.$modal.show('dialog', {
+        title: 'Supprimer un exercice',
+        text: 'êtes-vous sûr de vouloir supprimer cet exercice?<br>Cette action est définitive.',
+        buttons: [{
+          title: 'Annuler',
+          handler: function handler() {
+            _this2.delId = null;
+
+            _this2.$modal.hide('dialog');
+          }
+        }, {
+          title: 'Supprimer',
+          handler: function handler() {
+            axios.post('/exercise/' + _this2.delId + '/removeFromTraining', {
+              training: _this2.$parent.props.id
+            });
+            _this2.delId = null;
+
+            _this2.getExercises();
+
+            _this2.$modal.hide('dialog');
+          }
+        }]
+      });
     }
   },
   created: function created() {
@@ -41978,10 +42006,14 @@ var render = function() {
                                                       {
                                                         staticClass:
                                                           "text-indigo-600 hover:text-indigo-900",
-                                                        attrs: {
-                                                          href: _vm.delExerciseLink(
-                                                            exercise.id
-                                                          )
+                                                        on: {
+                                                          click: function(
+                                                            $event
+                                                          ) {
+                                                            return _vm.delExercise(
+                                                              exercise.id
+                                                            )
+                                                          }
                                                         }
                                                       },
                                                       [
@@ -42079,8 +42111,11 @@ var render = function() {
                 ]
               )
             ])
-          ])
-        ]
+          ]),
+          _vm._v(" "),
+          _c("v-dialog")
+        ],
+        1
       )
     ],
     1

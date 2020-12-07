@@ -68,6 +68,11 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return Inertia\Inertia::render('SelectExercises', ['id' => $id]);
     })->name('selectExercises');
 
+    Route::get('/selectAllTrainings', function () {
+        return Inertia\Inertia::render('SelectAllTrainings');
+    })->name('selectTrainings');
+
+
     Route::get('/editTrainingPlan/{id}', function ($id) {
         return Inertia\Inertia::render('EditTrainingPlan', ['id' => $id]);
     })->name('editTrainingPlan');
@@ -89,9 +94,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return Inertia\Inertia::render('NewTraining', ['idTP' => $idTP]);
     })->name('newTraining');
 
-    Route::get('/newExercise/{idTraining}', function ($idTraining) {
-        return Inertia\Inertia::render('NewExercise', ['idTraining' => $idTraining]);
-    })->name('newExercise');
+    Route::get('/newTraining/{idTP}', function ($idTP) {
+        return Inertia\Inertia::render('NewTraining', ['idTP' => $idTP, 'attach' => true]);
+    })->name('newTraining');
+
 
     Route::get('/results/{id}', function ($id) {
         return Inertia\Inertia::render('Results', ['id' => $id]);

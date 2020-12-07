@@ -22,7 +22,19 @@ class TrainingController extends Controller
                 $a[] = $t;
             }
         }
-        return response()->json($a);
+
+        $final  = array();
+        $ids = array();
+
+        foreach ($a as $current) {
+            if ( ! in_array($current->id, $ids)) {
+                $final[] = $current;
+                $ids[] = $current->id;
+            }
+        }
+        
+
+        return response()->json($final);
     }
 
     /**
@@ -45,7 +57,7 @@ class TrainingController extends Controller
     {
         $data = $request->validate([
             'name' => 'string',
-            'trainigPlan' => 'integer|min:1'
+            'trainingPlan' => 'integer|min:1'
         ]);
         $p = TrainingPlan::find($data['trainingPlan']);
         $t = new Training();
@@ -54,12 +66,26 @@ class TrainingController extends Controller
         return response()->json($t);
     }
 
+    /**
+     * attach a training to a trainingPlan
+     */
     public function attach(Request $request, $id){
         $data = $request->validate([
             'trainingPlan' => 'integer|min:1'
         ]);
         $p = TrainingPlan::find($data['trainingPlan']);
         $p->trainings()->attach($id);
+    }
+
+    /**
+     * detach a training from a trainingPlan
+     */
+    public function detach(Request $request, $id){
+        $data = $request->validate([
+            'trainingPlan' => 'integer|min:1'
+        ]);
+        $p = TrainingPlan::find($data['trainingPlan']);
+        $p->trainings()->detach($id);
     }
 
     /**

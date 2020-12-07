@@ -44,7 +44,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::apiResource('exerciseEff', ExerciseEffController::class);
     Route::apiResource('seriesEff', SeriesEffController::class);
     Route::post('training/{id}/addToTrainingPlan', [TrainingController::class, 'attach']);
+    Route::post('training/{id}/removeFromTrainingPlan', [TrainingController::class, 'detach']);
     Route::post('exercise/{id}/addToTraining', [ExerciseController::class, 'attach']);
+    Route::post('exercise/{id}/removeFromTraining', [ExerciseController::class, 'detach']);
 
     Route::get('training/fromTP/{id}', [TrainingController::class, 'getFromTrainingPlan']);
     Route::get('exercise/fromT/{id}', [ExerciseController::class, 'getFromTraining']);
@@ -65,6 +67,31 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/selectExercises/{id}', function ($id) {
         return Inertia\Inertia::render('SelectExercises', ['id' => $id]);
     })->name('selectExercises');
+
+    Route::get('/editTrainingPlan/{id}', function ($id) {
+        return Inertia\Inertia::render('EditTrainingPlan', ['id' => $id]);
+    })->name('editTrainingPlan');
+
+    Route::get('/editTraining/{id}', function ($id) {
+        return Inertia\Inertia::render('EditTraining', ['id' => $id]);
+    })->name('editTraining');
+
+    Route::get('/editExercise/{id}', function ($id) {
+        return Inertia\Inertia::render('EditExercise', ['id' => $id]);
+    })->name('editExercise');
+
+
+    Route::get('/newTrainingPlan', function () {
+        return Inertia\Inertia::render('NewTrainingPlan');
+    })->name('newTrainingPlan');
+
+    Route::get('/newTraining/{idTP}', function ($idTP) {
+        return Inertia\Inertia::render('NewTraining', ['idTP' => $idTP]);
+    })->name('newTraining');
+
+    Route::get('/newExercise/{idTraining}', function ($idTraining) {
+        return Inertia\Inertia::render('NewExercise', ['idTraining' => $idTraining]);
+    })->name('newExercise');
 
     Route::get('/results/{id}', function ($id) {
         return Inertia\Inertia::render('Results', ['id' => $id]);

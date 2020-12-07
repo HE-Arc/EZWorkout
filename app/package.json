@@ -25,5 +25,12 @@
         "vue": "^2.5.17",
         "vue-template-compiler": "^2.6.10"
     },
-    "name": "app"
+    "name": "app",
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.32",
+        "@fortawesome/free-solid-svg-icons": "^5.15.1",
+        "@fortawesome/vue-fontawesome": "^2.0.0",
+        "vue-js-modal": "^2.0.0-rc.6",
+        "vue-select": "^3.10.8"
+    }
 }

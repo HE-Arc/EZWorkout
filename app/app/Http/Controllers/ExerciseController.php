@@ -24,7 +24,29 @@ class ExerciseController extends Controller
                 }
             }
         }
-        return response()->json($a);
+
+        $final  = array();
+        $ids = array();
+
+        foreach ($a as $current) {
+            if ( ! in_array($current->id, $ids)) {
+                $final[] = $current;
+                $ids[] = $current->id;
+            }
+        }
+        
+
+        return response()->json($final);
+    }
+
+    /**
+     * Return exercises that are part of a training
+     * 
+     * @param int $id
+     * @return Response
+     */
+    public function getFromTraining($id){
+        return response()->json(Training::find($id)->exercises()->get());
     }
 
     /**
@@ -42,8 +64,8 @@ class ExerciseController extends Controller
             'repMin' => 'integer|min:1',
             'repMax' => 'integer|min:1',
             'pauseSerie' => 'integer|min:0',
-            'pauseExercice' => 'integer|min:0',
-            'trainig' => 'integer|min:1'
+            'pauseExercise' => 'integer|min:0',
+            'training' => 'integer|min:1'
         ]);
         $t = Training::find($data['training']);
         $e = new Exercise();
@@ -53,18 +75,39 @@ class ExerciseController extends Controller
         $e->repMin = $data['repMin'];
         $e->repMax = $data['repMax'];
         $e->pauseSerie = $data['pauseSerie'];
-        $e->pauseExercice = $data['pauseExercice'];
+        $e->pauseExercise = $data['pauseExercise'];
         $t->exercises()->save($e);
         return response()->json($e);
     }
 
-
+    /**
+     * attach exercise to training
+     */
     public function attach(Request $request, $id){
         $data = $request->validate([
             'training' => 'integer|min:1'
         ]);
         $p = Training::find($data['training']);
         $p->exercises()->attach($id);
+    }
+
+    /**
+     * detach exercise from training
+     */
+    public function detach(Request $request, $id){
+        $data = $request->validate([
+            'training' => 'integer|min:1'
+        ]);
+        $p = Training::find($data['training']);
+        $p->exercises()->detach($id);
+    }
+
+    /**
+     * detach exercise from all training
+     */
+    public function detachAll($id){
+        $p = Exercise::find($id);
+        $p->trainings()->detach();
     }
 
     /**
@@ -94,7 +137,7 @@ class ExerciseController extends Controller
             'repMin' => 'integer|min:1',
             'repMax' => 'integer|min:1',
             'pauseSerie' => 'integer|min:0',
-            'pauseExercice' => 'integer|min:0'
+            'pauseExercise' => 'integer|min:0'
         ]);
         $e = Exercise::find($id);
         $e->name = $data['name'];
@@ -103,7 +146,7 @@ class ExerciseController extends Controller
         $e->repMin = $data['repMin'];
         $e->repMax = $data['repMax'];
         $e->pauseSerie = $data['pauseSerie'];
-        $e->pauseExercice = $data['pauseExercice'];
+        $e->pauseExercise = $data['pauseExercise'];
         $e->save();
         return response()->json($e);
     }

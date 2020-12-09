@@ -58,7 +58,7 @@
                                 </a>
                                 <v-select class=" px-2 py-2" style="min-width: 500px" label="name" :options="AllTrainings" :reduce="tr => tr.id" v-model="newSelected" />
                                 <button @click="addExisting" :disabled="btnDisabled" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150">
-                                        Ajouter un entraînement exsistant
+                                        Ajouter un entraînement existant
                                 </button>
                             </div>
                         </div>
@@ -122,7 +122,7 @@
                 this.delId = id;
                 this.$modal.show('dialog', {
                     title: 'Supprimer un entraînement',
-                    text: 'êtes-vous sûr de vouloir supprimer cet entraînement?<br>Cette action est définitive.',
+                    text: 'Êtes-vous sûr de vouloir supprimer cet entraînement?<br>Cette action est définitive.',
                     buttons: [
                         {
                             title: 'Annuler',

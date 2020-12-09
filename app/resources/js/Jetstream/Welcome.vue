@@ -8,11 +8,11 @@
             <div class="mt-6 text-gray-500">
                             EZWorkout vous permet de planifier facilement vos entraînements et de voir vos résultats en un coup d'oeil.
                             <br><br>
-                            Pour suivre vos entraînement, téléchargez notre application android.
+                            Pour suivre vos entraînements, téléchargez notre application android.
                             <a href="https://play.google.com/apps/internaltest/4698965301354935484"><img width="300em" src="https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png" alt="badge playsotre"></a>
                             <br>
-                            Pour vous connecter à l'application android, vous pouvez afficher le qrcode à l'aide du lien ci-dessous ou dans le menu de votre profile.
-                            <br><a class="text-blue-500" href="user/api-tokens">Afficher le qrcode</a>
+                            Pour vous connecter à l'application android, vous pouvez afficher le QRcode à l'aide du lien ci-dessous ou dans le menu de votre profil.
+                            <br><a class="text-blue-500" href="user/api-tokens">Afficher le QRcode</a>
             </div>
         </div>
 
@@ -25,7 +25,7 @@
 
                 <div class="ml-8">
                     <div class="mt-2 text-sm text-gray-500">
-                        Cette section vous permet de gèrer vos plan d'entraînement, vous pourrez les créer, les modifier et y ajouter des entraîenements et des exercices.
+                        Cette section vous permet de gérer vos plans d'entraînement, vous pourrez les créer, les modifier et y ajouter des entraînements et des exercices.
                     </div>
                 </div>
             </div>
@@ -38,7 +38,7 @@
 
                 <div class="ml-8">
                     <div class="mt-2 text-sm text-gray-500">
-                        Vous pourrez içi visualiser les résultats de vos précédents entraînements.
+                        Vous pourrez ici visualiser les résultats de vos entraînements précédents.
                     </div>
                 </div>
             </div>
@@ -51,7 +51,7 @@
 
                 <div class="ml-8">
                     <div class="mt-2 text-sm text-gray-500">
-                        Içi, vous pourrez parcourire tous vos entrainements.
+                        Ici, vous pourrez parcourir tous vos entraînements.
                     </div>
                 </div>
             </div>

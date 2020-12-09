@@ -27,7 +27,7 @@
                                 Exercices
                             </jet-nav-link>
                             <jet-nav-link href="/selectresults" :active="$page.currentRouteName == 'selectresults'">
-                                Results
+                                Resultats
                             </jet-nav-link>
                         </div>
                     </div>
@@ -59,7 +59,7 @@
                                     </div>
 
                                     <jet-dropdown-link href="/user/profile">
-                                        Profile
+                                        Profil
                                     </jet-dropdown-link>
 
                                     <jet-dropdown-link href="/user/api-tokens" v-if="$page.jetstream.hasApiFeatures">

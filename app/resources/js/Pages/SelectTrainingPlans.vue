@@ -103,7 +103,7 @@
                 this.delId = id;
                 this.$modal.show('dialog', {
                     title: 'Supprimer un plan d\'entraînement',
-                    text: 'êtes-vous sûr de vouloir supprimer ce plan d\'entraînement?<br>Cette action est définitive.',
+                    text: 'Êtes-vous sûr de vouloir supprimer ce plan d\'entraînement?<br>Cette action est définitive.',
                     buttons: [
                         {
                             title: 'Annuler',

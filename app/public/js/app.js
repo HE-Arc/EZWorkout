@@ -14883,7 +14883,7 @@ __webpack_require__.r(__webpack_exports__);
       this.delId = id;
       this.$modal.show('dialog', {
         title: 'Supprimer un exercice',
-        text: 'êtes-vous sûr de vouloir supprimer cet exercice?<br>Cette action est définitive.',
+        text: 'Êtes-vous sûr de vouloir supprimer cet exercice?<br>Cette action est définitive.',
         buttons: [{
           title: 'Annuler',
           handler: function handler() {
@@ -15028,7 +15028,7 @@ __webpack_require__.r(__webpack_exports__);
       this.delId = id;
       this.$modal.show('dialog', {
         title: 'Supprimer un entraînement',
-        text: 'êtes-vous sûr de vouloir supprimer cet entraînement?<br>Cette action est définitive.',
+        text: 'Êtes-vous sûr de vouloir supprimer cet entraînement?<br>Cette action est définitive.',
         buttons: [{
           title: 'Annuler',
           handler: function handler() {
@@ -15220,7 +15220,7 @@ __webpack_require__.r(__webpack_exports__);
       this.delId = id;
       this.$modal.show('dialog', {
         title: 'Supprimer un exercice',
-        text: 'êtes-vous sûr de vouloir supprimer cet exercice?<br>Cette action est définitive.',
+        text: 'Êtes-vous sûr de vouloir supprimer cet exercice?<br>Cette action est définitive.',
         buttons: [{
           title: 'Annuler',
           handler: function handler() {
@@ -15477,7 +15477,7 @@ __webpack_require__.r(__webpack_exports__);
       this.delId = id;
       this.$modal.show('dialog', {
         title: 'Supprimer un plan d\'entraînement',
-        text: 'êtes-vous sûr de vouloir supprimer ce plan d\'entraînement?<br>Cette action est définitive.',
+        text: 'Êtes-vous sûr de vouloir supprimer ce plan d\'entraînement?<br>Cette action est définitive.',
         buttons: [{
           title: 'Annuler',
           handler: function handler() {
@@ -15646,7 +15646,7 @@ __webpack_require__.r(__webpack_exports__);
       this.delId = id;
       this.$modal.show('dialog', {
         title: 'Supprimer un entraînement',
-        text: 'êtes-vous sûr de vouloir supprimer cet entraînement?<br>Cette action est définitive.',
+        text: 'Êtes-vous sûr de vouloir supprimer cet entraînement?<br>Cette action est définitive.',
         buttons: [{
           title: 'Annuler',
           handler: function handler() {
@@ -36896,7 +36896,7 @@ var staticRenderFns = [
           _c("br"),
           _c("br"),
           _vm._v(
-            "\n                        Pour suivre vos entraînement, téléchargez notre application android.\n                        "
+            "\n                        Pour suivre vos entraînements, téléchargez notre application android.\n                        "
           ),
           _c(
             "a",
@@ -36920,7 +36920,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("br"),
           _vm._v(
-            "\n                        Pour vous connecter à l'application android, vous pouvez afficher le qrcode à l'aide du lien ci-dessous ou dans le menu de votre profile.\n                        "
+            "\n                        Pour vous connecter à l'application android, vous pouvez afficher le QRcode à l'aide du lien ci-dessous ou dans le menu de votre profil.\n                        "
           ),
           _c("br"),
           _c(
@@ -36929,7 +36929,7 @@ var staticRenderFns = [
               staticClass: "text-blue-500",
               attrs: { href: "user/api-tokens" }
             },
-            [_vm._v("Afficher le qrcode")]
+            [_vm._v("Afficher le QRcode")]
           )
         ])
       ]
@@ -36956,7 +36956,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "ml-8" }, [
       _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
         _vm._v(
-          "\n                    Cette section vous permet de gèrer vos plan d'entraînement, vous pourrez les créer, les modifier et y ajouter des entraîenements et des exercices.\n                "
+          "\n                    Cette section vous permet de gérer vos plans d'entraînement, vous pourrez les créer, les modifier et y ajouter des entraînements et des exercices.\n                "
         )
       ])
     ])
@@ -36982,7 +36982,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "ml-8" }, [
       _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
         _vm._v(
-          "\n                    Vous pourrez içi visualiser les résultats de vos précédents entraînements.\n                "
+          "\n                    Vous pourrez ici visualiser les résultats de vos entraînements précédents.\n                "
         )
       ])
     ])
@@ -37008,7 +37008,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "ml-8" }, [
       _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
         _vm._v(
-          "\n                    Içi, vous pourrez parcourire tous vos entrainements.\n                "
+          "\n                    Ici, vous pourrez parcourir tous vos entraînements.\n                "
         )
       ])
     ])
@@ -37159,7 +37159,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                            Results\n                        "
+                        "\n                            Resultats\n                        "
                       )
                     ]
                   )
@@ -37263,7 +37263,7 @@ var render = function() {
                                 { attrs: { href: "/user/profile" } },
                                 [
                                   _vm._v(
-                                    "\n                                    Profile\n                                "
+                                    "\n                                    Profil\n                                "
                                   )
                                 ]
                               ),
@@ -37810,7 +37810,7 @@ var render = function() {
                                                   },
                                                   [
                                                     _vm._v(
-                                                      "\n                                        Changer le nom de votre entraînement\n                                    "
+                                                      "\n                                        Modifier votre exercice\n                                    "
                                                     )
                                                   ]
                                                 ),
@@ -38148,7 +38148,7 @@ var render = function() {
                                                                   [
                                                                     _c("span", [
                                                                       _vm._v(
-                                                                        "Nombre de répetitions minimales"
+                                                                        "Nombre de répétitions minimales"
                                                                       )
                                                                     ])
                                                                   ]
@@ -38234,7 +38234,7 @@ var render = function() {
                                                                   [
                                                                     _c("span", [
                                                                       _vm._v(
-                                                                        "Nombre de répetitions maximales"
+                                                                        "Nombre de répétitions maximales"
                                                                       )
                                                                     ])
                                                                   ]
@@ -38652,7 +38652,7 @@ var render = function() {
                                                   },
                                                   [
                                                     _vm._v(
-                                                      "\n                                        Choisissez un nom reconnaissable\n                                    "
+                                                      "\n                                        Choisissez un nom  facilement identifiable\n                                    "
                                                     )
                                                   ]
                                                 )
@@ -39632,7 +39632,7 @@ var render = function() {
                                                                   [
                                                                     _c("span", [
                                                                       _vm._v(
-                                                                        "Nombre de répetitions minimales"
+                                                                        "Nombre de répétitions minimales"
                                                                       )
                                                                     ])
                                                                   ]
@@ -39718,7 +39718,7 @@ var render = function() {
                                                                   [
                                                                     _c("span", [
                                                                       _vm._v(
-                                                                        "Nombre de répetitions maximales"
+                                                                        "Nombre de répétitions maximales"
                                                                       )
                                                                     ])
                                                                   ]
@@ -40480,7 +40480,7 @@ var render = function() {
                                                   },
                                                   [
                                                     _vm._v(
-                                                      "\n                                        Choisissez un nom reconnaissable\n                                    "
+                                                      "\n                                        Choisissez un nom facilement identifiable\n                                    "
                                                     )
                                                   ]
                                                 )
@@ -40693,7 +40693,7 @@ var render = function() {
       {
         key: "title",
         fn: function() {
-          return [_vm._v("\n        Supression du compte\n    ")]
+          return [_vm._v("\n        Suppression du compte\n    ")]
         },
         proxy: true
       },
@@ -40701,7 +40701,7 @@ var render = function() {
         key: "description",
         fn: function() {
           return [
-            _vm._v("\n        supprimer définitivement votre compte.\n    ")
+            _vm._v("\n        Supprimer définitivement votre compte.\n    ")
           ]
         },
         proxy: true
@@ -40712,7 +40712,7 @@ var render = function() {
           return [
             _c("div", { staticClass: "max-w-xl text-sm text-gray-600" }, [
               _vm._v(
-                "\n            Une fois votre compte supprimé, vos données seront définitivement suprimmées.\n        "
+                "\n            Une fois votre compte supprimé, vos données seront définitivement effacées.\n        "
               )
             ]),
             _vm._v(" "),
@@ -40763,7 +40763,7 @@ var render = function() {
                   fn: function() {
                     return [
                       _vm._v(
-                        "\n                Etes-vous sûr de vouloir supprimer votre compte? Une fois votre compte supprimé, vos données seront définitivement suprimmées. Veuillez entrer votre mot de passe pour confirmer la supression définitive de votre compte.\n\n                "
+                        "\n                Etes-vous sûr de vouloir supprimer votre compte? Une fois votre compte supprimé, vos données seront définitivement effacées. Veuillez entrer votre mot de passe pour confirmer la suppression définitive de votre compte.\n\n                "
                       ),
                       _c(
                         "div",
@@ -40774,7 +40774,7 @@ var render = function() {
                             staticClass: "mt-1 block w-3/4",
                             attrs: {
                               type: "password",
-                              placeholder: "Password"
+                              placeholder: "Mot de passe"
                             },
                             nativeOn: {
                               keyup: function($event) {
@@ -40847,7 +40847,7 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                    Suprimmer mon compte\n                "
+                            "\n                    Supprimer mon compte\n                "
                           )
                         ]
                       )
@@ -41213,7 +41213,7 @@ var render = function() {
                   staticClass:
                     "font-semibold text-xl text-gray-800 leading-tight"
                 },
-                [_vm._v("\n            Profile\n        ")]
+                [_vm._v("\n            Profil\n        ")]
               )
             ]
           },
@@ -41505,7 +41505,7 @@ var render = function() {
       {
         key: "title",
         fn: function() {
-          return [_vm._v("\n        Changer de mon de passe\n    ")]
+          return [_vm._v("\n        Changer de mot de passe\n    ")]
         },
         proxy: true
       },
@@ -41686,7 +41686,7 @@ var render = function() {
       {
         key: "title",
         fn: function() {
-          return [_vm._v("\n        Informations de profile\n    ")]
+          return [_vm._v("\n        Informations de profil\n    ")]
         },
         proxy: true
       },
@@ -41695,7 +41695,7 @@ var render = function() {
         fn: function() {
           return [
             _vm._v(
-              "\n        Mettez à jour vos informations de profile et votre adresse mail.\n    "
+              "\n        Mettez à jour vos informations de profil et votre adresse mail.\n    "
             )
           ]
         },
@@ -41991,7 +41991,7 @@ var render = function() {
                       staticClass:
                         "font-semibold text-xl text-gray-800 leading-tight"
                     },
-                    [_vm._v("\n            Vos Exercices\n        ")]
+                    [_vm._v("\n            Vos exercices\n        ")]
                   )
                 ]
               },
@@ -42757,7 +42757,7 @@ var render = function() {
                       staticClass:
                         "font-semibold text-xl text-gray-800 leading-tight"
                     },
-                    [_vm._v("\n            Vos Exercices\n        ")]
+                    [_vm._v("\n            Vos exercices\n        ")]
                   )
                 ]
               },
@@ -43197,7 +43197,7 @@ var render = function() {
                                       },
                                       [
                                         _vm._v(
-                                          "\n                                    Ajouter un exercice exsistant\n                            "
+                                          "\n                                    Ajouter un exercice existant\n                            "
                                         )
                                       ]
                                     )
@@ -44137,7 +44137,7 @@ var render = function() {
                                           },
                                           [
                                             _vm._v(
-                                              "\n                                    Ajouter un entraînement exsistant\n                            "
+                                              "\n                                    Ajouter un entraînement existant\n                            "
                                             )
                                           ]
                                         )

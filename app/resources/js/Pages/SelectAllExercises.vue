@@ -3,7 +3,7 @@
         <app-layout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Vos Exercices
+                Vos exercices
             </h2>
         </template>
 
@@ -119,7 +119,7 @@
                 this.delId = id;
                 this.$modal.show('dialog', {
                     title: 'Supprimer un exercice',
-                    text: 'êtes-vous sûr de vouloir supprimer cet exercice?<br>Cette action est définitive.',
+                    text: 'Êtes-vous sûr de vouloir supprimer cet exercice?<br>Cette action est définitive.',
                     buttons: [
                         {
                             title: 'Annuler',

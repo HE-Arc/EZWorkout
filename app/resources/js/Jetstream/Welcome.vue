@@ -6,10 +6,13 @@
             </div>
 
             <div class="mt-6 text-gray-500">
-                EZWorkout vous permet de planifier facilement vos entraînements et de voir vos résultats en un coup d'oeil.
-                <br><br>
-                Pour suivre vos entraînement, téléchargez notre application android.
-                <a href="https://play.google.com/apps/internaltest/4698965301354935484"><img width="300em" src="https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png" alt="badge playsotre"></a>
+                            EZWorkout vous permet de planifier facilement vos entraînements et de voir vos résultats en un coup d'oeil.
+                            <br><br>
+                            Pour suivre vos entraînement, téléchargez notre application android.
+                            <a href="https://play.google.com/apps/internaltest/4698965301354935484"><img width="300em" src="https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png" alt="badge playsotre"></a>
+                            <br>
+                            Pour vous connecter à l'application android, vous pouvez afficher le qrcode à l'aide du lien ci-dessous ou dans le menu de votre profile.
+                            <br><a class="text-blue-500" href="user/api-tokens">Afficher le qrcode</a>
             </div>
         </div>
 

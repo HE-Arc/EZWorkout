@@ -31,7 +31,7 @@
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
-                                <tr v-for="plan in training_plans" :key="plan.id">
+                                <tr v-for="plan in training_plans" :key="plan.id" class="hover:bg-gray-200">
                                 <a :href="getTrainingLink(plan.id)">
                                 <td class="px-18 py-4 whitespace-nowrap">
                                     <div class="flex items-center">

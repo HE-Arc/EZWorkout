@@ -17,16 +17,16 @@
                             <jet-nav-link href="/dashboard" :active="$page.currentRouteName == 'dashboard'">
                                 Accueil
                             </jet-nav-link>
-                            <jet-nav-link href="/selectTrainingPlans" :active="$page.currentRouteName == 'trainingPlans'">
+                            <jet-nav-link href="/selectTrainingPlans" :active="$page.currentRouteName == 'selectTrainingPlans'">
                                 Plans d'entraînement
                             </jet-nav-link>
-                            <jet-nav-link href="/selectAllTrainings" :active="$page.currentRouteName == 'Alltrainings'">
+                            <jet-nav-link href="/selectAllTrainings" :active="$page.currentRouteName == 'selectAllTrainings'">
                                 Entraînements
                             </jet-nav-link>
-                            <jet-nav-link href="/selectAllExercises" :active="$page.currentRouteName == 'allExercises'">
+                            <jet-nav-link href="/selectAllExercises" :active="$page.currentRouteName == 'selectAllExercises'">
                                 Exercices
                             </jet-nav-link>
-                            <jet-nav-link href="/selectresults" :active="$page.currentRouteName == 'results'">
+                            <jet-nav-link href="/selectresults" :active="$page.currentRouteName == 'selectresults'">
                                 Results
                             </jet-nav-link>
                         </div>

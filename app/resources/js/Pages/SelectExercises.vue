@@ -43,7 +43,7 @@
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
-                                <tr v-for="exercise in exercises" :key="exercise.id">
+                                <tr v-for="exercise in exercises" :key="exercise.id" class="hover:bg-gray-200">
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="text-sm font-medium text-gray-900">
                                         {{exercise.name}}

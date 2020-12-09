@@ -31,7 +31,7 @@
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
-                                <tr v-for="training in trainings" :key="training.id">
+                                <tr v-for="training in trainings" :key="training.id" class="hover:bg-gray-200">
                                 <a :href="getExerciseLink(training.id)" class="text-indigo-600 hover:text-indigo-900">
                                 <td class="px-18 py-4 whitespace-nowrap">
                                     <div class="flex items-center">

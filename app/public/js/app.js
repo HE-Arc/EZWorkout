@@ -12825,6 +12825,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -36888,12 +36891,12 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("div", { staticClass: "mt-6 text-gray-500" }, [
           _vm._v(
-            "\n            EZWorkout vous permet de planifier facilement vos entraînements et de voir vos résultats en un coup d'oeil.\n            "
+            "\n                        EZWorkout vous permet de planifier facilement vos entraînements et de voir vos résultats en un coup d'oeil.\n                        "
           ),
           _c("br"),
           _c("br"),
           _vm._v(
-            "\n            Pour suivre vos entraînement, téléchargez notre application android.\n            "
+            "\n                        Pour suivre vos entraînement, téléchargez notre application android.\n                        "
           ),
           _c(
             "a",
@@ -36913,6 +36916,20 @@ var staticRenderFns = [
                 }
               })
             ]
+          ),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(
+            "\n                        Pour vous connecter à l'application android, vous pouvez afficher le qrcode à l'aide du lien ci-dessous ou dans le menu de votre profile.\n                        "
+          ),
+          _c("br"),
+          _c(
+            "a",
+            {
+              staticClass: "text-blue-500",
+              attrs: { href: "user/api-tokens" }
+            },
+            [_vm._v("Afficher le qrcode")]
           )
         ])
       ]
@@ -37089,7 +37106,8 @@ var render = function() {
                     {
                       attrs: {
                         href: "/selectTrainingPlans",
-                        active: _vm.$page.currentRouteName == "trainingPlans"
+                        active:
+                          _vm.$page.currentRouteName == "selectTrainingPlans"
                       }
                     },
                     [
@@ -37104,7 +37122,8 @@ var render = function() {
                     {
                       attrs: {
                         href: "/selectAllTrainings",
-                        active: _vm.$page.currentRouteName == "Alltrainings"
+                        active:
+                          _vm.$page.currentRouteName == "selectAllTrainings"
                       }
                     },
                     [
@@ -37119,7 +37138,8 @@ var render = function() {
                     {
                       attrs: {
                         href: "/selectAllExercises",
-                        active: _vm.$page.currentRouteName == "allExercises"
+                        active:
+                          _vm.$page.currentRouteName == "selectAllExercises"
                       }
                     },
                     [
@@ -37134,7 +37154,7 @@ var render = function() {
                     {
                       attrs: {
                         href: "/selectresults",
-                        active: _vm.$page.currentRouteName == "results"
+                        active: _vm.$page.currentRouteName == "selectresults"
                       }
                     },
                     [
@@ -42144,7 +42164,10 @@ var render = function() {
                                           ) {
                                             return _c(
                                               "tr",
-                                              { key: exercise.id },
+                                              {
+                                                key: exercise.id,
+                                                staticClass: "hover:bg-gray-200"
+                                              },
                                               [
                                                 _c(
                                                   "td",
@@ -42540,7 +42563,11 @@ var render = function() {
                                               ) {
                                                 return _c(
                                                   "tr",
-                                                  { key: training.id },
+                                                  {
+                                                    key: training.id,
+                                                    staticClass:
+                                                      "hover:bg-gray-200"
+                                                  },
                                                   [
                                                     _c(
                                                       "a",
@@ -42903,7 +42930,10 @@ var render = function() {
                                           ) {
                                             return _c(
                                               "tr",
-                                              { key: exercise.id },
+                                              {
+                                                key: exercise.id,
+                                                staticClass: "hover:bg-gray-200"
+                                              },
                                               [
                                                 _c(
                                                   "td",
@@ -43566,116 +43596,131 @@ var render = function() {
                                           _vm._l(_vm.training_plans, function(
                                             plan
                                           ) {
-                                            return _c("tr", { key: plan.id }, [
-                                              _c(
-                                                "a",
-                                                {
-                                                  attrs: {
-                                                    href: _vm.getTrainingLink(
-                                                      plan.id
-                                                    )
-                                                  }
-                                                },
-                                                [
-                                                  _c(
-                                                    "td",
-                                                    {
-                                                      staticClass:
-                                                        "px-18 py-4 whitespace-nowrap"
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "flex items-center"
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "ml-4"
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "div",
-                                                                {
-                                                                  staticClass:
-                                                                    "text-sm font-medium text-gray-900"
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "\n                                    " +
-                                                                      _vm._s(
-                                                                        plan.name
-                                                                      ) +
-                                                                      "\n                                    "
-                                                                  )
-                                                                ]
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
+                                            return _c(
+                                              "tr",
+                                              {
+                                                key: plan.id,
+                                                staticClass: "hover:bg-gray-200"
+                                              },
+                                              [
+                                                _c(
+                                                  "a",
+                                                  {
+                                                    attrs: {
+                                                      href: _vm.getTrainingLink(
+                                                        plan.id
                                                       )
-                                                    ]
-                                                  )
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "td",
-                                                {
-                                                  staticClass:
-                                                    "px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
-                                                },
-                                                [
-                                                  _c(
-                                                    "a",
-                                                    {
-                                                      staticClass:
-                                                        "text-indigo-600 hover:text-indigo-900",
-                                                      attrs: {
-                                                        href: _vm.editTrainingPlanLink(
-                                                          plan.id
+                                                    }
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "td",
+                                                      {
+                                                        staticClass:
+                                                          "px-18 py-4 whitespace-nowrap"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "flex items-center"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                staticClass:
+                                                                  "ml-4"
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "text-sm font-medium text-gray-900"
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "\n                                    " +
+                                                                        _vm._s(
+                                                                          plan.name
+                                                                        ) +
+                                                                        "\n                                    "
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
                                                         )
-                                                      }
-                                                    },
-                                                    [
-                                                      _c("font-awesome-icon", {
-                                                        attrs: { icon: "edit" }
-                                                      })
-                                                    ],
-                                                    1
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "a",
-                                                    {
-                                                      staticClass:
-                                                        "text-indigo-600 hover:text-indigo-900",
-                                                      on: {
-                                                        click: function(
-                                                          $event
-                                                        ) {
-                                                          return _vm.delTP(
+                                                      ]
+                                                    )
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "td",
+                                                  {
+                                                    staticClass:
+                                                      "px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "a",
+                                                      {
+                                                        staticClass:
+                                                          "text-indigo-600 hover:text-indigo-900",
+                                                        attrs: {
+                                                          href: _vm.editTrainingPlanLink(
                                                             plan.id
                                                           )
                                                         }
-                                                      }
-                                                    },
-                                                    [
-                                                      _c("font-awesome-icon", {
-                                                        attrs: {
-                                                          icon: "trash-alt"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "font-awesome-icon",
+                                                          {
+                                                            attrs: {
+                                                              icon: "edit"
+                                                            }
+                                                          }
+                                                        )
+                                                      ],
+                                                      1
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "a",
+                                                      {
+                                                        staticClass:
+                                                          "text-indigo-600 hover:text-indigo-900",
+                                                        on: {
+                                                          click: function(
+                                                            $event
+                                                          ) {
+                                                            return _vm.delTP(
+                                                              plan.id
+                                                            )
+                                                          }
                                                         }
-                                                      })
-                                                    ],
-                                                    1
-                                                  )
-                                                ]
-                                              )
-                                            ])
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "font-awesome-icon",
+                                                          {
+                                                            attrs: {
+                                                              icon: "trash-alt"
+                                                            }
+                                                          }
+                                                        )
+                                                      ],
+                                                      1
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            )
                                           }),
                                           0
                                         )
@@ -43898,7 +43943,11 @@ var render = function() {
                                               ) {
                                                 return _c(
                                                   "tr",
-                                                  { key: training.id },
+                                                  {
+                                                    key: training.id,
+                                                    staticClass:
+                                                      "hover:bg-gray-200"
+                                                  },
                                                   [
                                                     _c(
                                                       "a",

@@ -1,12 +1,12 @@
 # EZWorkout
 
-Le but de l’application est de planifier, d’organiser, puis de suivre des entraînements sportif orientés musculation.
+Le but de l’application est de planifier, d’organiser, puis de suivre des entraînements sportifs orientés musculation.
 
-Elle se décompose en 3 parties :
+Elle se compose de 3 parties :
 
-  * la planification d'entraînements
-  * historique des entraînements
-  * Analyses des performances
+  * La planification d'entraînements
+  * L'historique des entraînements
+  * L'analyse des performances
 
 Les données des entraînements seront synchronisées depuis une app mobile à l'aide d'une api.
 

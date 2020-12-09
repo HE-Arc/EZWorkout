@@ -10,8 +10,6 @@ Elle se décompose en 3 parties :
 
 Les données des entraînements seront synchronisées depuis une app mobile à l'aide d'une api.
 
-team postman : https://app.getpostman.com/join-team?invite_code=2e1d81a068f69a2e53b212df80a99e4a&ws=606b7570-acdb-4876-bb66-f9e216d411ba
-
 accès au site: [ezw.dev.jojoc4.ch](https://ezw.dev.jojoc4.ch)
 
 [![Laravel Actions Status](https://github.com/HE-Arc/EZWorkout/workflows/Laravel/badge.svg)](https://github.com/HE-Arc/EZWorkout/actions)

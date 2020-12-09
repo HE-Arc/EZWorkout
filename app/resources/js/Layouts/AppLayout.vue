@@ -27,7 +27,7 @@
                                 Exercices
                             </jet-nav-link>
                             <jet-nav-link href="/selectresults" :active="$page.currentRouteName == 'selectresults'">
-                                Resultats
+                                Résultats
                             </jet-nav-link>
                         </div>
                     </div>

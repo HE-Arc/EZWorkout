@@ -19,11 +19,14 @@ accès au site: [ezw.dev.jojoc4.ch](https://ezw.dev.jojoc4.ch)
 1. clone repo
 2. copy .env.exemple .env
 3. run composer installer 
-4. run php artisan key:generate
-5. run php artisan migrate
-6. you're ready
+4. run npm install
+5. run npm run dev
+6. run php artisan key:generate
+7. run php artisan migrate
+8. if you want some base datas for the first user, run php artisan db:seed
+9. you're ready
 
-## Dev deployment
+## production
 You can deploy our application using docker,
 simply run this command:
 

@@ -23,7 +23,7 @@
                                         </h3>
 
                                         <p class="mt-1 text-sm text-gray-600">
-                                            Choisissez un nom reconnaissable
+                                            Choisissez un nom  facilement identifiable
                                         </p>
                                     </div>
                                 </div>

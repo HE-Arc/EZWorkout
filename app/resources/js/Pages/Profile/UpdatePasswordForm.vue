@@ -1,7 +1,7 @@
 <template>
     <jet-form-section @submitted="updatePassword">
         <template #title>
-            Changer de mon de passe
+            Changer de mot de passe
         </template>
 
         <template #description>

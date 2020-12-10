@@ -15,19 +15,13 @@
                         <!-- Navigation Links -->
                         <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                             <jet-nav-link href="/dashboard" :active="$page.currentRouteName == 'dashboard'">
-                                Accueil
+                                EZWorkout
                             </jet-nav-link>
-                            <jet-nav-link href="/selectTrainingPlans" :active="$page.currentRouteName == 'selectTrainingPlans'">
+                            <jet-nav-link href="/selectTrainingPlans" :active="$page.currentRouteName == 'trainingPlans'">
                                 Plans d'entraînement
                             </jet-nav-link>
-                            <jet-nav-link href="/selectAllTrainings" :active="$page.currentRouteName == 'selectAllTrainings'">
-                                Entraînements
-                            </jet-nav-link>
-                            <jet-nav-link href="/selectAllExercises" :active="$page.currentRouteName == 'selectAllExercises'">
-                                Exercices
-                            </jet-nav-link>
-                            <jet-nav-link href="/selectresults" :active="$page.currentRouteName == 'selectresults'">
-                                Résultats
+                            <jet-nav-link href="/selectresults" :active="$page.currentRouteName == 'results'">
+                                Results
                             </jet-nav-link>
                         </div>
                     </div>
@@ -59,7 +53,7 @@
                                     </div>
 
                                     <jet-dropdown-link href="/user/profile">
-                                        Profil
+                                        Profile
                                     </jet-dropdown-link>
 
                                     <jet-dropdown-link href="/user/api-tokens" v-if="$page.jetstream.hasApiFeatures">

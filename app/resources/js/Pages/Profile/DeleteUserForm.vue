@@ -1,16 +1,16 @@
 <template>
     <jet-action-section>
         <template #title>
-            Supression du compte
+            Suppression du compte
         </template>
 
         <template #description>
-            supprimer définitivement votre compte.
+            Supprimer définitivement votre compte.
         </template>
 
         <template #content>
             <div class="max-w-xl text-sm text-gray-600">
-                Une fois votre compte supprimé, vos données seront définitivement suprimmées.
+                Une fois votre compte supprimé, vos données seront définitivement effacées.
             </div>
 
             <div class="mt-5">
@@ -26,10 +26,10 @@
                 </template>
 
                 <template #content>
-                    Etes-vous sûr de vouloir supprimer votre compte? Une fois votre compte supprimé, vos données seront définitivement suprimmées. Veuillez entrer votre mot de passe pour confirmer la supression définitive de votre compte.
+                    Etes-vous sûr de vouloir supprimer votre compte? Une fois votre compte supprimé, vos données seront définitivement effacées. Veuillez entrer votre mot de passe pour confirmer la suppression définitive de votre compte.
 
                     <div class="mt-4">
-                        <jet-input type="password" class="mt-1 block w-3/4" placeholder="Password"
+                        <jet-input type="password" class="mt-1 block w-3/4" placeholder="Mot de passe"
                                     ref="password"
                                     v-model="form.password"
                                     @keyup.enter.native="deleteUser" />
@@ -44,7 +44,7 @@
                     </jet-secondary-button>
 
                     <jet-danger-button class="ml-2" @click.native="deleteUser" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                        Suprimmer mon compte
+                        Supprimer mon compte
                     </jet-danger-button>
                 </template>
             </jet-dialog-modal>

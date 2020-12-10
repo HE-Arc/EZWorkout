@@ -37159,7 +37159,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                            Resultats\n                        "
+                        "\n                            Résultats\n                        "
                       )
                     ]
                   )
@@ -59548,8 +59548,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/jojoc4/dev/EZWorkout/app/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/jojoc4/dev/EZWorkout/app/resources/css/app.css */"./resources/css/app.css");
+__webpack_require__(/*! /var/www/html/EZWorkout/app/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /var/www/html/EZWorkout/app/resources/css/app.css */"./resources/css/app.css");
 
 
 /***/ })

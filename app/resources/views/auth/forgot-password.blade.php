@@ -5,7 +5,7 @@
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">
-            Entrez votre adresse mail pour recevoir un lien de réinitialisation.
+            Entrez votre adresse mail pour recevoire un lien de réinitialisation.
         </div>
 
         @if (session('status'))
@@ -16,7 +16,7 @@
 
         <x-jet-validation-errors class="mb-4" />
 
-        <form method="POST" action="/forgot-password">
+        <form method="POST" action="{{ route('password.email') }}">
             @csrf
 
             <div class="block">

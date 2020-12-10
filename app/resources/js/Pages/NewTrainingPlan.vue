@@ -23,7 +23,7 @@
                                         </h3>
 
                                         <p class="mt-1 text-sm text-gray-600">
-                                            Choisissez un nom facilement identifiable
+                                            Choisissez un nom reconnaissable
                                         </p>
                                     </div>
                                 </div>
@@ -65,10 +65,12 @@
 
 <script>
     import AppLayout from './../Layouts/AppLayout'
+    import Welcome from './../Jetstream/Welcome'
 
     export default {
         components: {
             AppLayout,
+            Welcome
         },
 
         data(){

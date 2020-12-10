@@ -3,7 +3,7 @@
         <app-layout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Vos exercices
+                Vos Exercices
             </h2>
         </template>
 
@@ -43,7 +43,7 @@
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
-                                <tr v-for="exercise in exercises" :key="exercise.id" class="hover:bg-gray-200">
+                                <tr v-for="exercise in exercises" :key="exercise.id">
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="text-sm font-medium text-gray-900">
                                         {{exercise.name}}
@@ -84,7 +84,7 @@
                                 </a>
                                 <v-select class=" px-2 py-2" style="min-width: 500px" label="name" :options="AllExercises" :reduce="ex => ex.id" v-model="newSelected" />
                                 <button @click="addExisting" :disabled="btnDisabled" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150">
-                                        Ajouter un exercice existant
+                                        Ajouter un exercice exsistant
                                 </button>
                             </div>
                         </div>
@@ -102,10 +102,12 @@
 
 <script>
     import AppLayout from './../Layouts/AppLayout'
+    import Welcome from './../Jetstream/Welcome'
 
     export default {
         components: {
             AppLayout,
+            Welcome,
         },
 
         data(){
@@ -145,7 +147,7 @@
                 this.delId = id;
                 this.$modal.show('dialog', {
                     title: 'Supprimer un exercice',
-                    text: 'Êtes-vous sûr de vouloir supprimer cet exercice?<br>Cette action est définitive.',
+                    text: 'êtes-vous sûr de vouloir supprimer cet exercice?<br>Cette action est définitive.',
                     buttons: [
                         {
                             title: 'Annuler',

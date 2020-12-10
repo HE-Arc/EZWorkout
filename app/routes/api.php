@@ -38,7 +38,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::post('training/{id}/addToTrainingPlan', [TrainingController::class, 'attach']);
     Route::post('exercise/{id}/addToTraining', [ExerciseController::class, 'attach']);
 
-    Route::get('test', function (Request $r) {
+    Route::get('user', function (Request $r) {
         return $r->user();
     });
 });

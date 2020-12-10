@@ -12828,25 +12828,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -12871,6 +12852,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Jetstream_DropdownLink__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../Jetstream/DropdownLink */ "./resources/js/Jetstream/DropdownLink.vue");
 /* harmony import */ var _Jetstream_NavLink__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../Jetstream/NavLink */ "./resources/js/Jetstream/NavLink.vue");
 /* harmony import */ var _Jetstream_ResponsiveNavLink__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../Jetstream/ResponsiveNavLink */ "./resources/js/Jetstream/ResponsiveNavLink.vue");
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -13199,7 +13186,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
-/* harmony import */ var _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Jetstream/Welcome */ "./resources/js/Jetstream/Welcome.vue");
 //
 //
 //
@@ -13313,12 +13299,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Welcome: _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__["default"]
+    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {
@@ -13372,7 +13356,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
-/* harmony import */ var _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Jetstream/Welcome */ "./resources/js/Jetstream/Welcome.vue");
 //
 //
 //
@@ -13438,12 +13421,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Welcome: _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__["default"]
+    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {
@@ -13485,7 +13466,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
-/* harmony import */ var _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Jetstream/Welcome */ "./resources/js/Jetstream/Welcome.vue");
 //
 //
 //
@@ -13551,12 +13531,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Welcome: _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__["default"]
+    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {
@@ -13598,7 +13576,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
-/* harmony import */ var _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Jetstream/Welcome */ "./resources/js/Jetstream/Welcome.vue");
 //
 //
 //
@@ -13713,12 +13690,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Welcome: _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__["default"]
+    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {
@@ -13754,7 +13729,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
-/* harmony import */ var _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Jetstream/Welcome */ "./resources/js/Jetstream/Welcome.vue");
 //
 //
 //
@@ -13821,12 +13795,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Welcome: _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__["default"]
+    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {
@@ -13856,7 +13828,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
-/* harmony import */ var _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Jetstream/Welcome */ "./resources/js/Jetstream/Welcome.vue");
 //
 //
 //
@@ -13922,12 +13893,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Welcome: _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__["default"]
+    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {
@@ -14778,6 +14747,316 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/SelectAllExercises.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/SelectAllExercises.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {
+      exercises: [],
+      delId: null
+    };
+  },
+  methods: {
+    getExercises: function getExercises() {
+      var _this = this;
+
+      axios.get('/exercise').then(function (res) {
+        _this.exercises = res.data;
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    },
+    editExerciseLink: function editExerciseLink(id) {
+      return "/editExercise/" + id;
+    },
+    delExercise: function delExercise(id) {
+      var _this2 = this;
+
+      this.delId = id;
+      this.$modal.show('dialog', {
+        title: 'Supprimer un exercice',
+        text: 'Êtes-vous sûr de vouloir supprimer cet exercice?<br>Cette action est définitive.',
+        buttons: [{
+          title: 'Annuler',
+          handler: function handler() {
+            _this2.delId = null;
+
+            _this2.$modal.hide('dialog');
+          }
+        }, {
+          title: 'Supprimer',
+          handler: function handler() {
+            axios["delete"]('/exercise/' + _this2.delId + '/all');
+            _this2.delId = null;
+
+            _this2.getExercises();
+
+            _this2.$modal.hide('dialog');
+          }
+        }]
+      });
+    }
+  },
+  created: function created() {
+    this.getExercises();
+  },
+  computed: {
+    e_present: function e_present() {
+      return this.exercises.length > 0;
+    },
+    btnDisabled: function btnDisabled() {
+      return this.newSelected == null;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/SelectAllTrainings.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/SelectAllTrainings.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {
+      trainings: [],
+      delId: null
+    };
+  },
+  methods: {
+    getTrainings: function getTrainings() {
+      var _this = this;
+
+      axios.get('/training').then(function (res) {
+        _this.trainings = res.data;
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    },
+    getExerciseLink: function getExerciseLink(id) {
+      return "/selectExercises/" + id;
+    },
+    editTrainingLink: function editTrainingLink(id) {
+      return "/editTraining/" + id;
+    },
+    delTraining: function delTraining(id) {
+      var _this2 = this;
+
+      this.delId = id;
+      this.$modal.show('dialog', {
+        title: 'Supprimer un entraînement',
+        text: 'Êtes-vous sûr de vouloir supprimer cet entraînement?<br>Cette action est définitive.',
+        buttons: [{
+          title: 'Annuler',
+          handler: function handler() {
+            _this2.delId = null;
+
+            _this2.$modal.hide('dialog');
+          }
+        }, {
+          title: 'Supprimer',
+          handler: function handler() {
+            axios["delete"]('/training/' + _this2.delId + "/all");
+            _this2.delId = null;
+
+            _this2.getTrainings();
+
+            _this2.$modal.hide('dialog');
+          }
+        }]
+      });
+    }
+  },
+  created: function created() {
+    this.getTrainings();
+  },
+  computed: {
+    t_present: function t_present() {
+      return this.trainings.length > 0;
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/SelectExercises.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/SelectExercises.vue?vue&type=script&lang=js& ***!
@@ -14788,7 +15067,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
-/* harmony import */ var _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Jetstream/Welcome */ "./resources/js/Jetstream/Welcome.vue");
 //
 //
 //
@@ -14891,12 +15169,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Welcome: _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__["default"]
+    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {
@@ -14939,7 +15215,7 @@ __webpack_require__.r(__webpack_exports__);
       this.delId = id;
       this.$modal.show('dialog', {
         title: 'Supprimer un exercice',
-        text: 'êtes-vous sûr de vouloir supprimer cet exercice?<br>Cette action est définitive.',
+        text: 'Êtes-vous sûr de vouloir supprimer cet exercice?<br>Cette action est définitive.',
         buttons: [{
           title: 'Annuler',
           handler: function handler() {
@@ -15091,7 +15367,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
-/* harmony import */ var _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Jetstream/Welcome */ "./resources/js/Jetstream/Welcome.vue");
 //
 //
 //
@@ -15164,12 +15439,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Welcome: _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__["default"]
+    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {
@@ -15199,7 +15472,7 @@ __webpack_require__.r(__webpack_exports__);
       this.delId = id;
       this.$modal.show('dialog', {
         title: 'Supprimer un plan d\'entraînement',
-        text: 'êtes-vous sûr de vouloir supprimer ce plan d\'entraînement?<br>Cette action est définitive.',
+        text: 'Êtes-vous sûr de vouloir supprimer ce plan d\'entraînement?<br>Cette action est définitive.',
         buttons: [{
           title: 'Annuler',
           handler: function handler() {
@@ -15243,7 +15516,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
-/* harmony import */ var _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Jetstream/Welcome */ "./resources/js/Jetstream/Welcome.vue");
 //
 //
 //
@@ -15320,12 +15592,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Welcome: _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__["default"]
+    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {
@@ -15371,7 +15641,7 @@ __webpack_require__.r(__webpack_exports__);
       this.delId = id;
       this.$modal.show('dialog', {
         title: 'Supprimer un entraînement',
-        text: 'êtes-vous sûr de vouloir supprimer cet entraînement?<br>Cette action est définitive.',
+        text: 'Êtes-vous sûr de vouloir supprimer cet entraînement?<br>Cette action est définitive.',
         buttons: [{
           title: 'Annuler',
           handler: function handler() {
@@ -36511,27 +36781,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c(
-      "div",
-      { staticClass: "p-6 sm:px-20 bg-white border-b border-gray-200" },
-      [
-        _c(
-          "div",
-          [_c("jet-application-logo", { staticClass: "block h-12 w-auto" })],
-          1
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "mt-8 text-2xl" }, [
-          _vm._v("\n            Bienvenue sur EZWorkout\n        ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "mt-6 text-gray-500" }, [
-          _vm._v(
-            "\n            EZWorkout vous permet de planifier facilement vos entraînements et de voir vos résultats en un coup d'oeil.\n            Télécharger l'application android EZWorkout et connectez-la à votre compte afin de suivre vos entraînements.\n        "
-          )
-        ])
-      ]
-    ),
+    _vm._m(0),
     _vm._v(" "),
     _c(
       "div",
@@ -36540,73 +36790,21 @@ var render = function() {
       },
       [
         _c("div", { staticClass: "p-6" }, [
-          _c("div", { staticClass: "flex items-center" }, [
-            _c(
-              "svg",
-              {
+          _c(
+            "div",
+            { staticClass: "flex items-center" },
+            [
+              _c("font-awesome-icon", {
                 staticClass: "w-8 h-8 text-gray-400",
-                attrs: {
-                  fill: "none",
-                  stroke: "currentColor",
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round",
-                  "stroke-width": "2",
-                  viewBox: "0 0 24 24"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                  }
-                })
-              ]
-            ),
-            _vm._v(" "),
-            _vm._m(0)
-          ]),
+                attrs: { icon: "ruler-combined" }
+              }),
+              _vm._v(" "),
+              _vm._m(1)
+            ],
+            1
+          ),
           _vm._v(" "),
-          _c("div", { staticClass: "ml-12" }, [
-            _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
-              _vm._v(
-                "\n                    Laravel has wonderful documentation covering every aspect of the framework. Whether you're new to the framework or have previous experience, we recommend reading all of the documentation from beginning to end.\n                "
-              )
-            ]),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "https://laravel.com/docs" } }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "mt-3 flex items-center text-sm font-semibold text-indigo-700"
-                },
-                [
-                  _c("div", [_vm._v("Explore the documentation")]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "ml-1 text-indigo-500" }, [
-                    _c(
-                      "svg",
-                      {
-                        staticClass: "arrow-right w-4 h-4",
-                        attrs: { viewBox: "0 0 20 20", fill: "currentColor" }
-                      },
-                      [
-                        _c("path", {
-                          attrs: {
-                            "fill-rule": "evenodd",
-                            d:
-                              "M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z",
-                            "clip-rule": "evenodd"
-                          }
-                        })
-                      ]
-                    )
-                  ])
-                ]
-              )
-            ])
-          ])
+          _vm._m(2)
         ]),
         _vm._v(" "),
         _c(
@@ -36616,146 +36814,58 @@ var render = function() {
               "p-6 border-t border-gray-200 md:border-t-0 md:border-l"
           },
           [
-            _c("div", { staticClass: "flex items-center" }, [
-              _c(
-                "svg",
-                {
+            _c(
+              "div",
+              { staticClass: "flex items-center" },
+              [
+                _c("font-awesome-icon", {
                   staticClass: "w-8 h-8 text-gray-400",
-                  attrs: {
-                    fill: "none",
-                    stroke: "currentColor",
-                    "stroke-linecap": "round",
-                    "stroke-linejoin": "round",
-                    "stroke-width": "2",
-                    viewBox: "0 0 24 24"
-                  }
-                },
-                [
-                  _c("path", {
-                    attrs: {
-                      d:
-                        "M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-                    }
-                  }),
-                  _c("path", {
-                    attrs: { d: "M15 13a3 3 0 11-6 0 3 3 0 016 0z" }
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _vm._m(1)
-            ]),
+                  attrs: { icon: "chart-line" }
+                }),
+                _vm._v(" "),
+                _vm._m(3)
+              ],
+              1
+            ),
             _vm._v(" "),
-            _c("div", { staticClass: "ml-12" }, [
-              _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
-                _vm._v(
-                  "\n                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.\n                "
-                )
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "https://laracasts.com" } }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "mt-3 flex items-center text-sm font-semibold text-indigo-700"
-                  },
-                  [
-                    _c("div", [_vm._v("Start watching Laracasts")]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "ml-1 text-indigo-500" }, [
-                      _c(
-                        "svg",
-                        {
-                          staticClass: "arrow-right w-4 h-4",
-                          attrs: { viewBox: "0 0 20 20", fill: "currentColor" }
-                        },
-                        [
-                          _c("path", {
-                            attrs: {
-                              "fill-rule": "evenodd",
-                              d:
-                                "M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z",
-                              "clip-rule": "evenodd"
-                            }
-                          })
-                        ]
-                      )
-                    ])
-                  ]
-                )
-              ])
-            ])
+            _vm._m(4)
           ]
         ),
         _vm._v(" "),
         _c("div", { staticClass: "p-6 border-t border-gray-200" }, [
-          _c("div", { staticClass: "flex items-center" }, [
-            _c(
-              "svg",
-              {
+          _c(
+            "div",
+            { staticClass: "flex items-center" },
+            [
+              _c("font-awesome-icon", {
                 staticClass: "w-8 h-8 text-gray-400",
-                attrs: {
-                  fill: "none",
-                  stroke: "currentColor",
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round",
-                  "stroke-width": "2",
-                  viewBox: "0 0 24 24"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  }
-                })
-              ]
-            ),
-            _vm._v(" "),
-            _vm._m(2)
-          ]),
+                attrs: { icon: "book" }
+              }),
+              _vm._v(" "),
+              _vm._m(5)
+            ],
+            1
+          ),
           _vm._v(" "),
-          _vm._m(3)
+          _vm._m(6)
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "p-6 border-t border-gray-200 md:border-l" }, [
-          _c("div", { staticClass: "flex items-center" }, [
-            _c(
-              "svg",
-              {
+          _c(
+            "div",
+            { staticClass: "flex items-center" },
+            [
+              _c("font-awesome-icon", {
                 staticClass: "w-8 h-8 text-gray-400",
-                attrs: {
-                  fill: "none",
-                  stroke: "currentColor",
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round",
-                  "stroke-width": "2",
-                  viewBox: "0 0 24 24"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                  }
-                })
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "ml-4 text-lg text-gray-600 leading-7 font-semibold"
-              },
-              [_vm._v("Authentication")]
-            )
-          ]),
+                attrs: { icon: "dumbbell" }
+              }),
+              _vm._v(" "),
+              _vm._m(7)
+            ],
+            1
+          ),
           _vm._v(" "),
-          _vm._m(4)
+          _vm._m(8)
         ])
       ]
     )
@@ -36768,10 +36878,54 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "ml-4 text-lg text-gray-600 leading-7 font-semibold" },
+      { staticClass: "p-6 sm:px-20 bg-white border-b border-gray-200" },
       [
-        _c("a", { attrs: { href: "https://laravel.com/docs" } }, [
-          _vm._v("Documentation")
+        _c("div", { staticClass: "mt-8 text-2xl" }, [
+          _vm._v("\n            Bienvenue sur EZWorkout\n        ")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mt-6 text-gray-500" }, [
+          _vm._v(
+            "\n                        EZWorkout vous permet de planifier facilement vos entraînements et de voir vos résultats en un coup d'oeil.\n                        "
+          ),
+          _c("br"),
+          _c("br"),
+          _vm._v(
+            "\n                        Pour suivre vos entraînements, téléchargez notre application android.\n                        "
+          ),
+          _c(
+            "a",
+            {
+              attrs: {
+                href:
+                  "https://play.google.com/apps/internaltest/4698965301354935484"
+              }
+            },
+            [
+              _c("img", {
+                attrs: {
+                  width: "300em",
+                  src:
+                    "https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png",
+                  alt: "badge playsotre"
+                }
+              })
+            ]
+          ),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(
+            "\n                        Pour vous connecter à l'application android, vous pouvez afficher le QRcode à l'aide du lien ci-dessous ou dans le menu de votre profil.\n                        "
+          ),
+          _c("br"),
+          _c(
+            "a",
+            {
+              staticClass: "text-blue-500",
+              attrs: { href: "user/api-tokens" }
+            },
+            [_vm._v("Afficher le QRcode")]
+          )
         ])
       ]
     )
@@ -36784,8 +36938,8 @@ var staticRenderFns = [
       "div",
       { staticClass: "ml-4 text-lg text-gray-600 leading-7 font-semibold" },
       [
-        _c("a", { attrs: { href: "https://laracasts.com" } }, [
-          _vm._v("Laracasts")
+        _c("a", { attrs: { href: "/selectTrainingPlans" } }, [
+          _vm._v("Vos plans d'entraînement")
         ])
       ]
     )
@@ -36794,24 +36948,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "ml-4 text-lg text-gray-600 leading-7 font-semibold" },
-      [
-        _c("a", { attrs: { href: "https://tailwindcss.com/" } }, [
-          _vm._v("Tailwind")
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "ml-12" }, [
+    return _c("div", { staticClass: "ml-8" }, [
       _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
         _vm._v(
-          "\n                    Laravel Jetstream is built with Tailwind, an amazing utility first CSS framework that doesn't get in your way. You'll be amazed how easily you can build and maintain fresh, modern designs with this wonderful framework at your fingertips.\n                "
+          "\n                    Cette section vous permet de gérer vos plans d'entraînement, vous pourrez les créer, les modifier et y ajouter des entraînements et des exercices.\n                "
         )
       ])
     ])
@@ -36820,10 +36960,76 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "ml-12" }, [
+    return _c(
+      "div",
+      { staticClass: "ml-4 text-lg text-gray-600 leading-7 font-semibold" },
+      [
+        _c("a", { attrs: { href: "/selectresults" } }, [
+          _vm._v("Vos résultats")
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "ml-8" }, [
       _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
         _vm._v(
-          "\n                    Authentication and registration views are included with Laravel Jetstream, as well as support for user email verification and resetting forgotten passwords. So, you're free to get started what matters most: building your application.\n                "
+          "\n                    Vous pourrez ici visualiser les résultats de vos entraînements précédents.\n                "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "ml-4 text-lg text-gray-600 leading-7 font-semibold" },
+      [
+        _c("a", { attrs: { href: "/selectAllTrainings" } }, [
+          _vm._v("Bibliothèque des entraînements")
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "ml-8" }, [
+      _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
+        _vm._v(
+          "\n                    Ici, vous pourrez parcourir tous vos entraînements.\n                "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "ml-4 text-lg text-gray-600 leading-7 font-semibold" },
+      [
+        _c("a", { attrs: { href: "/selectAllExercises" } }, [
+          _vm._v("Bibliothèque des exercices")
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "ml-8" }, [
+      _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
+        _vm._v(
+          "\n                    Cette dernière section vous permet de parcourir tous vos exercices.\n                "
         )
       ])
     ])
@@ -36885,7 +37091,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                            EZWorkout\n                        "
+                        "\n                            Accueil\n                        "
                       )
                     ]
                   ),
@@ -36895,7 +37101,8 @@ var render = function() {
                     {
                       attrs: {
                         href: "/selectTrainingPlans",
-                        active: _vm.$page.currentRouteName == "trainingPlans"
+                        active:
+                          _vm.$page.currentRouteName == "selectTrainingPlans"
                       }
                     },
                     [
@@ -36909,13 +37116,45 @@ var render = function() {
                     "jet-nav-link",
                     {
                       attrs: {
-                        href: "/selectresults",
-                        active: _vm.$page.currentRouteName == "results"
+                        href: "/selectAllTrainings",
+                        active:
+                          _vm.$page.currentRouteName == "selectAllTrainings"
                       }
                     },
                     [
                       _vm._v(
-                        "\n                            Results\n                        "
+                        "\n                            Entraînements\n                        "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "jet-nav-link",
+                    {
+                      attrs: {
+                        href: "/selectAllExercises",
+                        active:
+                          _vm.$page.currentRouteName == "selectAllExercises"
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\n                            Exercices\n                        "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "jet-nav-link",
+                    {
+                      attrs: {
+                        href: "/selectresults",
+                        active: _vm.$page.currentRouteName == "selectresults"
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\n                            Resultats\n                        "
                       )
                     ]
                   )
@@ -37019,7 +37258,7 @@ var render = function() {
                                 { attrs: { href: "/user/profile" } },
                                 [
                                   _vm._v(
-                                    "\n                                    Profile\n                                "
+                                    "\n                                    Profil\n                                "
                                   )
                                 ]
                               ),
@@ -37566,7 +37805,7 @@ var render = function() {
                                                   },
                                                   [
                                                     _vm._v(
-                                                      "\n                                        Changer le nom de votre entraînement\n                                    "
+                                                      "\n                                        Modifier votre exercice\n                                    "
                                                     )
                                                   ]
                                                 ),
@@ -37904,7 +38143,7 @@ var render = function() {
                                                                   [
                                                                     _c("span", [
                                                                       _vm._v(
-                                                                        "Nombre de répetitions minimales"
+                                                                        "Nombre de répétitions minimales"
                                                                       )
                                                                     ])
                                                                   ]
@@ -37990,7 +38229,7 @@ var render = function() {
                                                                   [
                                                                     _c("span", [
                                                                       _vm._v(
-                                                                        "Nombre de répetitions maximales"
+                                                                        "Nombre de répétitions maximales"
                                                                       )
                                                                     ])
                                                                   ]
@@ -38408,7 +38647,7 @@ var render = function() {
                                                   },
                                                   [
                                                     _vm._v(
-                                                      "\n                                        Choisissez un nom reconnaissable\n                                    "
+                                                      "\n                                        Choisissez un nom  facilement identifiable\n                                    "
                                                     )
                                                   ]
                                                 )
@@ -39388,7 +39627,7 @@ var render = function() {
                                                                   [
                                                                     _c("span", [
                                                                       _vm._v(
-                                                                        "Nombre de répetitions minimales"
+                                                                        "Nombre de répétitions minimales"
                                                                       )
                                                                     ])
                                                                   ]
@@ -39474,7 +39713,7 @@ var render = function() {
                                                                   [
                                                                     _c("span", [
                                                                       _vm._v(
-                                                                        "Nombre de répetitions maximales"
+                                                                        "Nombre de répétitions maximales"
                                                                       )
                                                                     ])
                                                                   ]
@@ -40236,7 +40475,7 @@ var render = function() {
                                                   },
                                                   [
                                                     _vm._v(
-                                                      "\n                                        Choisissez un nom reconnaissable\n                                    "
+                                                      "\n                                        Choisissez un nom facilement identifiable\n                                    "
                                                     )
                                                   ]
                                                 )
@@ -40449,7 +40688,7 @@ var render = function() {
       {
         key: "title",
         fn: function() {
-          return [_vm._v("\n        Supression du compte\n    ")]
+          return [_vm._v("\n        Suppression du compte\n    ")]
         },
         proxy: true
       },
@@ -40457,7 +40696,7 @@ var render = function() {
         key: "description",
         fn: function() {
           return [
-            _vm._v("\n        supprimer définitivement votre compte.\n    ")
+            _vm._v("\n        Supprimer définitivement votre compte.\n    ")
           ]
         },
         proxy: true
@@ -40468,7 +40707,7 @@ var render = function() {
           return [
             _c("div", { staticClass: "max-w-xl text-sm text-gray-600" }, [
               _vm._v(
-                "\n            Une fois votre compte supprimé, vos données seront définitivement suprimmées.\n        "
+                "\n            Une fois votre compte supprimé, vos données seront définitivement effacées.\n        "
               )
             ]),
             _vm._v(" "),
@@ -40519,7 +40758,7 @@ var render = function() {
                   fn: function() {
                     return [
                       _vm._v(
-                        "\n                Etes-vous sûr de vouloir supprimer votre compte? Une fois votre compte supprimé, vos données seront définitivement suprimmées. Veuillez entrer votre mot de passe pour confirmer la supression définitive de votre compte.\n\n                "
+                        "\n                Etes-vous sûr de vouloir supprimer votre compte? Une fois votre compte supprimé, vos données seront définitivement effacées. Veuillez entrer votre mot de passe pour confirmer la suppression définitive de votre compte.\n\n                "
                       ),
                       _c(
                         "div",
@@ -40530,7 +40769,7 @@ var render = function() {
                             staticClass: "mt-1 block w-3/4",
                             attrs: {
                               type: "password",
-                              placeholder: "Password"
+                              placeholder: "Mot de passe"
                             },
                             nativeOn: {
                               keyup: function($event) {
@@ -40603,7 +40842,7 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                    Suprimmer mon compte\n                "
+                            "\n                    Supprimer mon compte\n                "
                           )
                         ]
                       )
@@ -40969,7 +41208,7 @@ var render = function() {
                   staticClass:
                     "font-semibold text-xl text-gray-800 leading-tight"
                 },
-                [_vm._v("\n            Profile\n        ")]
+                [_vm._v("\n            Profil\n        ")]
               )
             ]
           },
@@ -41261,7 +41500,7 @@ var render = function() {
       {
         key: "title",
         fn: function() {
-          return [_vm._v("\n        Changer de mon de passe\n    ")]
+          return [_vm._v("\n        Changer de mot de passe\n    ")]
         },
         proxy: true
       },
@@ -41442,7 +41681,7 @@ var render = function() {
       {
         key: "title",
         fn: function() {
-          return [_vm._v("\n        Informations de profile\n    ")]
+          return [_vm._v("\n        Informations de profil\n    ")]
         },
         proxy: true
       },
@@ -41451,7 +41690,7 @@ var render = function() {
         fn: function() {
           return [
             _vm._v(
-              "\n        Mettez à jour vos informations de profile et votre adresse mail.\n    "
+              "\n        Mettez à jour vos informations de profil et votre adresse mail.\n    "
             )
           ]
         },
@@ -41723,10 +41962,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/SelectExercises.vue?vue&type=template&id=0e9d01e6&":
-/*!*************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/SelectExercises.vue?vue&type=template&id=0e9d01e6& ***!
-  \*************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/SelectAllExercises.vue?vue&type=template&id=5bd1be7f&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/SelectAllExercises.vue?vue&type=template&id=5bd1be7f& ***!
+  \****************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -41755,7 +41994,7 @@ var render = function() {
                       staticClass:
                         "font-semibold text-xl text-gray-800 leading-tight"
                     },
-                    [_vm._v("\n            Vos Exercices\n        ")]
+                    [_vm._v("\n            Vos exercices\n        ")]
                   )
                 ]
               },
@@ -41928,7 +42167,809 @@ var render = function() {
                                           ) {
                                             return _c(
                                               "tr",
-                                              { key: exercise.id },
+                                              {
+                                                key: exercise.id,
+                                                staticClass: "hover:bg-gray-200"
+                                              },
+                                              [
+                                                _c(
+                                                  "td",
+                                                  {
+                                                    staticClass:
+                                                      "px-6 py-4 whitespace-nowrap"
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "text-sm font-medium text-gray-900"
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                    " +
+                                                            _vm._s(
+                                                              exercise.name
+                                                            ) +
+                                                            "\n                                "
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "td",
+                                                  {
+                                                    staticClass:
+                                                      "px-6 py-4 whitespace-nowrap"
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "text-sm font-medium text-gray-900"
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                    " +
+                                                            _vm._s(
+                                                              exercise.comment
+                                                            ) +
+                                                            "\n                                "
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "td",
+                                                  {
+                                                    staticClass:
+                                                      "px-6 py-4 whitespace-nowrap"
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "text-sm font-medium text-gray-900"
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                    " +
+                                                            _vm._s(
+                                                              exercise.nbSerie
+                                                            ) +
+                                                            "\n                                "
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "td",
+                                                  {
+                                                    staticClass:
+                                                      "px-6 py-4 whitespace-nowrap"
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "text-sm font-medium text-gray-900"
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                    Min: " +
+                                                            _vm._s(
+                                                              exercise.repMin
+                                                            ) +
+                                                            ", Max: " +
+                                                            _vm._s(
+                                                              exercise.repMax
+                                                            ) +
+                                                            "\n                                "
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "td",
+                                                  {
+                                                    staticClass:
+                                                      "px-6 py-4 whitespace-nowrap"
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "text-sm font-medium text-gray-900"
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                    " +
+                                                            _vm._s(
+                                                              exercise.pauseSerie
+                                                            ) +
+                                                            "/" +
+                                                            _vm._s(
+                                                              exercise.pauseExercise
+                                                            ) +
+                                                            "\n                                "
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "td",
+                                                  {
+                                                    staticClass:
+                                                      "px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "a",
+                                                      {
+                                                        staticClass:
+                                                          "text-indigo-600 hover:text-indigo-900",
+                                                        attrs: {
+                                                          href: _vm.editExerciseLink(
+                                                            exercise.id
+                                                          )
+                                                        }
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "font-awesome-icon",
+                                                          {
+                                                            attrs: {
+                                                              icon: "edit"
+                                                            }
+                                                          }
+                                                        )
+                                                      ],
+                                                      1
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "a",
+                                                      {
+                                                        staticClass:
+                                                          "text-indigo-600 hover:text-indigo-900",
+                                                        on: {
+                                                          click: function(
+                                                            $event
+                                                          ) {
+                                                            return _vm.delExercise(
+                                                              exercise.id
+                                                            )
+                                                          }
+                                                        }
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "font-awesome-icon",
+                                                          {
+                                                            attrs: {
+                                                              icon: "trash-alt"
+                                                            }
+                                                          }
+                                                        )
+                                                      ],
+                                                      1
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            )
+                                          }),
+                                          0
+                                        )
+                                      ]
+                                    )
+                                  : _vm._e()
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ])
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("v-dialog")
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/SelectAllTrainings.vue?vue&type=template&id=d1ee6e86&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/SelectAllTrainings.vue?vue&type=template&id=d1ee6e86& ***!
+  \****************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "app-layout",
+        {
+          scopedSlots: _vm._u([
+            {
+              key: "header",
+              fn: function() {
+                return [
+                  _c(
+                    "h2",
+                    {
+                      staticClass:
+                        "font-semibold text-xl text-gray-800 leading-tight"
+                    },
+                    [_vm._v("\n            Tous vos entraînements\n        ")]
+                  )
+                ]
+              },
+              proxy: true
+            }
+          ])
+        },
+        [
+          _vm._v(" "),
+          _c("div", { staticClass: "overflow-visible py-12" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "overflow-visible max-w-7xl mx-auto sm:px-6 lg:px-8"
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "bg-white overflow-visible shadow-xl sm:rounded-lg"
+                  },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "overflow-visible flex flex-col" },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "overflow-visible -my-2 sm:-mx-6 lg:-mx-8"
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "overflow-visible py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "overflow-visible shadow  border-b border-gray-200 sm:rounded-lg"
+                                  },
+                                  [
+                                    !_vm.t_present
+                                      ? _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8"
+                                          },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "text-3xl font-bold leading-tight text-gray-900"
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                Vous n'avez aucun entraînement pour le moment.\n                            "
+                                                )
+                                              ]
+                                            )
+                                          ]
+                                        )
+                                      : _vm._e(),
+                                    _vm._v(" "),
+                                    _vm.t_present
+                                      ? _c(
+                                          "table",
+                                          {
+                                            staticClass:
+                                              "min-w-full divide-y divide-gray-200"
+                                          },
+                                          [
+                                            _c("thead", [
+                                              _c("tr", [
+                                                _c(
+                                                  "th",
+                                                  {
+                                                    staticClass:
+                                                      "px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
+                                                    attrs: { scope: "col" }
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      "\n                                Nom\n                            "
+                                                    )
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "th",
+                                                  {
+                                                    staticClass:
+                                                      "px-6 py-3 bg-gray-50",
+                                                    attrs: { scope: "col" }
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "span",
+                                                      {
+                                                        staticClass: "sr-only"
+                                                      },
+                                                      [_vm._v("Éditer")]
+                                                    )
+                                                  ]
+                                                )
+                                              ])
+                                            ]),
+                                            _vm._v(" "),
+                                            _c(
+                                              "tbody",
+                                              {
+                                                staticClass:
+                                                  "px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider ",
+                                                attrs: { scope: "col" }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                Nom\n                            "
+                                                )
+                                              ]
+                                            )
+                                          ])
+                                        ]),
+                                        _vm._v(" "),
+                                        _c(
+                                          "tbody",
+                                          {
+                                            staticClass:
+                                              "bg-white divide-y divide-gray-200"
+                                          },
+                                          _vm._l(_vm.training_plans, function(
+                                            plan
+                                          ) {
+                                            return _c(
+                                              "tr",
+                                              {
+                                                key: plan.id,
+                                                staticClass:
+                                                  "hover:bg-gray-200",
+                                                on: {
+                                                  click: function($event) {
+                                                    return _vm.goToTrainingPlanResults(
+                                                      plan.id
+                                                    )
+                                                  }
+                                                }
+                                              },
+                                              _vm._l(_vm.trainings, function(
+                                                training
+                                              ) {
+                                                return _c(
+                                                  "tr",
+                                                  {
+                                                    key: training.id,
+                                                    staticClass:
+                                                      "hover:bg-gray-200"
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "a",
+                                                      {
+                                                        staticClass:
+                                                          "text-indigo-600 hover:text-indigo-900",
+                                                        attrs: {
+                                                          href: _vm.getExerciseLink(
+                                                            training.id
+                                                          )
+                                                        }
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "td",
+                                                          {
+                                                            staticClass:
+                                                              "px-18 py-4 whitespace-nowrap"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                staticClass:
+                                                                  "flex items-center"
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "ml-4"
+                                                                  },
+                                                                  [
+                                                                    _c(
+                                                                      "div",
+                                                                      {
+                                                                        staticClass:
+                                                                          "text-sm font-medium text-gray-900"
+                                                                      },
+                                                                      [
+                                                                        _vm._v(
+                                                                          "\n                                    " +
+                                                                            _vm._s(
+                                                                              training.name
+                                                                            ) +
+                                                                            "\n                                    "
+                                                                        )
+                                                                      ]
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        )
+                                                      ]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "td",
+                                                      {
+                                                        staticClass:
+                                                          "px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "a",
+                                                          {
+                                                            staticClass:
+                                                              "text-indigo-600 hover:text-indigo-900",
+                                                            attrs: {
+                                                              href: _vm.editTrainingLink(
+                                                                training.id
+                                                              )
+                                                            }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "font-awesome-icon",
+                                                              {
+                                                                attrs: {
+                                                                  icon: "edit"
+                                                                }
+                                                              }
+                                                            )
+                                                          ],
+                                                          1
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "a",
+                                                          {
+                                                            staticClass:
+                                                              "text-indigo-600 hover:text-indigo-900",
+                                                            on: {
+                                                              click: function(
+                                                                $event
+                                                              ) {
+                                                                return _vm.delTraining(
+                                                                  training.id
+                                                                )
+                                                              }
+                                                            }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "font-awesome-icon",
+                                                              {
+                                                                attrs: {
+                                                                  icon:
+                                                                    "trash-alt"
+                                                                }
+                                                              }
+                                                            )
+                                                          ],
+                                                          1
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                )
+                                              }),
+                                              0
+                                            )
+                                          ]
+                                        )
+                                      : _vm._e()
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("v-dialog")
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/SelectExercises.vue?vue&type=template&id=0e9d01e6&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/SelectExercises.vue?vue&type=template&id=0e9d01e6& ***!
+  \*************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "app-layout",
+        {
+          scopedSlots: _vm._u([
+            {
+              key: "header",
+              fn: function() {
+                return [
+                  _c(
+                    "h2",
+                    {
+                      staticClass:
+                        "font-semibold text-xl text-gray-800 leading-tight"
+                    },
+                    [_vm._v("\n            Vos exercices\n        ")]
+                  )
+                ]
+              },
+              proxy: true
+            }
+          ])
+        },
+        [
+          _vm._v(" "),
+          _c("div", { staticClass: "py-12" }, [
+            _c("div", { staticClass: "max-w-7xl mx-auto sm:px-6 lg:px-8" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "bg-white overflow-visible shadow-xl sm:rounded-lg"
+                },
+                [
+                  _c("div", { staticClass: "flex flex-col" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "-my-2 overflow-visible sm:-mx-6 lg:-mx-8"
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8"
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "shadow overflow-visible border-b border-gray-200 sm:rounded-lg"
+                              },
+                              [
+                                !_vm.e_present
+                                  ? _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8"
+                                      },
+                                      [
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "text-3xl font-bold leading-tight text-gray-900"
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                Vous n'avez aucun exercice pour le moment.\n                            "
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _vm.e_present
+                                  ? _c(
+                                      "table",
+                                      {
+                                        staticClass:
+                                          "min-w-full divide-y divide-gray-200"
+                                      },
+                                      [
+                                        _c("thead", [
+                                          _c("tr", [
+                                            _c(
+                                              "th",
+                                              {
+                                                staticClass:
+                                                  "px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
+                                                attrs: { scope: "col" }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                Nom\n                            "
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "th",
+                                              {
+                                                staticClass:
+                                                  "px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
+                                                attrs: { scope: "col" }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                Description\n                            "
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "th",
+                                              {
+                                                staticClass:
+                                                  "px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
+                                                attrs: { scope: "col" }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                Nombre de séries\n                            "
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "th",
+                                              {
+                                                staticClass:
+                                                  "px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
+                                                attrs: { scope: "col" }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                Nombre de répétitions\n                            "
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "th",
+                                              {
+                                                staticClass:
+                                                  "px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
+                                                attrs: { scope: "col" }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                Temps de pause entre les séries/exercices\n                            "
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "th",
+                                              {
+                                                staticClass:
+                                                  "px-6 py-3 bg-gray-50",
+                                                attrs: { scope: "col" }
+                                              },
+                                              [
+                                                _c(
+                                                  "span",
+                                                  { staticClass: "sr-only" },
+                                                  [_vm._v("Éditer")]
+                                                )
+                                              ]
+                                            )
+                                          ])
+                                        ]),
+                                        _vm._v(" "),
+                                        _c(
+                                          "tbody",
+                                          {
+                                            staticClass:
+                                              "bg-white divide-y divide-gray-200"
+                                          },
+                                          _vm._l(_vm.exercises, function(
+                                            exercise
+                                          ) {
+                                            return _c(
+                                              "tr",
+                                              {
+                                                key: exercise.id,
+                                                staticClass: "hover:bg-gray-200"
+                                              },
                                               [
                                                 _c(
                                                   "td",
@@ -42192,7 +43233,7 @@ var render = function() {
                                       },
                                       [
                                         _vm._v(
-                                          "\n                                    Ajouter un exercice exsistant\n                            "
+                                          "\n                                    Ajouter un exercice existant\n                            "
                                         )
                                       ]
                                     )
@@ -42352,7 +43393,7 @@ var render = function() {
                                           "tbody",
                                           {
                                             staticClass:
-                                              "bg-white divide-y divide-gray-200"
+                                              "bg-white divide-y divide-gray-200 hover:bg-gray-200"
                                           },
                                           _vm._l(_vm.training_plans, function(
                                             plan
@@ -42361,8 +43402,6 @@ var render = function() {
                                               "tr",
                                               {
                                                 key: plan.id,
-                                                staticClass:
-                                                  "hover:bg-gray-200",
                                                 on: {
                                                   click: function($event) {
                                                     return _vm.goToTrainingPlanResults(
@@ -42593,116 +43632,131 @@ var render = function() {
                                           _vm._l(_vm.training_plans, function(
                                             plan
                                           ) {
-                                            return _c("tr", { key: plan.id }, [
-                                              _c(
-                                                "a",
-                                                {
-                                                  attrs: {
-                                                    href: _vm.getTrainingLink(
-                                                      plan.id
-                                                    )
-                                                  }
-                                                },
-                                                [
-                                                  _c(
-                                                    "td",
-                                                    {
-                                                      staticClass:
-                                                        "px-18 py-4 whitespace-nowrap"
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "flex items-center"
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "ml-4"
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "div",
-                                                                {
-                                                                  staticClass:
-                                                                    "text-sm font-medium text-gray-900"
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "\n                                    " +
-                                                                      _vm._s(
-                                                                        plan.name
-                                                                      ) +
-                                                                      "\n                                    "
-                                                                  )
-                                                                ]
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
+                                            return _c(
+                                              "tr",
+                                              {
+                                                key: plan.id,
+                                                staticClass: "hover:bg-gray-200"
+                                              },
+                                              [
+                                                _c(
+                                                  "a",
+                                                  {
+                                                    attrs: {
+                                                      href: _vm.getTrainingLink(
+                                                        plan.id
                                                       )
-                                                    ]
-                                                  )
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "td",
-                                                {
-                                                  staticClass:
-                                                    "px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
-                                                },
-                                                [
-                                                  _c(
-                                                    "a",
-                                                    {
-                                                      staticClass:
-                                                        "text-indigo-600 hover:text-indigo-900",
-                                                      attrs: {
-                                                        href: _vm.editTrainingPlanLink(
-                                                          plan.id
+                                                    }
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "td",
+                                                      {
+                                                        staticClass:
+                                                          "px-18 py-4 whitespace-nowrap"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "flex items-center"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                staticClass:
+                                                                  "ml-4"
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "text-sm font-medium text-gray-900"
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "\n                                    " +
+                                                                        _vm._s(
+                                                                          plan.name
+                                                                        ) +
+                                                                        "\n                                    "
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
                                                         )
-                                                      }
-                                                    },
-                                                    [
-                                                      _c("font-awesome-icon", {
-                                                        attrs: { icon: "edit" }
-                                                      })
-                                                    ],
-                                                    1
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "a",
-                                                    {
-                                                      staticClass:
-                                                        "text-indigo-600 hover:text-indigo-900",
-                                                      on: {
-                                                        click: function(
-                                                          $event
-                                                        ) {
-                                                          return _vm.delTP(
+                                                      ]
+                                                    )
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "td",
+                                                  {
+                                                    staticClass:
+                                                      "px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "a",
+                                                      {
+                                                        staticClass:
+                                                          "text-indigo-600 hover:text-indigo-900",
+                                                        attrs: {
+                                                          href: _vm.editTrainingPlanLink(
                                                             plan.id
                                                           )
                                                         }
-                                                      }
-                                                    },
-                                                    [
-                                                      _c("font-awesome-icon", {
-                                                        attrs: {
-                                                          icon: "trash-alt"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "font-awesome-icon",
+                                                          {
+                                                            attrs: {
+                                                              icon: "edit"
+                                                            }
+                                                          }
+                                                        )
+                                                      ],
+                                                      1
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "a",
+                                                      {
+                                                        staticClass:
+                                                          "text-indigo-600 hover:text-indigo-900",
+                                                        on: {
+                                                          click: function(
+                                                            $event
+                                                          ) {
+                                                            return _vm.delTP(
+                                                              plan.id
+                                                            )
+                                                          }
                                                         }
-                                                      })
-                                                    ],
-                                                    1
-                                                  )
-                                                ]
-                                              )
-                                            ])
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "font-awesome-icon",
+                                                          {
+                                                            attrs: {
+                                                              icon: "trash-alt"
+                                                            }
+                                                          }
+                                                        )
+                                                      ],
+                                                      1
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            )
                                           }),
                                           0
                                         )
@@ -42925,7 +43979,11 @@ var render = function() {
                                               ) {
                                                 return _c(
                                                   "tr",
-                                                  { key: training.id },
+                                                  {
+                                                    key: training.id,
+                                                    staticClass:
+                                                      "hover:bg-gray-200"
+                                                  },
                                                   [
                                                     _c(
                                                       "a",
@@ -43115,7 +44173,7 @@ var render = function() {
                                           },
                                           [
                                             _vm._v(
-                                              "\n                                    Ajouter un entraînement exsistant\n                            "
+                                              "\n                                    Ajouter un entraînement existant\n                            "
                                             )
                                           ]
                                         )
@@ -56860,6 +57918,10 @@ var map = {
 	"./Profile/UpdateProfileInformationForm.vue": "./resources/js/Pages/Profile/UpdateProfileInformationForm.vue",
 	"./Results": "./resources/js/Pages/Results.vue",
 	"./Results.vue": "./resources/js/Pages/Results.vue",
+	"./SelectAllExercises": "./resources/js/Pages/SelectAllExercises.vue",
+	"./SelectAllExercises.vue": "./resources/js/Pages/SelectAllExercises.vue",
+	"./SelectAllTrainings": "./resources/js/Pages/SelectAllTrainings.vue",
+	"./SelectAllTrainings.vue": "./resources/js/Pages/SelectAllTrainings.vue",
 	"./SelectExercises": "./resources/js/Pages/SelectExercises.vue",
 	"./SelectExercises.vue": "./resources/js/Pages/SelectExercises.vue",
 	"./SelectResults": "./resources/js/Pages/SelectResults.vue",
@@ -57996,6 +59058,144 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Pages/SelectAllExercises.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/Pages/SelectAllExercises.vue ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _SelectAllExercises_vue_vue_type_template_id_5bd1be7f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SelectAllExercises.vue?vue&type=template&id=5bd1be7f& */ "./resources/js/Pages/SelectAllExercises.vue?vue&type=template&id=5bd1be7f&");
+/* harmony import */ var _SelectAllExercises_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SelectAllExercises.vue?vue&type=script&lang=js& */ "./resources/js/Pages/SelectAllExercises.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SelectAllExercises_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SelectAllExercises_vue_vue_type_template_id_5bd1be7f___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _SelectAllExercises_vue_vue_type_template_id_5bd1be7f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/SelectAllExercises.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/SelectAllExercises.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/Pages/SelectAllExercises.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SelectAllExercises_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./SelectAllExercises.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/SelectAllExercises.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SelectAllExercises_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/SelectAllExercises.vue?vue&type=template&id=5bd1be7f&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/Pages/SelectAllExercises.vue?vue&type=template&id=5bd1be7f& ***!
+  \**********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SelectAllExercises_vue_vue_type_template_id_5bd1be7f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./SelectAllExercises.vue?vue&type=template&id=5bd1be7f& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/SelectAllExercises.vue?vue&type=template&id=5bd1be7f&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SelectAllExercises_vue_vue_type_template_id_5bd1be7f___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SelectAllExercises_vue_vue_type_template_id_5bd1be7f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/SelectAllTrainings.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/Pages/SelectAllTrainings.vue ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _SelectAllTrainings_vue_vue_type_template_id_d1ee6e86___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SelectAllTrainings.vue?vue&type=template&id=d1ee6e86& */ "./resources/js/Pages/SelectAllTrainings.vue?vue&type=template&id=d1ee6e86&");
+/* harmony import */ var _SelectAllTrainings_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SelectAllTrainings.vue?vue&type=script&lang=js& */ "./resources/js/Pages/SelectAllTrainings.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SelectAllTrainings_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SelectAllTrainings_vue_vue_type_template_id_d1ee6e86___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _SelectAllTrainings_vue_vue_type_template_id_d1ee6e86___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/SelectAllTrainings.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/SelectAllTrainings.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/Pages/SelectAllTrainings.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SelectAllTrainings_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./SelectAllTrainings.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/SelectAllTrainings.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SelectAllTrainings_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/SelectAllTrainings.vue?vue&type=template&id=d1ee6e86&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/Pages/SelectAllTrainings.vue?vue&type=template&id=d1ee6e86& ***!
+  \**********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SelectAllTrainings_vue_vue_type_template_id_d1ee6e86___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./SelectAllTrainings.vue?vue&type=template&id=d1ee6e86& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/SelectAllTrainings.vue?vue&type=template&id=d1ee6e86&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SelectAllTrainings_vue_vue_type_template_id_d1ee6e86___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SelectAllTrainings_vue_vue_type_template_id_d1ee6e86___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/Pages/SelectExercises.vue":
 /*!************************************************!*\
   !*** ./resources/js/Pages/SelectExercises.vue ***!
@@ -58314,6 +59514,10 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('v-select', vue_select__WEB
 
 _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_6__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faEdit"]);
 _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_6__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faTrashAlt"]);
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_6__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faRulerCombined"]);
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_6__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faChartLine"]);
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_6__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faBook"]);
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_6__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faDumbbell"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('font-awesome-icon', _fortawesome_vue_fontawesome__WEBPACK_IMPORTED_MODULE_8__["FontAwesomeIcon"]); //vue-modal
 
 
@@ -58378,8 +59582,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/html/EZWorkout/app/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /var/www/html/EZWorkout/app/resources/css/app.css */"./resources/css/app.css");
+__webpack_require__(/*! /home/jojoc4/dev/EZWorkout/app/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/jojoc4/dev/EZWorkout/app/resources/css/app.css */"./resources/css/app.css");
 
 
 /***/ })

@@ -14741,6 +14741,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -14748,10 +14749,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      training_plans: [],
-      training_plan: {
-        name: ''
-      }
+      training_plans: {}
     };
   },
   methods: {
@@ -41699,6 +41697,14 @@ var render = function() {
                       "font-semibold text-xl text-gray-800 leading-tight"
                   },
                   [_vm._v("\n            Results ?\n        ")]
+                ),
+                _vm._v(
+                  "\n        " +
+                    _vm._s(
+                      _vm.training_plans.logbook_pages[0].training_effs[0]
+                        .exercise_effs[0].series_effs[0].rep
+                    ) +
+                    "\n    "
                 )
               ]
             },

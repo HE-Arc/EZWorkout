@@ -5,6 +5,7 @@
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 Results ?
             </h2>
+            {{training_plans.logbook_pages[0].training_effs[0].exercise_effs[0].series_effs[0].rep}}
         </template>
     </app-layout>
     </div>
@@ -20,11 +21,7 @@
 
         data(){
             return{
-                training_plans:[],
-                training_plan:{
-                    name:''
-
-                }
+                training_plans:{},
             }
         },
         methods:{

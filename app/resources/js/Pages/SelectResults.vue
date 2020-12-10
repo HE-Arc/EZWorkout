@@ -26,8 +26,8 @@
                                 </th>
                                 </tr>
                             </thead>
-                            <tbody class="bg-white divide-y divide-gray-200">
-                                <tr v-for="plan in training_plans" :key="plan.id" @click="goToTrainingPlanResults(plan.id)" class="hover:bg-gray-200">
+                            <tbody class="bg-white divide-y divide-gray-200 hover:bg-gray-200">
+                                <tr v-for="plan in training_plans" :key="plan.id" @click="goToTrainingPlanResults(plan.id)">
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
                                         <div class="ml-4">

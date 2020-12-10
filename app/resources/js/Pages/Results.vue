@@ -3,9 +3,8 @@
         <app-layout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Results ?
+                Results
             </h2>
-            {{training_plans.logbook_pages[0].training_effs[0].exercise_effs[0].series_effs[0].rep}}
         </template>
     </app-layout>
     </div>
@@ -13,20 +12,26 @@
 
 <script>
     import AppLayout from './../Layouts/AppLayout'
+    import Welcome from './../Jetstream/Welcome'
 
     export default {
         components: {
             AppLayout,
+            Welcome,
         },
 
         data(){
             return{
-                training_plans:{},
+                training_plans:[],
+                training_plan:{
+                    name:''
+
+                }
             }
         },
         methods:{
             getTrainingPlans(){
-                axios.get("/trainingPlan/"+this.$parent.props.id+"/results")
+                axios.get('/trainingPlan')
                 .then((res) => {
                     this.training_plans = res.data
                 }).catch((err) => {

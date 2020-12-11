@@ -37110,108 +37110,19 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "min-h-screen bg-gray-100" },
-    [
-      _c("nav", { staticClass: "bg-white border-b border-gray-100" }, [
-        _c("div", { staticClass: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" }, [
-          _c("div", { staticClass: "flex justify-between h-16" }, [
-            _c("div", { staticClass: "flex" }, [
-              _c("div", { staticClass: "flex-shrink-0 flex items-center" }, [
-                _c(
-                  "a",
-                  { attrs: { href: "/dashboard" } },
-                  [
-                    _c("jet-application-mark", {
-                      staticClass: "block h-9 w-auto"
-                    })
-                  ],
-                  1
-                )
-              ]),
-              _vm._v(" "),
+  return _c("div", { staticClass: "min-h-screen bg-gray-100" }, [
+    _c("nav", { staticClass: "bg-white border-b border-gray-100" }, [
+      _c("div", { staticClass: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" }, [
+        _c("div", { staticClass: "flex justify-between h-16" }, [
+          _c("div", { staticClass: "flex" }, [
+            _c("div", { staticClass: "flex-shrink-0 flex items-center" }, [
               _c(
-                "div",
-                { staticClass: "hidden space-x-8 sm:-my-px sm:ml-10 sm:flex" },
+                "a",
+                { attrs: { href: "/dashboard" } },
                 [
-                  _c(
-                    "jet-nav-link",
-                    {
-                      attrs: {
-                        href: "/dashboard",
-                        active: _vm.$page.currentRouteName == "dashboard"
-                      }
-                    },
-                    [
-                      _vm._v(
-                        "\n                            Accueil\n                        "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "jet-nav-link",
-                    {
-                      attrs: {
-                        href: "/selectTrainingPlans",
-                        active:
-                          _vm.$page.currentRouteName == "selectTrainingPlans"
-                      }
-                    },
-                    [
-                      _vm._v(
-                        "\n                            Plans d'entraînement\n                        "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "jet-nav-link",
-                    {
-                      attrs: {
-                        href: "/selectAllTrainings",
-                        active:
-                          _vm.$page.currentRouteName == "selectAllTrainings"
-                      }
-                    },
-                    [
-                      _vm._v(
-                        "\n                            Entraînements\n                        "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "jet-nav-link",
-                    {
-                      attrs: {
-                        href: "/selectAllExercises",
-                        active:
-                          _vm.$page.currentRouteName == "selectAllExercises"
-                      }
-                    },
-                    [
-                      _vm._v(
-                        "\n                            Exercices\n                        "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "jet-nav-link",
-                    {
-                      attrs: {
-                        href: "/selectresults",
-                        active: _vm.$page.currentRouteName == "selectresults"
-                      }
-                    },
-                    [
-                      _vm._v(
-                        "\n                            Résultats\n                        "
-                      )
-                    ]
-                  )
+                  _c("jet-application-mark", {
+                    staticClass: "block h-9 w-auto"
+                  })
                 ],
                 1
               )
@@ -37219,239 +37130,25 @@ var render = function() {
             _vm._v(" "),
             _c(
               "div",
-              { staticClass: "hidden sm:flex sm:items-center sm:ml-6" },
+              { staticClass: "hidden space-x-8 sm:-my-px sm:ml-10 sm:flex" },
               [
                 _c(
-                  "div",
-                  { staticClass: "ml-3 relative" },
-                  [
-                    _c("jet-dropdown", {
-                      attrs: { align: "right", width: "48" },
-                      scopedSlots: _vm._u([
-                        {
-                          key: "trigger",
-                          fn: function() {
-                            return [
-                              _vm.$page.jetstream.managesProfilePhotos
-                                ? _c(
-                                    "button",
-                                    {
-                                      staticClass:
-                                        "flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out"
-                                    },
-                                    [
-                                      _c("img", {
-                                        staticClass:
-                                          "h-8 w-8 rounded-full object-cover",
-                                        attrs: {
-                                          src: _vm.$page.user.profile_photo_url,
-                                          alt: _vm.$page.user.name
-                                        }
-                                      })
-                                    ]
-                                  )
-                                : _c(
-                                    "button",
-                                    {
-                                      staticClass:
-                                        "flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
-                                    },
-                                    [
-                                      _c("div", [
-                                        _vm._v(_vm._s(_vm.$page.user.name))
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "ml-1" }, [
-                                        _c(
-                                          "svg",
-                                          {
-                                            staticClass: "fill-current h-4 w-4",
-                                            attrs: {
-                                              xmlns:
-                                                "http://www.w3.org/2000/svg",
-                                              viewBox: "0 0 20 20"
-                                            }
-                                          },
-                                          [
-                                            _c("path", {
-                                              attrs: {
-                                                "fill-rule": "evenodd",
-                                                d:
-                                                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z",
-                                                "clip-rule": "evenodd"
-                                              }
-                                            })
-                                          ]
-                                        )
-                                      ])
-                                    ]
-                                  )
-                            ]
-                          },
-                          proxy: true
-                        },
-                        {
-                          key: "content",
-                          fn: function() {
-                            return [
-                              _c(
-                                "div",
-                                {
-                                  staticClass:
-                                    "block px-4 py-2 text-xs text-gray-400"
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                    Mon compte\n                                "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "jet-dropdown-link",
-                                { attrs: { href: "/user/profile" } },
-                                [
-                                  _vm._v(
-                                    "\n                                    Profil\n                                "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _vm.$page.jetstream.hasApiFeatures
-                                ? _c(
-                                    "jet-dropdown-link",
-                                    { attrs: { href: "/user/api-tokens" } },
-                                    [
-                                      _vm._v(
-                                        "\n                                    Connexion à l'app\n                                "
-                                      )
-                                    ]
-                                  )
-                                : _vm._e(),
-                              _vm._v(" "),
-                              _c("div", {
-                                staticClass: "border-t border-gray-100"
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "form",
-                                {
-                                  on: {
-                                    submit: function($event) {
-                                      $event.preventDefault()
-                                      return _vm.logout($event)
-                                    }
-                                  }
-                                },
-                                [
-                                  _c(
-                                    "jet-dropdown-link",
-                                    { attrs: { as: "button" } },
-                                    [
-                                      _vm._v(
-                                        "\n                                        Se déconnecter\n                                    "
-                                      )
-                                    ]
-                                  )
-                                ],
-                                1
-                              )
-                            ]
-                          },
-                          proxy: true
-                        }
-                      ])
-                    })
-                  ],
-                  1
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "-mr-2 flex items-center sm:hidden" }, [
-              _c(
-                "button",
-                {
-                  staticClass:
-                    "inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out",
-                  on: {
-                    click: function($event) {
-                      _vm.showingNavigationDropdown = !_vm.showingNavigationDropdown
-                    }
-                  }
-                },
-                [
-                  _c(
-                    "svg",
-                    {
-                      staticClass: "h-6 w-6",
-                      attrs: {
-                        stroke: "currentColor",
-                        fill: "none",
-                        viewBox: "0 0 24 24"
-                      }
-                    },
-                    [
-                      _c("path", {
-                        class: {
-                          hidden: _vm.showingNavigationDropdown,
-                          "inline-flex": !_vm.showingNavigationDropdown
-                        },
-                        attrs: {
-                          "stroke-linecap": "round",
-                          "stroke-linejoin": "round",
-                          "stroke-width": "2",
-                          d: "M4 6h16M4 12h16M4 18h16"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("path", {
-                        class: {
-                          hidden: !_vm.showingNavigationDropdown,
-                          "inline-flex": _vm.showingNavigationDropdown
-                        },
-                        attrs: {
-                          "stroke-linecap": "round",
-                          "stroke-linejoin": "round",
-                          "stroke-width": "2",
-                          d: "M6 18L18 6M6 6l12 12"
-                        }
-                      })
-                    ]
-                  )
-                ]
-              )
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "sm:hidden",
-            class: {
-              block: _vm.showingNavigationDropdown,
-              hidden: !_vm.showingNavigationDropdown
-            }
-          },
-          [
-            _c(
-              "div",
-              { staticClass: "pt-2 pb-3 space-y-1" },
-              [
-                _c(
-                  "jet-responsive-nav-link",
+                  "jet-nav-link",
                   {
                     attrs: {
                       href: "/dashboard",
                       active: _vm.$page.currentRouteName == "dashboard"
                     }
                   },
-                  [_vm._v("\n                    Accueil\n                ")]
+                  [
+                    _vm._v(
+                      "\n                            Accueil\n                        "
+                    )
+                  ]
                 ),
                 _vm._v(" "),
                 _c(
-                  "jet-responsive-nav-link",
+                  "jet-nav-link",
                   {
                     attrs: {
                       href: "/selectTrainingPlans",
@@ -37461,13 +37158,13 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      "\n                     Plans d'entraînement\n                "
+                      "\n                            Plans d'entraînement\n                        "
                     )
                   ]
                 ),
                 _vm._v(" "),
                 _c(
-                  "jet-responsive-nav-link",
+                  "jet-nav-link",
                   {
                     attrs: {
                       href: "/selectAllTrainings",
@@ -37476,147 +37173,431 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      "\n                     Entraînements\n                "
+                      "\n                            Entraînements\n                        "
                     )
                   ]
                 ),
                 _vm._v(" "),
                 _c(
-                  "jet-responsive-nav-link",
+                  "jet-nav-link",
                   {
                     attrs: {
                       href: "/selectAllExercises",
                       active: _vm.$page.currentRouteName == "selectAllExercises"
                     }
                   },
-                  [_vm._v("\n                     Exercices\n                ")]
+                  [
+                    _vm._v(
+                      "\n                            Exercices\n                        "
+                    )
+                  ]
                 ),
                 _vm._v(" "),
                 _c(
-                  "jet-responsive-nav-link",
+                  "jet-nav-link",
                   {
                     attrs: {
                       href: "/selectresults",
                       active: _vm.$page.currentRouteName == "selectresults"
                     }
                   },
-                  [_vm._v("\n                     Résultats\n                ")]
+                  [
+                    _vm._v(
+                      "\n                            Résultats\n                        "
+                    )
+                  ]
                 )
               ],
               1
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "pt-4 pb-1 border-t border-gray-200" }, [
-              _c("div", { staticClass: "flex items-center px-4" }, [
-                _c("div", { staticClass: "flex-shrink-0" }, [
-                  _c("img", {
-                    staticClass: "h-10 w-10 rounded-full",
-                    attrs: {
-                      src: _vm.$page.user.profile_photo_url,
-                      alt: _vm.$page.user.name
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "hidden sm:flex sm:items-center sm:ml-6" }, [
+            _c(
+              "div",
+              { staticClass: "ml-3 relative" },
+              [
+                _c("jet-dropdown", {
+                  attrs: { align: "right", width: "48" },
+                  scopedSlots: _vm._u([
+                    {
+                      key: "trigger",
+                      fn: function() {
+                        return [
+                          _vm.$page.jetstream.managesProfilePhotos
+                            ? _c(
+                                "button",
+                                {
+                                  staticClass:
+                                    "flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out"
+                                },
+                                [
+                                  _c("img", {
+                                    staticClass:
+                                      "h-8 w-8 rounded-full object-cover",
+                                    attrs: {
+                                      src: _vm.$page.user.profile_photo_url,
+                                      alt: _vm.$page.user.name
+                                    }
+                                  })
+                                ]
+                              )
+                            : _c(
+                                "button",
+                                {
+                                  staticClass:
+                                    "flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+                                },
+                                [
+                                  _c("div", [
+                                    _vm._v(_vm._s(_vm.$page.user.name))
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "ml-1" }, [
+                                    _c(
+                                      "svg",
+                                      {
+                                        staticClass: "fill-current h-4 w-4",
+                                        attrs: {
+                                          xmlns: "http://www.w3.org/2000/svg",
+                                          viewBox: "0 0 20 20"
+                                        }
+                                      },
+                                      [
+                                        _c("path", {
+                                          attrs: {
+                                            "fill-rule": "evenodd",
+                                            d:
+                                              "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z",
+                                            "clip-rule": "evenodd"
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ])
+                                ]
+                              )
+                        ]
+                      },
+                      proxy: true
+                    },
+                    {
+                      key: "content",
+                      fn: function() {
+                        return [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "block px-4 py-2 text-xs text-gray-400"
+                            },
+                            [
+                              _vm._v(
+                                "\n                                    Mon compte\n                                "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "jet-dropdown-link",
+                            { attrs: { href: "/user/profile" } },
+                            [
+                              _vm._v(
+                                "\n                                    Profil\n                                "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _vm.$page.jetstream.hasApiFeatures
+                            ? _c(
+                                "jet-dropdown-link",
+                                { attrs: { href: "/user/api-tokens" } },
+                                [
+                                  _vm._v(
+                                    "\n                                    Connexion à l'app\n                                "
+                                  )
+                                ]
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _c("div", {
+                            staticClass: "border-t border-gray-100"
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "form",
+                            {
+                              on: {
+                                submit: function($event) {
+                                  $event.preventDefault()
+                                  return _vm.logout($event)
+                                }
+                              }
+                            },
+                            [
+                              _c(
+                                "jet-dropdown-link",
+                                { attrs: { as: "button" } },
+                                [
+                                  _vm._v(
+                                    "\n                                        Se déconnecter\n                                    "
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ]
+                      },
+                      proxy: true
                     }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "ml-3" }, [
-                  _c(
-                    "div",
-                    { staticClass: "font-medium text-base text-gray-800" },
-                    [_vm._v(_vm._s(_vm.$page.user.name))]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "font-medium text-sm text-gray-500" },
-                    [_vm._v(_vm._s(_vm.$page.user.email))]
-                  )
-                ])
-              ]),
+                  ])
+                })
+              ],
+              1
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "-mr-2 flex items-center sm:hidden" }, [
+            _c(
+              "button",
+              {
+                staticClass:
+                  "inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out",
+                on: {
+                  click: function($event) {
+                    _vm.showingNavigationDropdown = !_vm.showingNavigationDropdown
+                  }
+                }
+              },
+              [
+                _c(
+                  "svg",
+                  {
+                    staticClass: "h-6 w-6",
+                    attrs: {
+                      stroke: "currentColor",
+                      fill: "none",
+                      viewBox: "0 0 24 24"
+                    }
+                  },
+                  [
+                    _c("path", {
+                      class: {
+                        hidden: _vm.showingNavigationDropdown,
+                        "inline-flex": !_vm.showingNavigationDropdown
+                      },
+                      attrs: {
+                        "stroke-linecap": "round",
+                        "stroke-linejoin": "round",
+                        "stroke-width": "2",
+                        d: "M4 6h16M4 12h16M4 18h16"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("path", {
+                      class: {
+                        hidden: !_vm.showingNavigationDropdown,
+                        "inline-flex": _vm.showingNavigationDropdown
+                      },
+                      attrs: {
+                        "stroke-linecap": "round",
+                        "stroke-linejoin": "round",
+                        "stroke-width": "2",
+                        d: "M6 18L18 6M6 6l12 12"
+                      }
+                    })
+                  ]
+                )
+              ]
+            )
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "sm:hidden",
+          class: {
+            block: _vm.showingNavigationDropdown,
+            hidden: !_vm.showingNavigationDropdown
+          }
+        },
+        [
+          _c(
+            "div",
+            { staticClass: "pt-2 pb-3 space-y-1" },
+            [
+              _c(
+                "jet-responsive-nav-link",
+                {
+                  attrs: {
+                    href: "/dashboard",
+                    active: _vm.$page.currentRouteName == "dashboard"
+                  }
+                },
+                [_vm._v("\n                    Accueil\n                ")]
+              ),
               _vm._v(" "),
               _c(
-                "div",
-                { staticClass: "mt-3 space-y-1" },
+                "jet-responsive-nav-link",
+                {
+                  attrs: {
+                    href: "/selectTrainingPlans",
+                    active: _vm.$page.currentRouteName == "selectTrainingPlans"
+                  }
+                },
                 [
-                  _c(
-                    "jet-responsive-nav-link",
-                    {
-                      attrs: {
-                        href: "/user/profile",
-                        active: _vm.$page.currentRouteName == "profile.show"
-                      }
-                    },
-                    [
-                      _vm._v(
-                        "\n                        Profile\n                    "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _vm.$page.jetstream.hasApiFeatures
-                    ? _c(
-                        "jet-responsive-nav-link",
-                        {
-                          attrs: {
-                            href: "/user/api-tokens",
-                            active:
-                              _vm.$page.currentRouteName == "api-tokens.index"
-                          }
-                        },
-                        [
-                          _vm._v(
-                            "\n                        Connexion à l'app\n                    "
-                          )
-                        ]
-                      )
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _c(
-                    "form",
-                    {
-                      attrs: { method: "POST" },
-                      on: {
-                        submit: function($event) {
-                          $event.preventDefault()
-                          return _vm.logout($event)
-                        }
-                      }
-                    },
-                    [
-                      _c(
-                        "jet-responsive-nav-link",
-                        { attrs: { as: "button" } },
-                        [
-                          _vm._v(
-                            "\n                            Se déconnecter\n                        "
-                          )
-                        ]
-                      )
-                    ],
-                    1
+                  _vm._v(
+                    "\n                     Plans d'entraînement\n                "
                   )
-                ],
-                1
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "jet-responsive-nav-link",
+                {
+                  attrs: {
+                    href: "/selectAllTrainings",
+                    active: _vm.$page.currentRouteName == "selectAllTrainings"
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n                     Entraînements\n                "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "jet-responsive-nav-link",
+                {
+                  attrs: {
+                    href: "/selectAllExercises",
+                    active: _vm.$page.currentRouteName == "selectAllExercises"
+                  }
+                },
+                [_vm._v("\n                     Exercices\n                ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "jet-responsive-nav-link",
+                {
+                  attrs: {
+                    href: "/selectresults",
+                    active: _vm.$page.currentRouteName == "selectresults"
+                  }
+                },
+                [_vm._v("\n                     Résultats\n                ")]
               )
-            ])
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c("header", { staticClass: "bg-white shadow" }, [
-        _c(
-          "div",
-          { staticClass: "max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8" },
-          [_vm._t("header")],
-          2
-        )
-      ]),
-      _vm._v(" "),
-      _c("main", [_vm._t("default")], 2),
-      _vm._v(" "),
-      _c("portal-target", { attrs: { name: "modal", multiple: "" } })
-    ],
-    1
-  )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "pt-4 pb-1 border-t border-gray-200" }, [
+            _c("div", { staticClass: "flex items-center px-4" }, [
+              _c("div", { staticClass: "flex-shrink-0" }, [
+                _c("img", {
+                  staticClass: "h-10 w-10 rounded-full",
+                  attrs: {
+                    src: _vm.$page.user.profile_photo_url,
+                    alt: _vm.$page.user.name
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "ml-3" }, [
+                _c(
+                  "div",
+                  { staticClass: "font-medium text-base text-gray-800" },
+                  [_vm._v(_vm._s(_vm.$page.user.name))]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "font-medium text-sm text-gray-500" },
+                  [_vm._v(_vm._s(_vm.$page.user.email))]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "mt-3 space-y-1" },
+              [
+                _c(
+                  "jet-responsive-nav-link",
+                  {
+                    attrs: {
+                      href: "/user/profile",
+                      active: _vm.$page.currentRouteName == "profile.show"
+                    }
+                  },
+                  [
+                    _vm._v(
+                      "\n                        Profile\n                    "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _vm.$page.jetstream.hasApiFeatures
+                  ? _c(
+                      "jet-responsive-nav-link",
+                      {
+                        attrs: {
+                          href: "/user/api-tokens",
+                          active:
+                            _vm.$page.currentRouteName == "api-tokens.index"
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Connexion à l'app\n                    "
+                        )
+                      ]
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                _c(
+                  "form",
+                  {
+                    attrs: { method: "POST" },
+                    on: {
+                      submit: function($event) {
+                        $event.preventDefault()
+                        return _vm.logout($event)
+                      }
+                    }
+                  },
+                  [
+                    _c("jet-responsive-nav-link", { attrs: { as: "button" } }, [
+                      _vm._v(
+                        "\n                            Se déconnecter\n                        "
+                      )
+                    ])
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          ])
+        ]
+      )
+    ]),
+    _vm._v(" "),
+    _c("header", { staticClass: "bg-white shadow" }, [
+      _c(
+        "div",
+        { staticClass: "max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8" },
+        [_vm._t("header")],
+        2
+      )
+    ]),
+    _vm._v(" "),
+    _c("main", [_vm._t("default")], 2)
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -59730,8 +59711,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_js_modal__WEBPACK_IMPORTED_MO
   dialog: true
 });
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(_inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_1__["InertiaApp"]);
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(laravel_jetstream__WEBPACK_IMPORTED_MODULE_2__["InertiaForm"]);
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(portal_vue__WEBPACK_IMPORTED_MODULE_3___default.a);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(laravel_jetstream__WEBPACK_IMPORTED_MODULE_2__["InertiaForm"]); //Vue.use(PortalVue);
+
 var app = document.getElementById('app');
 new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   render: function render(h) {

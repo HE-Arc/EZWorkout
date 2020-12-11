@@ -32,7 +32,7 @@ Vue.use(VModal, { dialog: true })
 
 Vue.use(InertiaApp);
 Vue.use(InertiaForm);
-Vue.use(PortalVue);
+//Vue.use(PortalVue);
 
 const app = document.getElementById('app');
 

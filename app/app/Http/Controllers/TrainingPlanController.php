@@ -13,9 +13,9 @@ class TrainingPlanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return response()->json(TrainingPlan::all());
+        return response()->json(TrainingPlan::where('user_id', $request->user()->id)->get());
     }
 
     /**

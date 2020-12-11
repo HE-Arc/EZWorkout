@@ -16,15 +16,15 @@ class TrainingController extends Controller
      */
     public function index(Request $request)
     {
-        $a = array();
+        $a = [];
         foreach (TrainingPlan::where('user_id', $request->user()->id)->get() as $tp) {
             foreach ($tp->trainings()->get() as $t) {
                 $a[] = $t;
             }
         }
 
-        $final  = array();
-        $ids = array();
+        $final  = [];
+        $ids = [];
 
         foreach ($a as $current) {
             if (!in_array($current->id, $ids)) {

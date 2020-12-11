@@ -18,18 +18,37 @@ class TrainingPlanController extends Controller
         return response()->json(TrainingPlan::where('user_id', $request->user()->id)->get());
     }
 
-            /**
-     * Return a training plan and containing all objects
+    /**
+     * Return a training plan containing all objects (effective data)
      * 
      * @param int $id
      * @return Response
      */
-    public function getAllInTrainingPlan($id){
-        $tabOutput = [];
+    public function getAllEffectiveInTrainingPlan($id){
 
         $tp = TrainingPlan::with(["logbook_pages.training_effs.exercise_effs.series_effs" => function($query) use ($id) {
             $query->where("id",$id);
         }])->get();
+
+        foreach ($tp as $currentTp)
+        {
+            if ($currentTp->id == $id)
+            {
+                return response()->json($currentTp);
+            }
+        }
+        return response()->json([]);
+    }
+
+    /**
+     * Return a training plan containing all objects (template only)
+     * 
+     * @param int $id
+     * @return Response
+     */
+    public function getAllTemplateInTrainingPlan($id){
+
+        $tp = TrainingPlan::with("trainings.exercises")->get();
 
         foreach ($tp as $currentTp)
         {

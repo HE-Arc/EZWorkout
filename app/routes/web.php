@@ -53,7 +53,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('training/fromTP/{id}', [TrainingController::class, 'getFromTrainingPlan']);
     Route::get('exercise/fromT/{id}', [ExerciseController::class, 'getFromTraining']);
 
-    Route::get('trainingPlan/{id}/results', [TrainingPlanController::class, 'getAllInTrainingPlan']);
+    Route::get('trainingPlan/{id}/results', [TrainingPlanController::class, 'getAllEffectiveInTrainingPlan']);
+    Route::get('trainingPlan/{id}/resultsTemplate', [TrainingPlanController::class, 'getAllTemplateInTrainingPlan']);
 
     //vue
     Route::get('/selectresults', function () {

@@ -3,7 +3,7 @@
         <app-layout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Vos entraînements
+                Tous vos entraînements
             </h2>
         </template>
 
@@ -50,17 +50,6 @@
                                 </tr>
                             </tbody>
                             </table>
-                            <div class="overflow-visible flex items-center w-full justify-evenly px-2 py-7 bg-gray-50 text-right sm:px-6">
-                                <a :href="newLink()" class="pr-12">
-                                    <button class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150">
-                                        Créer un nouvel entraînement
-                                    </button>
-                                </a>
-                                <v-select class=" px-2 py-2" style="min-width: 500px" label="name" :options="AllTrainings" :reduce="tr => tr.id" v-model="newSelected" />
-                                <button @click="addExisting" :disabled="btnDisabled" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150">
-                                        Ajouter un entraînement existant
-                                </button>
-                            </div>
                         </div>
                         </div>
                     </div>
@@ -85,22 +74,14 @@
         data(){
             return{
                 trainings:[],
-                AllTrainings: [],
-                newSelected: null,
                 delId: null
             }
         },
         methods:{
             getTrainings(){
-                axios.get('/training/fromTP/'+ this.$parent.props.id)
+                axios.get('/training')
                 .then((res) => {
                     this.trainings = res.data
-                }).catch((err) => {
-                    console.log(err)
-                });
-                axios.get('/training/')
-                .then((res) => {
-                    this.AllTrainings = res.data
                 }).catch((err) => {
                     console.log(err)
                 });
@@ -110,13 +91,6 @@
             },
             editTrainingLink(id){
                 return "/editTraining/" + id
-            },
-            newLink(){
-                return "/newTraining/" + this.$parent.props.id
-            },
-            addExisting(){
-                axios.post('/training/' + this.newSelected + '/addToTrainingPlan', {trainingPlan: this.$parent.props.id});
-                this.getTrainings();
             },
             delTraining(id){
                 this.delId = id;
@@ -134,7 +108,7 @@
                         {
                             title: 'Supprimer',
                             handler: () => {
-                                axios.post('/training/' + this.delId + '/removeFromTrainingPlan',  {trainingPlan: this.$parent.props.id})
+                                axios.delete('/training/' + this.delId + "/all")
                                 this.delId = null;
                                 this.getTrainings();
                                 this.$modal.hide('dialog');
@@ -150,9 +124,6 @@
         computed: {
             t_present: function(){
                 return this.trainings.length > 0
-            },
-            btnDisabled: function(){
-                return this.newSelected == null
             }
         }
     }

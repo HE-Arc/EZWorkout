@@ -76,17 +76,6 @@
                                 </tr>
                             </tbody>
                             </table>
-                            <div class="flex overflow-visible items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
-                                <a :href="newLink()">
-                                    <button class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150">
-                                        Créer un nouvel exercice
-                                    </button>
-                                </a>
-                                <v-select class=" px-2 py-2" style="min-width: 500px" label="name" :options="AllExercises" :reduce="ex => ex.id" v-model="newSelected" />
-                                <button @click="addExisting" :disabled="btnDisabled" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150">
-                                        Ajouter un exercice existant
-                                </button>
-                            </div>
                         </div>
                         </div>
                     </div>
@@ -111,35 +100,20 @@
         data(){
             return{
                 exercises:[],
-                AllExercises: [],
-                newSelected: null,
                 delId: null
             }
         },
         methods:{
             getExercises(){
-                axios.get('/exercise/fromT/'+ this.$parent.props.id)
+                axios.get('/exercise')
                 .then((res) => {
                     this.exercises = res.data
-                }).catch((err) => {
-                    console.log(err)
-                });
-                axios.get('/exercise/')
-                .then((res) => {
-                    this.AllExercises = res.data
                 }).catch((err) => {
                     console.log(err)
                 });
             },
             editExerciseLink(id){
                 return "/editExercise/" + id
-            },
-            newLink(){
-                return "/newExercise/" + this.$parent.props.id
-            },
-            addExisting(){
-                axios.post('/exercise/' + this.newSelected + '/addToTraining', {training: this.$parent.props.id});
-                this.getExercises();
             },
             delExercise(id){
                 this.delId = id;
@@ -157,7 +131,7 @@
                         {
                             title: 'Supprimer',
                             handler: () => {
-                                axios.post('/exercise/' + this.delId + '/removeFromTraining',  {training: this.$parent.props.id})
+                                axios.delete('/exercise/' + this.delId + '/all')
                                 this.delId = null;
                                 this.getExercises();
                                 this.$modal.hide('dialog');

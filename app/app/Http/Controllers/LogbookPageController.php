@@ -24,7 +24,6 @@ class LogbookPageController extends Controller
         return response()->json($a);
     }
 
-
     /**
      * Store a newly created resource in storage.
      *

@@ -59,7 +59,7 @@
                                                 <div class="grid grid-cols-6 gap-6">
                                                     <div class="col-span-6 sm:col-span-4">
                                                     <label for="repMin" class="block font-medium text-sm text-gray-700">
-                                                        <span>Nombre de répétitions minimales</span>
+                                                        <span>Nombre de répetitions minimales</span>
                                                     </label>
                                                     <input id="repMin" type="number" class="form-input rounded-md shadow-sm mt-1 block w-full" v-model="form.repMin">
                                                     </div>
@@ -67,7 +67,7 @@
                                                 <div class="grid grid-cols-6 gap-6">
                                                     <div class="col-span-6 sm:col-span-4">
                                                     <label for="repMax" class="block font-medium text-sm text-gray-700">
-                                                        <span>Nombre de répétitions maximales</span>
+                                                        <span>Nombre de répetitions maximales</span>
                                                     </label>
                                                     <input id="repMax" type="number" class="form-input rounded-md shadow-sm mt-1 block w-full" v-model="form.repMax">
                                                     </div>
@@ -114,10 +114,12 @@
 
 <script>
     import AppLayout from './../Layouts/AppLayout'
+    import Welcome from './../Jetstream/Welcome'
 
     export default {
         components: {
             AppLayout,
+            Welcome
             },
 
         data(){

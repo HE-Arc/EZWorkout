@@ -7,6 +7,43 @@
             </h2>
             {{training_plans.logbook_pages[0].training_effs[0].exercise_effs[0].series_effs[0].rep}}
         </template>
+        <div class="py-12">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                    <div class="flex flex-col">
+                    <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                        <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                            <table  class="border-collapse border border-gray-200">
+                                  <thead>
+                                    <tr>
+                                    <th class="border border-green-600 ...">State</th>
+                                    <th class="border border-green-600 ...">City</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td class="border border-green-600 ...">Indiana</td>
+                                    <td class="border border-green-600 ...">Indianapolis</td>
+                                    </tr>
+                                    <tr>
+                                    <td class="border border-green-600 ...">Ohio</td>
+                                    <td class="border border-green-600 ...">Columbus</td>
+                                    </tr>
+                                    <tr>
+                                    <td class="border border-green-600 ...">Michigan</td>
+                                    <td class="border border-green-600 ...">Detroit</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
     </app-layout>
     </div>
 </template>

@@ -35,8 +35,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::apiResource('exerciseEff', ExerciseEffController::class);
     Route::apiResource('seriesEff', SeriesEffController::class);
 
-    Route::post('training/{id}/addToTrainingPlan', [TrainingController::class, 'attach']);
-    Route::post('exercise/{id}/addToTraining', [ExerciseController::class, 'attach']);
+    Route::post('training/{id}/addToTrainingPlan', [TrainingController::class, 'attach'])->whereNumber('id');
+    Route::post('exercise/{id}/addToTraining', [ExerciseController::class, 'attach'])->whereNumber('id');
 
     Route::get('test', function (Request $r) {
         return $r->user();

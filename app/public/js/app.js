@@ -37587,7 +37587,7 @@ var render = function() {
                         { attrs: { as: "button" } },
                         [
                           _vm._v(
-                            "\n                            Logout\n                        "
+                            "\n                            Se déconnecter\n                        "
                           )
                         ]
                       )

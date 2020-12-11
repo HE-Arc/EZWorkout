@@ -135,7 +135,7 @@
                         <!-- Authentication -->
                         <form method="POST" @submit.prevent="logout">
                             <jet-responsive-nav-link as="button">
-                                Logout
+                                Se déconnecter
                             </jet-responsive-nav-link>
                         </form>
                     </div>

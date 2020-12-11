@@ -27,6 +27,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 //authentificated routes
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+
+    //resource
     Route::apiResource('trainingPlan', TrainingPlanController::class);
     Route::apiResource('training', TrainingController::class);
     Route::apiResource('exercise', ExerciseController::class);
@@ -35,10 +37,20 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::apiResource('exerciseEff', ExerciseEffController::class);
     Route::apiResource('seriesEff', SeriesEffController::class);
 
-    Route::post('training/{id}/addToTrainingPlan', [TrainingController::class, 'attach']);
-    Route::post('exercise/{id}/addToTraining', [ExerciseController::class, 'attach']);
+    //special get
+    Route::get('training/fromTP/{id}', [TrainingController::class, 'getFromTrainingPlan'])->whereNumber('id');
+    Route::get('exercise/fromT/{id}', [ExerciseController::class, 'getFromTraining'])->whereNumber('id');
+    Route::get('trainingPlan/{id}/results', [TrainingPlanController::class, 'getAllInTrainingPlan'])->whereNumber('id');
+    Route::get('user', function (Request $r) {return $r->user();});
 
-    Route::get('test', function (Request $r) {
-        return $r->user();
-    });
+    //other training
+    Route::post('training/{id}/addToTrainingPlan', [TrainingController::class, 'attach'])->whereNumber('id');
+    Route::post('training/{id}/removeFromTrainingPlan', [TrainingController::class, 'detach'])->whereNumber('id');
+    Route::delete('training/{id}/all', [TrainingController::class, 'detachAll'])->whereNumber('id');
+
+    //other exercise
+    Route::post('exercise/{id}/addToTraining', [ExerciseController::class, 'attach'])->whereNumber('id');
+    Route::post('exercise/{id}/removeFromTraining', [ExerciseController::class, 'detach'])->whereNumber('id');
+    Route::delete('exercise/{id}/all', [ExerciseController::class, 'detachAll'])->whereNumber('id');
+
 });

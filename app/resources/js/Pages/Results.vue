@@ -59,6 +59,7 @@
         data(){
             return{
                 training_plans_effective:{},
+                training_plans_template:{},
             }
         },
         methods:{
@@ -73,7 +74,7 @@
             getTrainingPlansTemplate(){
                 axios.get("/trainingPlan/"+this.$parent.props.id+"/resultsTemplate")
                 .then((res) => {
-                    this.training_plans_effective = res.data
+                    this.training_plans_template = res.data
                 }).catch((err) => {
                     console.log(err)
                 });

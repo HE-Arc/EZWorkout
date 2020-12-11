@@ -15,7 +15,7 @@ class SeriesEffController extends Controller
      */
     public function index(Request $request)
     {
-        $a = array();
+        $a = [];
         foreach (TrainingPlan::where('user_id', $request->user()->id)->get() as $tp) {
             foreach ($tp->logbook_pages()->get() as $lbp) {
                 foreach ($lbp->training_effs()->get() as $te) {
@@ -59,7 +59,7 @@ class SeriesEffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(int $id)
     {
         return response()->json(SeriesEff::find($id));
     }
@@ -71,7 +71,7 @@ class SeriesEffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, int $id)
     {
         $data = $request->validate([
             'rep' => 'integer|min:1',
@@ -94,7 +94,7 @@ class SeriesEffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(int $id)
     {
         SeriesEff::destroy($id);
         return response()->json(['delete' => 'ok']);

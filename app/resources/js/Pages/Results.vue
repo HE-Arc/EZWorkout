@@ -16,23 +16,22 @@
                         <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                             <table  class="border-collapse border border-gray-200">
                                   <thead>
-                                    <tr>
-                                    <th class="border border-green-600 ...">State</th>
-                                    <th class="border border-green-600 ...">City</th>
+                                    <tr v-for="page in training_plans.logbook_pages" :key="page.id">
+                                    <th class="border border-gray-200 ..." :colspan = "page.training_effs[0].exercise_effs[0].series_effs.length">Page {{page.id}}</th><!--TOFIX: display number and series number (keep only the max of series of the plan)  -->
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                    <td class="border border-green-600 ...">Indiana</td>
-                                    <td class="border border-green-600 ...">Indianapolis</td>
+                                    <td class="border border-gray-200 ...">Indiana</td>
+                                    <td class="border border-gray-200 ...">Indianapolis</td>
                                     </tr>
                                     <tr>
-                                    <td class="border border-green-600 ...">Ohio</td>
-                                    <td class="border border-green-600 ...">Columbus</td>
+                                    <td class="border border-gray-200 ...">Ohio</td>
+                                    <td class="border border-gray-200 ...">Columbus</td>
                                     </tr>
                                     <tr>
-                                    <td class="border border-green-600 ...">Michigan</td>
-                                    <td class="border border-green-600 ...">Detroit</td>
+                                    <td class="border border-gray-200 ...">Michigan</td>
+                                    <td class="border border-gray-200 ...">Detroit</td>
                                     </tr>
                                 </tbody>
                             </table>

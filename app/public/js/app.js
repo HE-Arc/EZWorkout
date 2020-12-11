@@ -13003,6 +13003,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -14699,6 +14711,43 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
 /* harmony import */ var _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Jetstream/Welcome */ "./resources/js/Jetstream/Welcome.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -37159,7 +37208,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                            Resultats\n                        "
+                        "\n                            Résultats\n                        "
                       )
                     ]
                   )
@@ -37398,7 +37447,60 @@ var render = function() {
                       active: _vm.$page.currentRouteName == "dashboard"
                     }
                   },
-                  [_vm._v("\n                    EZWorkout\n                ")]
+                  [_vm._v("\n                    Accueil\n                ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "jet-responsive-nav-link",
+                  {
+                    attrs: {
+                      href: "/selectTrainingPlans",
+                      active:
+                        _vm.$page.currentRouteName == "selectTrainingPlans"
+                    }
+                  },
+                  [
+                    _vm._v(
+                      "\n                     Plans d'entraînement\n                "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "jet-responsive-nav-link",
+                  {
+                    attrs: {
+                      href: "/selectAllTrainings",
+                      active: _vm.$page.currentRouteName == "selectAllTrainings"
+                    }
+                  },
+                  [
+                    _vm._v(
+                      "\n                     Entraînements\n                "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "jet-responsive-nav-link",
+                  {
+                    attrs: {
+                      href: "/selectAllExercises",
+                      active: _vm.$page.currentRouteName == "selectAllExercises"
+                    }
+                  },
+                  [_vm._v("\n                     Exercices\n                ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "jet-responsive-nav-link",
+                  {
+                    attrs: {
+                      href: "/selectresults",
+                      active: _vm.$page.currentRouteName == "selectresults"
+                    }
+                  },
+                  [_vm._v("\n                     Résultats\n                ")]
                 )
               ],
               1
@@ -41928,26 +42030,165 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("app-layout", {
-        scopedSlots: _vm._u([
-          {
-            key: "header",
-            fn: function() {
-              return [
-                _c(
-                  "h2",
-                  {
-                    staticClass:
-                      "font-semibold text-xl text-gray-800 leading-tight"
-                  },
-                  [_vm._v("\n            Results\n        ")]
-                )
-              ]
-            },
-            proxy: true
-          }
-        ])
-      })
+      _c(
+        "app-layout",
+        {
+          scopedSlots: _vm._u([
+            {
+              key: "header",
+              fn: function() {
+                return [
+                  _c(
+                    "h2",
+                    {
+                      staticClass:
+                        "font-semibold text-xl text-gray-800 leading-tight"
+                    },
+                    [_vm._v("\n            Results\n        ")]
+                  )
+                ]
+              },
+              proxy: true
+            }
+          ])
+        },
+        [
+          _vm._v(" "),
+          _c("div", { staticClass: "py-12" }, [
+            _c("div", { staticClass: "max-w-7xl mx-auto sm:px-6 lg:px-8" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "bg-white overflow-hidden shadow-xl sm:rounded-lg"
+                },
+                [
+                  _c("div", { staticClass: "flex flex-col" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8"
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8"
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "shadow overflow-hidden border-b border-gray-200 sm:rounded-lg"
+                              },
+                              [
+                                _c(
+                                  "table",
+                                  {
+                                    staticClass:
+                                      "border-collapse border border-gray-200"
+                                  },
+                                  [
+                                    _c("thead", [
+                                      _c("tr", [
+                                        _c(
+                                          "th",
+                                          {
+                                            staticClass:
+                                              "border border-green-600 ..."
+                                          },
+                                          [_vm._v("State")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "th",
+                                          {
+                                            staticClass:
+                                              "border border-green-600 ..."
+                                          },
+                                          [_vm._v("City")]
+                                        )
+                                      ])
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("tbody", [
+                                      _c("tr", [
+                                        _c(
+                                          "td",
+                                          {
+                                            staticClass:
+                                              "border border-green-600 ..."
+                                          },
+                                          [_vm._v("Indiana")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "td",
+                                          {
+                                            staticClass:
+                                              "border border-green-600 ..."
+                                          },
+                                          [_vm._v("Indianapolis")]
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("tr", [
+                                        _c(
+                                          "td",
+                                          {
+                                            staticClass:
+                                              "border border-green-600 ..."
+                                          },
+                                          [_vm._v("Ohio")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "td",
+                                          {
+                                            staticClass:
+                                              "border border-green-600 ..."
+                                          },
+                                          [_vm._v("Columbus")]
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("tr", [
+                                        _c(
+                                          "td",
+                                          {
+                                            staticClass:
+                                              "border border-green-600 ..."
+                                          },
+                                          [_vm._v("Michigan")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "td",
+                                          {
+                                            staticClass:
+                                              "border border-green-600 ..."
+                                          },
+                                          [_vm._v("Detroit")]
+                                        )
+                                      ])
+                                    ])
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ])
+                ]
+              )
+            ])
+          ])
+        ]
+      )
     ],
     1
   )

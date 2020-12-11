@@ -94,19 +94,7 @@
             <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
                 <div class="pt-2 pb-3 space-y-1">
                     <jet-responsive-nav-link href="/dashboard" :active="$page.currentRouteName == 'dashboard'">
-                        Accueil
-                    </jet-responsive-nav-link>
-                    <jet-responsive-nav-link href="/selectTrainingPlans" :active="$page.currentRouteName == 'selectTrainingPlans'">
-                         Plans d'entraînement
-                    </jet-responsive-nav-link>
-                    <jet-responsive-nav-link href="/selectAllTrainings" :active="$page.currentRouteName == 'selectAllTrainings'">
-                         Entraînements
-                    </jet-responsive-nav-link>
-                    <jet-responsive-nav-link href="/selectAllExercises" :active="$page.currentRouteName == 'selectAllExercises'">
-                         Exercices
-                    </jet-responsive-nav-link>
-                    <jet-responsive-nav-link href="/selectresults" :active="$page.currentRouteName == 'selectresults'">
-                         Résultats
+                        EZWorkout
                     </jet-responsive-nav-link>
                 </div>
 
@@ -135,7 +123,7 @@
                         <!-- Authentication -->
                         <form method="POST" @submit.prevent="logout">
                             <jet-responsive-nav-link as="button">
-                                Se déconnecter
+                                Logout
                             </jet-responsive-nav-link>
                         </form>
                     </div>
@@ -156,8 +144,8 @@
         </main>
 
         <!-- Modal Portal -->
-        <!--<portal-target name="modal" multiple>
-        </portal-target>-->
+        <portal-target name="modal" multiple>
+        </portal-target>
     </div>
 </template>
 

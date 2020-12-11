@@ -13,9 +13,9 @@ class TrainingPlanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        return response()->json(TrainingPlan::where('user_id', $request->user()->id)->get());
+        return response()->json(TrainingPlan::all());
     }
 
             /**
@@ -65,7 +65,7 @@ class TrainingPlanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(int $id)
+    public function show($id)
     {
         return response()->json(TrainingPlan::find($id));
     }
@@ -77,7 +77,7 @@ class TrainingPlanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, int $id)
+    public function update(Request $request, $id)
     {
         $data = $request->validate([
             'name' => 'string'
@@ -94,7 +94,7 @@ class TrainingPlanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(int $id)
+    public function destroy($id)
     {
         TrainingPlan::destroy($id);
         return response()->json(['delete' => 'ok']);

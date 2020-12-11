@@ -55,7 +55,7 @@ class TrainingEffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(int $id)
     {
         return response()->json(TrainingEff::find($id));
     }
@@ -67,7 +67,7 @@ class TrainingEffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, int $id)
     {
         $data = $request->validate([
             'logbookPage' => 'integer|min:1',
@@ -90,7 +90,7 @@ class TrainingEffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(int $id)
     {
         TrainingEff::destroy($id);
         return response()->json(['delete' => 'ok']);

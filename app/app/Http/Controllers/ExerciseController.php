@@ -16,7 +16,7 @@ class ExerciseController extends Controller
      */
     public function index(Request $request)
     {
-        $a = array();
+        $a = [];
         foreach(TrainingPlan::where('user_id', $request->user()->id)->get() as $tp){
             foreach($tp->trainings()->get() as $t){
                 foreach($t->exercises()->get() as $e){
@@ -25,8 +25,8 @@ class ExerciseController extends Controller
             }
         }
 
-        $final  = array();
-        $ids = array();
+        $final  = [];
+        $ids = [];
 
         foreach ($a as $current) {
             if ( ! in_array($current->id, $ids)) {
@@ -45,7 +45,7 @@ class ExerciseController extends Controller
      * @param int $id
      * @return Response
      */
-    public function getFromTraining($id){
+    public function getFromTraining(int $id){
         return response()->json(Training::find($id)->exercises()->get());
     }
 
@@ -83,7 +83,7 @@ class ExerciseController extends Controller
     /**
      * attach exercise to training
      */
-    public function attach(Request $request, $id){
+    public function attach(Request $request, int $id){
         $data = $request->validate([
             'training' => 'integer|min:1'
         ]);
@@ -94,7 +94,7 @@ class ExerciseController extends Controller
     /**
      * detach exercise from training
      */
-    public function detach(Request $request, $id){
+    public function detach(Request $request, int $id){
         $data = $request->validate([
             'training' => 'integer|min:1'
         ]);
@@ -105,7 +105,7 @@ class ExerciseController extends Controller
     /**
      * detach exercise from all training
      */
-    public function detachAll($id){
+    public function detachAll(int $id){
         $p = Exercise::find($id);
         $p->trainings()->detach();
     }
@@ -116,7 +116,7 @@ class ExerciseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(int $id)
     {
         return response()->json(Exercise::find($id));
     }
@@ -128,7 +128,7 @@ class ExerciseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, int $id)
     {
         $data = $request->validate([
             'name' => 'string',
@@ -157,7 +157,7 @@ class ExerciseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(int $id)
     {
         Exercise::destroy($id);
         return response()->json(['delete' => 'ok']);

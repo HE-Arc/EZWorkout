@@ -32,8 +32,7 @@
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
                                 <tr v-for="training in trainings" :key="training.id" class="hover:bg-gray-200">
-                                <a :href="getExerciseLink(training.id)" class="text-indigo-600 hover:text-indigo-900">
-                                <td class="px-18 py-4 whitespace-nowrap">
+                                <td @click="gotoExercise(training.id)" class="px-18 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
                                     <div class="ml-4">
                                         <div class="text-sm font-medium text-gray-900">
@@ -42,7 +41,6 @@
                                     </div>
                                     </div>
                                 </td>
-                                </a>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                     <a :href="editTrainingLink(training.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="edit" /></a> 
                                     <a @click="delTraining(training.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="trash-alt" /></a>
@@ -105,9 +103,6 @@
                     console.log(err)
                 });
             },
-            getExerciseLink(id){
-                return "/selectExercises/" + id
-            },
             editTrainingLink(id){
                 return "/editTraining/" + id
             },
@@ -142,6 +137,9 @@
                         }
                     ]
                 })
+            },
+            gotoExercise(id){
+                window.location.href = "/selectExercises/" + id;
             }
         },
         created(){

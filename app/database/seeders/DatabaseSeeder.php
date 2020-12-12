@@ -115,6 +115,14 @@ class DatabaseSeeder extends Seeder
                 'pause' => 58
             ])
         ]);
+
+        $ef[1]->series_effs()->saveMany([
+            new SeriesEff([
+                'rep' => 5,
+                'weight' => 10,
+                'pause' => 50
+            ]),
+        ]);
     }
     
 }

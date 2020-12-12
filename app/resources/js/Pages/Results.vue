@@ -21,17 +21,13 @@
                                         <th class="border border-collapse border-gray-200 " scope="col" >Exercice</th>
                                         <th class="border border-collapse border-gray-200 " scope="col" >Seance {{index+1}}</th> <!-- TODO: v-for here -->
                                     </tr>
-                                 <div v-for="training in page.training_effs" :key="training.id" class="border border-collapse border-gray-400">
-                                    <tr v-for="exo in training.exercise_effs" :key="exo.id" class="border border-collapse border-gray-200">
-                                            <th class="border border-collapse border-gray-200 ..." scope="row"  >{{exo.id}}</th>
-                                            <td v-for="serie in exo.series_effs" :key="serie.id">{{serie.rep}} </td>
-                                    </tr>
-                                </div>
-                                   
-                                        <tr >
-                                        <td class="border border-gray-200"></td>
+                                    <div v-for="training in page.training_effs" :key="training.id" class="border border-collapse border-gray-400">
+                                        <tr v-for="exo in training.exercise_effs" :key="exo.id" class="border border-collapse border-gray-200">
+                                                <th class="border border-collapse border-gray-200 ..." scope="row"  >{{exo.id}}</th>
+                                                <td v-for="serie in exo.series_effs" :key="serie.id">{{serie.rep}} </td>
                                         </tr>
                                     </div>
+                                </div>
                             </table>
                         </div>
                         </div>
@@ -57,6 +53,7 @@
             return{
                 training_plans_effective:{},
                 training_plans_template:{},
+                exercises_names:[],
             }
         },
         methods:{
@@ -82,9 +79,11 @@
             this.getTrainingPlansTemplate();
         },
         computed: {
-            tp_present: function(){
-                return this.training_plans_effective.length > 0
-            }
+            getExercisesNames: function(){
+                for (let i = 0; i < training_plans_template.trainings.length; i++) {
+                    this.exercises_names[i] = 0;
+                }
+            },
         }
     }
 </script>

@@ -26,9 +26,7 @@ class TrainingPlanController extends Controller
      */
     public function getAllEffectiveInTrainingPlan($id){
 
-        $tp = TrainingPlan::with(["logbook_pages.training_effs.exercise_effs.series_effs" => function($query) use ($id) {
-            $query->where("id",$id);
-        }])->get();
+        $tp = TrainingPlan::with("logbook_pages.training_effs.exercise_effs.series_effs")->get();
 
         foreach ($tp as $currentTp)
         {

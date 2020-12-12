@@ -19,7 +19,7 @@
                                  <div v-for="(page,index) in training_plans_effective.logbook_pages" :key="page.id" >
                                     <tr class="border border-collapse border-gray-400 ">
                                         <th class="border border-collapse border-gray-200 " scope="col" >Exercice</th>
-                                        <th class="border border-collapse border-gray-200 " scope="col" >Seance {{index+1}}</th> <!-- TODO: v-for here -->
+                                        <th class="border border-collapse border-gray-200 " scope="col" >Page {{index+1}}</th> <!-- TODO: v-for here -->
                                     </tr>
                                     <div v-for="training in page.training_effs" :key="training.id" class="border border-collapse border-gray-400">
                                         <tr v-for="exo in training.exercise_effs" :key="exo.id" class="border border-collapse border-gray-200">

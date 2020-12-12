@@ -2,8 +2,8 @@
     <div>
         <app-layout>
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Results ?
+            <h2  class="font-semibold text-xl text-gray-800 leading-tight">
+                Results
             </h2>
             {{training_plans_effective.logbook_pages[0].training_effs[0].exercise_effs[0].series_effs[0].rep}}
             {{training_plans_template.trainings[0].exercises[0].name}}
@@ -16,17 +16,18 @@
                         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                         <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                             <table  class="border-collapse border border-gray-200">
-                                 <div v-for="(page,index) in training_plans_effective.logbook_pages" :key="page.id" >
-                                    <tr class="border border-collapse border-gray-400 ">
-                                        <th class="border border-collapse border-gray-200 " scope="col" >Exercice</th>
-                                        <th class="border border-collapse border-gray-200 " scope="col" >Page {{index+1}}</th> <!-- TODO: v-for here -->
-                                    </tr>
-                                    <div v-for="training in page.training_effs" :key="training.id" class="border border-collapse border-gray-400">
-                                        <tr v-for="exo in training.exercise_effs" :key="exo.id" class="border border-collapse border-gray-200">
-                                                <th class="border border-collapse border-gray-200 ..." scope="row"  >{{exo.id}}</th>
-                                                <td v-for="serie in exo.series_effs" :key="serie.id">{{serie.rep}} </td>
-                                        </tr>
-                                    </div>
+                                 
+                                <tr class="border border-collapse border-gray-400 ">
+                                    <th class="border border-collapse border-gray-200 " scope="col" >Exercice</th>
+                                    <th v-for="(page,index) in training_plans_effective.logbook_pages" :key="page.id" class="border border-collapse border-gray-200 " scope="col" >Page {{index+1}}</th>
+                                </tr>
+                                <div v-for="(page,index) in training_plans_effective.logbook_pages" :key="page.id" >
+                                        <div v-for="training in page.training_effs" :key="training.id" class="border border-collapse border-gray-400">
+                                            <tr v-for="exo in training.exercise_effs" :key="exo.id" class="border border-collapse border-gray-200">
+                                                    <th v-if="index == 0" class="border border-collapse border-gray-200 ..." scope="row"  >{{exo.id}}</th>
+                                                    <td v-for="serie in exo.series_effs" :key="serie.id">{{serie.rep}}x{{serie.weight}}kg </td>
+                                            </tr>
+                                        </div>
                                 </div>
                             </table>
                         </div>
@@ -53,7 +54,7 @@
             return{
                 training_plans_effective:{},
                 training_plans_template:{},
-                exercises_names:[],
+                exercises_names:{},
             }
         },
         methods:{
@@ -68,9 +69,17 @@
             getTrainingPlansTemplate(){
                 axios.get("/trainingPlan/"+this.$parent.props.id+"/resultsTemplate")
                 .then((res) => {
-                    this.training_plans_template = res.data
+                    this.training_plans_template = res.data;
+                    this.extractExercisesNames()
                 }).catch((err) => {
                     console.log(err)
+                });
+            },
+            extractExercisesNames(){
+                this.training_plans_template.trainings.forEach(training => {
+                    training.exercises.forEach(exo => {
+                        this.exercises_names[exo.id] = exo.name;
+                    });
                 });
             },
         },
@@ -78,12 +87,5 @@
             this.getTrainingPlansResults();
             this.getTrainingPlansTemplate();
         },
-        computed: {
-            getExercisesNames: function(){
-                for (let i = 0; i < training_plans_template.trainings.length; i++) {
-                    this.exercises_names[i] = 0;
-                }
-            },
-        }
     }
 </script>

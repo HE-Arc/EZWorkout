@@ -40,7 +40,7 @@
                     </ul>
                     @endif
 				</div>
-				<div class="image phone"><div class="inner"><img src="images/screen.jpg" alt="" /></div></div>
+				<div class="image phone"><div class="inner"><img src="images/screen.gif" alt="" /></div></div>
 			</header>
 
 		<!-- Footer -->

@@ -77,7 +77,7 @@
         },
         methods:{
             getTrainings(){
-                axios.get('/training')
+                axios.get('/api/web/training')
                 .then((res) => {
                     this.trainings = res.data
                 }).catch((err) => {
@@ -103,7 +103,7 @@
                         {
                             title: 'Supprimer',
                             handler: () => {
-                                axios.delete('/training/' + this.delId + "/all")
+                                axios.delete('/api/web/training/' + this.delId + "/all")
                                 this.delId = null;
                                 this.getTrainings();
                                 this.$modal.hide('dialog');

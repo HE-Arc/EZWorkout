@@ -118,13 +118,13 @@
         },
         methods:{
             getExercises(){
-                axios.get('/exercise/fromT/'+ this.$parent.props.id)
+                axios.get('/api/web/exercise/fromT/'+ this.$parent.props.id)
                 .then((res) => {
                     this.exercises = res.data
                 }).catch((err) => {
                     console.log(err)
                 });
-                axios.get('/exercise/')
+                axios.get('/api/web/exercise/')
                 .then((res) => {
                     this.AllExercises = res.data
                 }).catch((err) => {
@@ -138,7 +138,7 @@
                 return "/newExercise/" + this.$parent.props.id
             },
             addExisting(){
-                axios.post('/exercise/' + this.newSelected + '/addToTraining', {training: this.$parent.props.id});
+                axios.post('/api/web/exercise/' + this.newSelected + '/addToTraining', {training: this.$parent.props.id});
                 this.getExercises();
             },
             delExercise(id){
@@ -157,7 +157,7 @@
                         {
                             title: 'Supprimer',
                             handler: () => {
-                                axios.post('/exercise/' + this.delId + '/removeFromTraining',  {training: this.$parent.props.id})
+                                axios.post('/api/web/exercise/' + this.delId + '/removeFromTraining',  {training: this.$parent.props.id})
                                 this.delId = null;
                                 this.getExercises();
                                 this.$modal.hide('dialog');

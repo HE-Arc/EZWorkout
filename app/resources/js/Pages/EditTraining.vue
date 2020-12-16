@@ -81,11 +81,11 @@
         methods:{
             updateTraining() {
                 let id = this.$parent.props.id;
-                this.$inertia.put('/training/' + id, this.form);
+                this.$inertia.put('/api/web/training/' + id, this.form);
                 window.location.href = '/selectTrainings/' + id;
             },
             getTraining(){
-                axios.get('/training/'+ this.$parent.props.id)
+                axios.get('/api/web/training/'+ this.$parent.props.id)
                 .then((res) => {
                     this.form.name = res.data.name
                 }).catch((err) => {

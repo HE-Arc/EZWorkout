@@ -36,6 +36,28 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     })->name('qrcode');
 
     //crud
+    Route::prefix('api/web')->group(function() {
+        Route::apiResource('trainingPlan', TrainingPlanController::class);
+        Route::apiResource('training', TrainingController::class);
+        Route::apiResource('exercise', ExerciseController::class);
+        Route::apiResource('logbookPage', LogbookPageController::class);
+        Route::apiResource('trainingEff', TrainingEffController::class);
+        Route::apiResource('exerciseEff', ExerciseEffController::class);
+        Route::apiResource('seriesEff', SeriesEffController::class);
+        Route::post('training/{id}/addToTrainingPlan', [TrainingController::class, 'attach']);
+        Route::post('training/{id}/removeFromTrainingPlan', [TrainingController::class, 'detach']);
+        Route::delete('training/{id}/all', [TrainingController::class, 'detachAll']);
+        Route::post('exercise/{id}/addToTraining', [ExerciseController::class, 'attach']);
+        Route::post('exercise/{id}/removeFromTraining', [ExerciseController::class, 'detach']);
+        Route::delete('exercise/{id}/all', [ExerciseController::class, 'detachAll']);
+
+        Route::get('training/fromTP/{id}', [TrainingController::class, 'getFromTrainingPlan']);
+        Route::get('exercise/fromT/{id}', [ExerciseController::class, 'getFromTraining']);
+
+        Route::get('trainingPlan/{id}/results', [TrainingPlanController::class, 'getAllInTrainingPlan']);
+    });
+
+    //TODO remove
     Route::apiResource('trainingPlan', TrainingPlanController::class);
     Route::apiResource('training', TrainingController::class);
     Route::apiResource('exercise', ExerciseController::class);

@@ -136,7 +136,7 @@
         },
         methods:{
             createExercise() {
-                this.$inertia.post('/exercise/', this.form);
+                this.$inertia.post('/api/web/exercise/', this.form);
                 window.location.href = '/selectExercises/' + this.form.training;
             },
         },

@@ -84,7 +84,7 @@
         },
         methods:{
             getTrainingPlans(){
-                axios.get('/trainingPlan')
+                axios.get('/api/web/trainingPlan')
                 .then((res) => {
                     this.training_plans = res.data
                 }).catch((err) => {
@@ -110,7 +110,7 @@
                         {
                             title: 'Supprimer',
                             handler: () => {
-                                axios.delete('/trainingPlan/' + this.delId)
+                                axios.delete('/api/web/trainingPlan/' + this.delId)
                                 this.delId = null;
                                 this.getTrainingPlans();
                                 this.$modal.hide('dialog');

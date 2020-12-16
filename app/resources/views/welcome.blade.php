@@ -30,7 +30,7 @@
                     <p>Vivez vos entraînements autrement</p>
                     @if (Route::has('login'))
 					<ul class="actions">
-						<li><a href="https://play.google.com/apps/internaltest/4698965301354935484" class="button primary icon solid fa-download">Télécharger</a></li>
+						<li><a target="_blank" href="https://play.google.com/apps/internaltest/4698965301354935484" class="button primary icon solid fa-download">Télécharger</a></li>
                         @auth
                         <li><a href="/dashboard" class="button icon solid fa-user" >Mon compte</a></li>
                         @else
@@ -40,7 +40,7 @@
                     </ul>
                     @endif
 				</div>
-				<div class="image phone"><div class="inner"><img src="images/screen.jpg" alt="" /></div></div>
+				<div class="image phone"><div class="inner"><img src="images/screen.gif" alt="" /></div></div>
 			</header>
 
 		<!-- Footer -->

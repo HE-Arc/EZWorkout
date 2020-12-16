@@ -9,7 +9,7 @@
                             EZWorkout vous permet de planifier facilement vos entraînements et de voir vos résultats en un coup d'oeil.
                             <br><br>
                             Pour suivre vos entraînements, téléchargez notre application android.
-                            <a target="_blank" href="https://play.google.com/apps/internaltest/4698965301354935484"><img width="300em" src="https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png" alt="badge playsotre"></a>
+                            <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/apps/internaltest/4698965301354935484"><img width="300em" src="https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png" alt="badge playsotre"></a>
                             <br>
                             Pour vous connecter à l'application android, vous pouvez afficher le QRcode à l'aide du lien ci-dessous ou dans le menu de votre profil.
                             <br><a class="text-blue-500" href="user/api-tokens">Afficher le QRcode</a>

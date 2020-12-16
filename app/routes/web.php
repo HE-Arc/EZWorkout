@@ -36,7 +36,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     })->name('qrcode');
 
     //crud
-    Route::apiResource('trainingPlan', TrainingPlanController::class);
+    Route::apiResource('trainingPlan', TrainingPlanController::class); //TODO: rename prefix : "api/web/
     Route::apiResource('training', TrainingController::class);
     Route::apiResource('exercise', ExerciseController::class);
     Route::apiResource('logbookPage', LogbookPageController::class);
@@ -53,7 +53,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('training/fromTP/{id}', [TrainingController::class, 'getFromTrainingPlan']);
     Route::get('exercise/fromT/{id}', [ExerciseController::class, 'getFromTraining']);
 
-    Route::get('trainingPlan/{id}/results', [TrainingPlanController::class, 'getAllEffectiveInTrainingPlan']);
+    Route::get('trainingPlan/{id}/results', [TrainingPlanController::class, 'getResultData']);
     Route::get('trainingPlan/{id}/resultsTemplate', [TrainingPlanController::class, 'getAllTemplateInTrainingPlan']);
 
     //vue
@@ -115,7 +115,5 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
         return Inertia\Inertia::render('Dashboard');
     })->name('dashboard');
-
-
     
 });

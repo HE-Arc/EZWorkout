@@ -19,20 +19,61 @@ class TrainingPlanController extends Controller
     }
 
     /**
-     * Return a training plan containing all objects (effective data)
+     * Return all effective data and template for a given training plan
      * 
      * @param int $id
      * @return Response
      */
-    public function getAllEffectiveInTrainingPlan($id){
+    public function getResultData($id){
 
-        $tp = TrainingPlan::with("logbook_pages.training_effs.exercise_effs.series_effs")->get();
+        $trainingPlanEffective = TrainingPlan::with("logbook_pages.training_effs.exercise_effs.series_effs")->get();
+        $trainingPlanTemplate = TrainingPlan::with("trainings.exercises")->get();
 
-        foreach ($tp as $currentTp)
+        $templateNames = [];
+        $tabData = [];
+        
+        foreach ($trainingPlanTemplate as $tpTemplate)
         {
-            if ($currentTp->id == $id)
+            if ($tpTemplate->id == $id)
             {
-                return response()->json($currentTp);
+                foreach ($tpTemplate->trainings as $training)
+                {
+                    foreach ( $training->exercises as $exo)
+                    {
+                        //Fill the templateNames dictionary
+                        $templateNames[$exo->id] = $exo->name;
+                    }
+                }
+            }
+        }
+
+
+        foreach ($trainingPlanEffective as $tp)
+        {
+            if ($tp->id == $id)
+            {
+                foreach ($tp->logbook_pages as $logPage)
+                {
+                    foreach ($logPage->training_effs as $trainingEff)
+                    {
+                        $exoIndex = 0;
+                        foreach ($trainingEff->exercise_effs as $exoEff)
+                        {
+                            //put the name of the exercise on first cell for each row
+                            $tabData[$exoIndex][0] = $templateNames[$exoEff->exercise_id];
+
+                            $serieIndex = 1; // start at 1 because the first celle is the exercise name
+                            foreach ($exoEff->series_effs as $serie)
+                            {
+                                $tabData[$exoIndex][$serieIndex] = $serie;
+                                
+                                $serieIndex++;
+                            }
+                            $exoIndex++;
+                        }
+                    }
+                }
+                return response()->json($tabData);
             }
         }
         return response()->json([]);

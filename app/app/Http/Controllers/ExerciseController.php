@@ -16,25 +16,22 @@ class ExerciseController extends Controller
      */
     public function index(Request $request)
     {
-        $a = [];
-        foreach(TrainingPlan::where('user_id', $request->user()->id)->get() as $tp){
-            foreach($tp->trainings()->get() as $t){
-                foreach($t->exercises()->get() as $e){
-                    $a[] = $e;
-                }
-            }
-        }
+        $a = TrainingPlan::where('user_id', $request->user()->id)->with("trainings.exercises")->get();
 
         $final  = [];
         $ids = [];
 
-        foreach ($a as $current) {
-            if ( ! in_array($current->id, $ids)) {
-                $final[] = $current;
-                $ids[] = $current->id;
+        foreach ($a as $tp) {
+            foreach ($tp['trainings'] as $t) {
+                foreach ($t['exercises'] as $current) {
+                    if (!in_array($current->id, $ids)) {
+                        $final[] = $current;
+                        $ids[] = $current->id;
+                    }
+                }
             }
         }
-        
+
 
         return response()->json($final);
     }
@@ -45,7 +42,8 @@ class ExerciseController extends Controller
      * @param int $id
      * @return Response
      */
-    public function getFromTraining(int $id){
+    public function getFromTraining(int $id)
+    {
         return response()->json(Training::find($id)->exercises()->get());
     }
 
@@ -83,7 +81,8 @@ class ExerciseController extends Controller
     /**
      * attach exercise to training
      */
-    public function attach(Request $request, int $id){
+    public function attach(Request $request, int $id)
+    {
         $data = $request->validate([
             'training' => 'integer|min:1'
         ]);
@@ -94,7 +93,8 @@ class ExerciseController extends Controller
     /**
      * detach exercise from training
      */
-    public function detach(Request $request, int $id){
+    public function detach(Request $request, int $id)
+    {
         $data = $request->validate([
             'training' => 'integer|min:1'
         ]);
@@ -105,7 +105,8 @@ class ExerciseController extends Controller
     /**
      * detach exercise from all training
      */
-    public function detachAll(int $id){
+    public function detachAll(int $id)
+    {
         $p = Exercise::find($id);
         $p->trainings()->detach();
     }

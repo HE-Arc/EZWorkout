@@ -77,7 +77,7 @@
         },
         methods:{
             getTrainings(){
-                axios.get('/training')
+                axios.get('/api/web/training')
                 .then((res) => {
                     this.trainings = res.data
                 }).catch((err) => {
@@ -85,7 +85,7 @@
                 });
             },
             editTrainingLink(id){
-                return "/editTraining/" + id
+                return "/training/" + id + "/edit"
             },
             delTraining(id){
                 this.delId = id;
@@ -103,7 +103,7 @@
                         {
                             title: 'Supprimer',
                             handler: () => {
-                                axios.delete('/training/' + this.delId + "/all")
+                                axios.delete('/api/web/training/' + this.delId + "/all")
                                 this.delId = null;
                                 this.getTrainings();
                                 this.$modal.hide('dialog');
@@ -113,7 +113,7 @@
                 })
             },
             gotoExercise(id){
-                window.location.href = "/selectExercises/" + id;
+                window.location.href = "/exercises/" + id;
             }
         },
         created(){

@@ -90,13 +90,13 @@
         },
         methods:{
             getTrainings(){
-                axios.get('/training/fromTP/'+ this.$parent.props.id)
+                axios.get('/api/web/training/fromTP/'+ this.$parent.props.id)
                 .then((res) => {
                     this.trainings = res.data
                 }).catch((err) => {
                     console.log(err)
                 });
-                axios.get('/training/')
+                axios.get('/api/web/training/')
                 .then((res) => {
                     this.AllTrainings = res.data
                 }).catch((err) => {
@@ -104,13 +104,13 @@
                 });
             },
             editTrainingLink(id){
-                return "/editTraining/" + id
+                return "/training/" + id + "/edit"
             },
             newLink(){
-                return "/newTraining/" + this.$parent.props.id
+                return "/training/" + this.$parent.props.id + "/add"
             },
             addExisting(){
-                axios.post('/training/' + this.newSelected + '/addToTrainingPlan', {trainingPlan: this.$parent.props.id});
+                axios.post('/api/web/training/' + this.newSelected + '/addToTrainingPlan', {trainingPlan: this.$parent.props.id});
                 this.getTrainings();
             },
             delTraining(id){
@@ -129,7 +129,7 @@
                         {
                             title: 'Supprimer',
                             handler: () => {
-                                axios.post('/training/' + this.delId + '/removeFromTrainingPlan',  {trainingPlan: this.$parent.props.id})
+                                axios.post('/api/web/training/' + this.delId + '/removeFromTrainingPlan',  {trainingPlan: this.$parent.props.id})
                                 this.delId = null;
                                 this.getTrainings();
                                 this.$modal.hide('dialog');
@@ -139,7 +139,7 @@
                 })
             },
             gotoExercise(id){
-                window.location.href = "/selectExercises/" + id;
+                window.location.href = "/exercises/" + id;
             }
         },
         created(){

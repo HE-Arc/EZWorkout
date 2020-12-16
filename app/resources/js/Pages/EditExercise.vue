@@ -135,11 +135,11 @@
         methods:{
             updateExercise() {
                 let id = this.$parent.props.id;
-                this.$inertia.put('/exercise/' + id, this.form);
-                window.location.href = '/selectExercises/' + id;
+                this.$inertia.put('/api/web/exercise/' + id, this.form);
+                window.location.href = '/exercises/' + id;
             },
             getExercise(){
-                axios.get('/exercise/'+ this.$parent.props.id)
+                axios.get('/api/web/exercise/'+ this.$parent.props.id)
                 .then((res) => {
                     this.form.name = res.data.name;
                     this.form.comment = res.data.comment;

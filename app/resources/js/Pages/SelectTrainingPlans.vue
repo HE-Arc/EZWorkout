@@ -49,7 +49,7 @@
                             </tbody>
                             </table>
                             <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
-                                <a href="/newTrainingPlan">
+                                <a href="/trainingPlans/add">
                                     <button class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150">
                                         Créer un nouveau plan d'entraînement
                                     </button>
@@ -84,7 +84,7 @@
         },
         methods:{
             getTrainingPlans(){
-                axios.get('/trainingPlan')
+                axios.get('/api/web/trainingPlan')
                 .then((res) => {
                     this.training_plans = res.data
                 }).catch((err) => {
@@ -92,7 +92,7 @@
                 });
             },
             editTrainingPlanLink(id){
-                return "/editTrainingPlan/" + id
+                return "/trainingPlan/" + id + "/edit"
             },
             delTP(id){
                 this.delId = id;
@@ -110,7 +110,7 @@
                         {
                             title: 'Supprimer',
                             handler: () => {
-                                axios.delete('/trainingPlan/' + this.delId)
+                                axios.delete('/api/web/trainingPlan/' + this.delId)
                                 this.delId = null;
                                 this.getTrainingPlans();
                                 this.$modal.hide('dialog');
@@ -120,7 +120,7 @@
                 })
             },
             gotoTraining(id){
-                window.location.href = "/selectTrainings/" + id;
+                window.location.href = "/trainings/" + id;
             }
         },
         created(){

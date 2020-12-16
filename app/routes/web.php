@@ -82,49 +82,49 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return Inertia\Inertia::render('SelectResults');
     })->name('selectresults');
 
-    Route::get('/selectTrainingPlans', function () {
+    Route::get('/trainingPlans', function () {
         return Inertia\Inertia::render('SelectTrainingPlans');
     })->name('selectTrainingPlans');
 
-    Route::get('/selectTrainings/{id}', function ($id) {
+    Route::get('/trainings/{id}', function ($id) {
         return Inertia\Inertia::render('SelectTrainings', ['id' => $id]);
     })->name('selectTrainings');
 
-    Route::get('/selectExercises/{id}', function ($id) {
+    Route::get('/exercises/{id}', function ($id) {
         return Inertia\Inertia::render('SelectExercises', ['id' => $id]);
     })->name('selectExercises');
 
-    Route::get('/selectAllTrainings', function () {
+    Route::get('/trainings', function () {
         return Inertia\Inertia::render('SelectAllTrainings');
     })->name('selectAllTrainings');
 
-    Route::get('/selectAllExercises', function () {
+    Route::get('/exercises', function () {
         return Inertia\Inertia::render('SelectAllExercises');
     })->name('selectAllExercises');
 
 
-    Route::get('/editTrainingPlan/{id}', function ($id) {
+    Route::get('/trainingPlan/{id}/edit', function ($id) {
         return Inertia\Inertia::render('EditTrainingPlan', ['id' => $id]);
     })->name('editTrainingPlan');
 
-    Route::get('/editTraining/{id}', function ($id) {
+    Route::get('/training/{id}/edit', function ($id) {
         return Inertia\Inertia::render('EditTraining', ['id' => $id]);
     })->name('editTraining');
 
-    Route::get('/editExercise/{id}', function ($id) {
+    Route::get('/exercise/{id}/edit', function ($id) {
         return Inertia\Inertia::render('EditExercise', ['id' => $id]);
     })->name('editExercise');
 
 
-    Route::get('/newTrainingPlan', function () {
+    Route::get('/trainingPlans/add', function () {
         return Inertia\Inertia::render('NewTrainingPlan');
     })->name('newTrainingPlan');
 
-    Route::get('/newTraining/{idTP}', function ($idTP) {
+    Route::get('/training/{idTP}/add', function ($idTP) {
         return Inertia\Inertia::render('NewTraining', ['idTP' => $idTP]);
     })->name('newTraining');
 
-    Route::get('/newExercise/{idTraining}', function ($idTraining) {
+    Route::get('/exercise/{idTraining}/add', function ($idTraining) {
         return Inertia\Inertia::render('NewExercise', ['idTraining' => $idTraining]);
     })->name('newExercise');
 

@@ -81,7 +81,7 @@
         methods:{
             createTP() {
                 this.$inertia.post('/api/web/trainingPlan/', this.form);
-                window.location.href = '/selectTrainingPlans/';
+                window.location.href = '/trainingPlans/';
             },
         },
     }

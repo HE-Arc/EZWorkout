@@ -85,7 +85,7 @@
                 });
             },
             editTrainingLink(id){
-                return "/editTraining/" + id
+                return "/training/" + id + "/edit"
             },
             delTraining(id){
                 this.delId = id;
@@ -113,7 +113,7 @@
                 })
             },
             gotoExercise(id){
-                window.location.href = "/selectExercises/" + id;
+                window.location.href = "/exercises/" + id;
             }
         },
         created(){

@@ -132,10 +132,10 @@
                 });
             },
             editExerciseLink(id){
-                return "/editExercise/" + id
+                return "/exercise/" + id + "/edit"
             },
             newLink(){
-                return "/newExercise/" + this.$parent.props.id
+                return "/exercise/" + this.$parent.props.id + "/add"
             },
             addExisting(){
                 axios.post('/api/web/exercise/' + this.newSelected + '/addToTraining', {training: this.$parent.props.id});

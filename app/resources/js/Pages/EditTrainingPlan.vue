@@ -82,7 +82,7 @@
             updateTP() {
                 let id = this.$parent.props.id;
                 this.$inertia.put('/api/web/trainingPlan/' + id, this.form);
-                window.location.href = '/selectTrainingPlans/';
+                window.location.href = '/trainingPlans/';
             },
             getTrainingPlan(){
                 axios.get('/api/web/trainingPlan/'+ this.$parent.props.id)

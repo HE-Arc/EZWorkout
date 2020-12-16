@@ -113,7 +113,7 @@
                 });
             },
             editExerciseLink(id){
-                return "/editExercise/" + id
+                return "/exercise/" + id + "/edit"
             },
             delExercise(id){
                 this.delId = id;

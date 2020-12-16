@@ -136,7 +136,7 @@
             updateExercise() {
                 let id = this.$parent.props.id;
                 this.$inertia.put('/api/web/exercise/' + id, this.form);
-                window.location.href = '/selectExercises/' + id;
+                window.location.href = '/exercises/' + id;
             },
             getExercise(){
                 axios.get('/api/web/exercise/'+ this.$parent.props.id)

@@ -104,10 +104,10 @@
                 });
             },
             editTrainingLink(id){
-                return "/editTraining/" + id
+                return "/training/" + id + "/edit"
             },
             newLink(){
-                return "/newTraining/" + this.$parent.props.id
+                return "/training/" + this.$parent.props.id + "/add"
             },
             addExisting(){
                 axios.post('/api/web/training/' + this.newSelected + '/addToTrainingPlan', {trainingPlan: this.$parent.props.id});
@@ -139,7 +139,7 @@
                 })
             },
             gotoExercise(id){
-                window.location.href = "/selectExercises/" + id;
+                window.location.href = "/exercises/" + id;
             }
         },
         created(){

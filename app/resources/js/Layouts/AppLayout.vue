@@ -26,7 +26,7 @@
                             <jet-nav-link href="/exercises" :active="$page.currentRouteName == 'exercises'">
                                 Exercices
                             </jet-nav-link>
-                            <jet-nav-link href="/selectresults" :active="$page.currentRouteName == 'selectresults'">
+                            <jet-nav-link href="/results" :active="$page.currentRouteName == 'results'">
                                 Résultats
                             </jet-nav-link>
                         </div>
@@ -105,7 +105,7 @@
                     <jet-responsive-nav-link href="/exercises" :active="$page.currentRouteName == 'exercises'">
                          Exercices
                     </jet-responsive-nav-link>
-                    <jet-responsive-nav-link href="/selectresults" :active="$page.currentRouteName == 'selectresults'">
+                    <jet-responsive-nav-link href="/results" :active="$page.currentRouteName == 'results'">
                          Résultats
                     </jet-responsive-nav-link>
                 </div>

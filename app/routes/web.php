@@ -59,7 +59,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
 
     //vue
-    Route::get('/selectresults', function () {
+    Route::get('/results', function () {
         return Inertia\Inertia::render('SelectResults');
     })->name('selectresults');
 

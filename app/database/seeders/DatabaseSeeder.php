@@ -126,18 +126,18 @@ class DatabaseSeeder extends Seeder
             new ExerciseEff([
                 'pause' => 30,
                 'skipped' => false,
-                'exercise_id' => 0,
+                'exercise_id' => 1,
                 'rating' => 10
             ]),
             new ExerciseEff([
                 'skipped' => false,
-                'exercise_id' => 1,
+                'exercise_id' => 2,
                 'pause' => 0,
                 'rating' => 0
             ]),
             new ExerciseEff([
                 'skipped' => false,
-                'exercise_id' => 2,
+                'exercise_id' => 3,
                 'pause' => 0,
                 'rating' => 0
             ])
@@ -146,18 +146,18 @@ class DatabaseSeeder extends Seeder
             new ExerciseEff([
                 'pause' => 30,
                 'skipped' => false,
-                'exercise_id' => 3,
+                'exercise_id' => 4,
                 'rating' => 10
             ]),
             new ExerciseEff([
                 'skipped' => false,
-                'exercise_id' => 4,
+                'exercise_id' => 5,
                 'pause' => 0,
                 'rating' => 0
             ]),
             new ExerciseEff([
                 'skipped' => false,
-                'exercise_id' => 5,
+                'exercise_id' => 6,
                 'pause' => 0,
                 'rating' => 0
             ])
@@ -166,18 +166,18 @@ class DatabaseSeeder extends Seeder
             new ExerciseEff([
                 'pause' => 30,
                 'skipped' => false,
-                'exercise_id' => 0,
+                'exercise_id' => 1,
                 'rating' => 10
             ]),
             new ExerciseEff([
                 'skipped' => false,
-                'exercise_id' => 1,
+                'exercise_id' => 2,
                 'pause' => 0,
                 'rating' => 0
             ]),
             new ExerciseEff([
                 'skipped' => false,
-                'exercise_id' => 2,
+                'exercise_id' => 3,
                 'pause' => 0,
                 'rating' => 0
             ])
@@ -186,18 +186,18 @@ class DatabaseSeeder extends Seeder
             new ExerciseEff([
                 'pause' => 30,
                 'skipped' => false,
-                'exercise_id' => 3,
+                'exercise_id' => 4,
                 'rating' => 10
             ]),
             new ExerciseEff([
                 'skipped' => false,
-                'exercise_id' => 4,
+                'exercise_id' => 5,
                 'pause' => 0,
                 'rating' => 0
             ]),
             new ExerciseEff([
                 'skipped' => false,
-                'exercise_id' => 5,
+                'exercise_id' => 6,
                 'pause' => 0,
                 'rating' => 0
             ])

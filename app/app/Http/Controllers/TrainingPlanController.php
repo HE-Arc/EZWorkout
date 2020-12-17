@@ -80,7 +80,7 @@ class TrainingPlanController extends Controller
                             }
                         }
                     }
-                    $tabHeader[1][] = $pageIndex;
+                    $tabHeader[1][] = $pageIndex+1;
                     $pageIndex++;
                 }
                 $dataOutput = [

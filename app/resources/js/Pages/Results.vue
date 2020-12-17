@@ -22,7 +22,7 @@
                                 </thead>
                                 <tbody>
                                     <tr v-for="exo in exercisesData.data" :key="exo[0]" class="border border-collapse border-gray-200 ">
-                                        <th class="border border-collapse border-gray-200 " scope="col" >{{exo[0]}}</th>
+                                        <th class="border border-collapse border-gray-400 " scope="col" >{{exo[0]}}</th>
                                         <td v-for="serie in exo.slice(1)" :key="serie.id" class="border border-collapse border-gray-200 " >{{serie.rep}}x{{serie.weight}}kg</td>
                                     </tr>
                                 </tbody>

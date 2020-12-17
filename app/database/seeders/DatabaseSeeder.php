@@ -36,8 +36,8 @@ class DatabaseSeeder extends Seeder
         $trainings[0]->exercises()->saveMany([
             new Exercise([
                 'name' => 'Developpé couché',
-                'comment' => 'On s\'en fout mec',
-                'nbSerie' => 1,
+                'comment' => 'no comment',
+                'nbSerie' => 4,
                 'repMin' => 8,
                 'repMax' => 12,
                 'pauseSerie' => 60,
@@ -45,8 +45,17 @@ class DatabaseSeeder extends Seeder
             ]),
             new Exercise([
                 'name' => 'Kickback',
-                'comment' => 'On s\'en fout',
-                'nbSerie' => 1,
+                'comment' => 'no comment',
+                'nbSerie' => 4,
+                'repMin' => 8,
+                'repMax' => 12,
+                'pauseSerie' => 60,
+                'pauseExercise' => 120
+            ]),
+            new Exercise([
+                'name' => 'Dips lestées',
+                'comment' => '',
+                'nbSerie' => 3,
                 'repMin' => 8,
                 'repMax' => 12,
                 'pauseSerie' => 60,
@@ -56,28 +65,28 @@ class DatabaseSeeder extends Seeder
         $trainings[1]->exercises()->saveMany([
             new Exercise([
                 'name' => 'Tirage vertical',
-                'comment' => 'OSEF',
-                'nbSerie' => 1,
+                'comment' => '',
+                'nbSerie' => 5,
                 'repMin' => 8,
                 'repMax' => 12,
                 'pauseSerie' => 60,
                 'pauseExercise' => 120
             ]),
             new Exercise([
-                'name' => 'Curl',
-                'comment' => 'On s\'en fout',
-                'nbSerie' => 1,
-                'repMin' => 8,
-                'repMax' => 12,
+                'name' => 'Curl haltere',
+                'comment' => 'no comment',
+                'nbSerie' => 4,
+                'repMin' => 10,
+                'repMax' => 15,
                 'pauseSerie' => 60,
                 'pauseExercise' => 120
             ]),
             new Exercise([
-                'name' => 'Curl2',
-                'comment' => 'On s\'en fout',
-                'nbSerie' => 1,
-                'repMin' => 8,
-                'repMax' => 12,
+                'name' => 'Curl barre',
+                'comment' => 'no comment',
+                'nbSerie' => 5,
+                'repMin' => 10,
+                'repMax' => 15,
                 'pauseSerie' => 60,
                 'pauseExercise' => 120
             ]),
@@ -117,18 +126,18 @@ class DatabaseSeeder extends Seeder
             new ExerciseEff([
                 'pause' => 30,
                 'skipped' => false,
-                'exercise_id' => 1,
+                'exercise_id' => 0,
                 'rating' => 10
             ]),
             new ExerciseEff([
                 'skipped' => false,
-                'exercise_id' => 2,
+                'exercise_id' => 1,
                 'pause' => 0,
                 'rating' => 0
             ]),
             new ExerciseEff([
                 'skipped' => false,
-                'exercise_id' => 3,
+                'exercise_id' => 2,
                 'pause' => 0,
                 'rating' => 0
             ])
@@ -137,18 +146,18 @@ class DatabaseSeeder extends Seeder
             new ExerciseEff([
                 'pause' => 30,
                 'skipped' => false,
-                'exercise_id' => 1,
+                'exercise_id' => 3,
                 'rating' => 10
             ]),
             new ExerciseEff([
                 'skipped' => false,
-                'exercise_id' => 2,
+                'exercise_id' => 4,
                 'pause' => 0,
                 'rating' => 0
             ]),
             new ExerciseEff([
                 'skipped' => false,
-                'exercise_id' => 3,
+                'exercise_id' => 5,
                 'pause' => 0,
                 'rating' => 0
             ])
@@ -157,18 +166,18 @@ class DatabaseSeeder extends Seeder
             new ExerciseEff([
                 'pause' => 30,
                 'skipped' => false,
-                'exercise_id' => 1,
+                'exercise_id' => 0,
                 'rating' => 10
             ]),
             new ExerciseEff([
                 'skipped' => false,
-                'exercise_id' => 2,
+                'exercise_id' => 1,
                 'pause' => 0,
                 'rating' => 0
             ]),
             new ExerciseEff([
                 'skipped' => false,
-                'exercise_id' => 3,
+                'exercise_id' => 2,
                 'pause' => 0,
                 'rating' => 0
             ])
@@ -177,18 +186,18 @@ class DatabaseSeeder extends Seeder
             new ExerciseEff([
                 'pause' => 30,
                 'skipped' => false,
-                'exercise_id' => 1,
+                'exercise_id' => 3,
                 'rating' => 10
             ]),
             new ExerciseEff([
                 'skipped' => false,
-                'exercise_id' => 2,
+                'exercise_id' => 4,
                 'pause' => 0,
                 'rating' => 0
             ]),
             new ExerciseEff([
                 'skipped' => false,
-                'exercise_id' => 3,
+                'exercise_id' => 5,
                 'pause' => 0,
                 'rating' => 0
             ])

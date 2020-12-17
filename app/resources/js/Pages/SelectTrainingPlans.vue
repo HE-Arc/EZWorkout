@@ -32,8 +32,7 @@
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
                                 <tr v-for="plan in training_plans" :key="plan.id" class="hover:bg-gray-200">
-                                <a :href="getTrainingLink(plan.id)">
-                                <td class="px-18 py-4 whitespace-nowrap">
+                                <td @click="gotoTraining(plan.id)" class="px-18 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
                                     <div class="ml-4">
                                         <div class="text-sm font-medium text-gray-900">
@@ -42,7 +41,6 @@
                                     </div>
                                     </div>
                                 </td>
-                                </a>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"> 
                                     <a :href="editTrainingPlanLink(plan.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="edit" /></a> 
                                     <a @click="delTP(plan.id)" class="text-indigo-600 hover:text-indigo-900"><font-awesome-icon icon="trash-alt" /></a>
@@ -51,7 +49,7 @@
                             </tbody>
                             </table>
                             <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
-                                <a href="/newTrainingPlan">
+                                <a href="/trainingPlans/add">
                                     <button class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150">
                                         Créer un nouveau plan d'entraînement
                                     </button>
@@ -86,18 +84,15 @@
         },
         methods:{
             getTrainingPlans(){
-                axios.get('/trainingPlan')
+                axios.get('/api/web/trainingPlan')
                 .then((res) => {
                     this.training_plans = res.data
                 }).catch((err) => {
                     console.log(err)
                 });
             },
-            getTrainingLink(id){
-                return "/selectTrainings/" + id
-            },
             editTrainingPlanLink(id){
-                return "/editTrainingPlan/" + id
+                return "/trainingPlan/" + id + "/edit"
             },
             delTP(id){
                 this.delId = id;
@@ -115,7 +110,7 @@
                         {
                             title: 'Supprimer',
                             handler: () => {
-                                axios.delete('/trainingPlan/' + this.delId)
+                                axios.delete('/api/web/trainingPlan/' + this.delId)
                                 this.delId = null;
                                 this.getTrainingPlans();
                                 this.$modal.hide('dialog');
@@ -123,6 +118,9 @@
                         }
                     ]
                 })
+            },
+            gotoTraining(id){
+                window.location.href = "/trainings/" + id;
             }
         },
         created(){

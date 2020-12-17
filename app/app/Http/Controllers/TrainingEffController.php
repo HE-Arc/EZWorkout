@@ -15,10 +15,10 @@ class TrainingEffController extends Controller
      */
     public function index(Request $request)
     {
-        $a = array();
-        foreach (TrainingPlan::where('user_id', $request->user()->id)->get() as $tp) {
-            foreach ($tp->logbook_pages()->get() as $lbp) {
-                foreach ($lbp->training_effs()->get() as $te) {
+        $a = [];
+        foreach (TrainingPlan::where('user_id', $request->user()->id)->with("logbook_pages.training_effs")->get() as $tp) {
+            foreach ($tp['logbook_pages'] as $lbp) {
+                foreach ($lbp['training_effs'] as $te) {
                     $a[] = $te;
                 }
             }
@@ -55,7 +55,7 @@ class TrainingEffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(int $id)
     {
         return response()->json(TrainingEff::find($id));
     }
@@ -67,7 +67,7 @@ class TrainingEffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, int $id)
     {
         $data = $request->validate([
             'logbookPage' => 'integer|min:1',
@@ -90,7 +90,7 @@ class TrainingEffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(int $id)
     {
         TrainingEff::destroy($id);
         return response()->json(['delete' => 'ok']);

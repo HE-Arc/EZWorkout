@@ -15,12 +15,12 @@ class SeriesEffController extends Controller
      */
     public function index(Request $request)
     {
-        $a = array();
-        foreach (TrainingPlan::where('user_id', $request->user()->id)->get() as $tp) {
-            foreach ($tp->logbook_pages()->get() as $lbp) {
-                foreach ($lbp->training_effs()->get() as $te) {
-                    foreach ($te->exercise_effs()->get() as $ee) {
-                        foreach ($ee->series_effs()->get() as $se) {
+        $a = [];
+        foreach (TrainingPlan::where('user_id', $request->user()->id)->with("logbook_pages.training_effs.exercise_effs.series_effs")->get() as $tp) {
+            foreach ($tp['logbook_pages'] as $lbp) {
+                foreach ($lbp['training_effs'] as $te) {
+                    foreach ($te['exercise_effs'] as $ee) {
+                        foreach ($ee['series_effs'] as $se) {
                             $a[] = $se;
                         }
                     }
@@ -59,7 +59,7 @@ class SeriesEffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(int $id)
     {
         return response()->json(SeriesEff::find($id));
     }
@@ -71,7 +71,7 @@ class SeriesEffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, int $id)
     {
         $data = $request->validate([
             'rep' => 'integer|min:1',
@@ -94,7 +94,7 @@ class SeriesEffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(int $id)
     {
         SeriesEff::destroy($id);
         return response()->json(['delete' => 'ok']);

@@ -13,9 +13,102 @@ class TrainingPlanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return response()->json(TrainingPlan::all());
+        return response()->json(TrainingPlan::where('user_id', $request->user()->id)->get());
+    }
+
+    /**
+     * Return all effective data and template for a given training plan
+     * 
+     * @param int $id
+     * @return Response
+     */
+    public function getResultData($id){
+
+        $trainingPlanEffective = TrainingPlan::with("logbook_pages.training_effs.exercise_effs.series_effs")->get();
+        $trainingPlanTemplate = TrainingPlan::with("trainings.exercises")->get();
+
+        $templateNames = [];
+        $tabData = [];
+        $tabHeader = [];
+        
+        foreach ($trainingPlanTemplate as $tpTemplate)
+        {
+            if ($tpTemplate->id == $id)
+            {
+                foreach ($tpTemplate->trainings as $training)
+                {
+                    foreach ( $training->exercises as $exo)
+                    {
+                        //Fill the templateNames dictionary
+                        $templateNames[$exo->id] = $exo->name;
+                    }
+                }
+            }
+        }
+        foreach ($trainingPlanEffective as $tp)
+        {
+            if ($tp->id == $id)
+            {
+                $pageIndex = 0;
+                $tabHeader[0][0] = 0;
+                foreach ($tp->logbook_pages as $logPage)
+                {
+                    $exoIndex = 0;
+                    foreach ($logPage->training_effs as $trainingEff)
+                    {
+                        
+                        foreach ($trainingEff->exercise_effs as $exoEff)
+                        {
+                            //put the name of the exercise on first cell for each row
+                            $tabData[$exoIndex][0] = $templateNames[$exoEff->exercise_id];
+
+                            $serieIndex = 0;
+                            foreach ($exoEff->series_effs as $serie)
+                            {
+                                $tabData[$exoIndex][] = $serie;
+
+                                $serieIndex++;
+                            }
+                            $exoIndex++;
+                            if ($tabHeader[0][0] <  $serieIndex)//get the maximum number of series for one exercise
+                            {
+                                $tabHeader[0][0] = $serieIndex;
+                            }
+                        }
+                    }
+                    $tabHeader[1][] = $pageIndex+1;
+                    $pageIndex++;
+                }
+                $dataOutput = [
+                    "data" => $tabData,
+                    "header" => $tabHeader
+                ];
+                return response()->json($dataOutput);
+            }
+        }
+        return response()->json([]);
+    }
+
+    /**
+     * Return a training plan containing all objects (template only)
+     * 
+     * @param int $id
+     * @return Response
+     */
+    public function getAllTemplateInTrainingPlan($id){
+
+        $tp = TrainingPlan::with("trainings.exercises")->get();
+
+        foreach ($tp as $currentTp)
+        {
+            if ($currentTp->id == $id)
+            {
+                return response()->json($currentTp);
+            }
+        }
+        return response()->json([]);
     }
 
     /**
@@ -42,7 +135,7 @@ class TrainingPlanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(int $id)
     {
         return response()->json(TrainingPlan::find($id));
     }
@@ -54,7 +147,7 @@ class TrainingPlanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, int $id)
     {
         $data = $request->validate([
             'name' => 'string'
@@ -71,7 +164,7 @@ class TrainingPlanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(int $id)
     {
         TrainingPlan::destroy($id);
         return response()->json(['delete' => 'ok']);

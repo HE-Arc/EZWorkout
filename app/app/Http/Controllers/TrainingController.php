@@ -16,17 +16,12 @@ class TrainingController extends Controller
      */
     public function index(Request $request)
     {
-        $a = array();
-        foreach (TrainingPlan::where('user_id', $request->user()->id)->get() as $tp) {
-            foreach ($tp->trainings()->get() as $t) {
-                $a[] = $t;
-            }
-        }
+        $a = TrainingPlan::where('user_id', $request->user()->id)->with('trainings')->get();
+        $final  = [];
+        $ids = [];
 
-        $final  = array();
-        $ids = array();
-
-        foreach ($a as $current) {
+        foreach ($a as $tp) {
+            foreach($tp['trainings'] as $current)
             if (!in_array($current->id, $ids)) {
                 $final[] = $current;
                 $ids[] = $current->id;
@@ -43,7 +38,7 @@ class TrainingController extends Controller
      * @param int $id
      * @return Response
      */
-    public function getFromTrainingPlan($id)
+    public function getFromTrainingPlan(int $id)
     {
         return response()->json(TrainingPlan::find($id)->trainings()->get());
     }
@@ -74,7 +69,7 @@ class TrainingController extends Controller
     /**
      * attach a training to a trainingPlan
      */
-    public function attach(Request $request, $id)
+    public function attach(Request $request, int $id)
     {
         $data = $request->validate([
             'trainingPlan' => 'integer|min:1'
@@ -86,7 +81,7 @@ class TrainingController extends Controller
     /**
      * detach a training from a trainingPlan
      */
-    public function detach(Request $request, $id)
+    public function detach(Request $request, int $id)
     {
         $data = $request->validate([
             'trainingPlan' => 'integer|min:1'
@@ -98,7 +93,7 @@ class TrainingController extends Controller
     /**
      * detach a training from all trainingPlans
      */
-    public function detachAll($id)
+    public function detachAll(int $id)
     {
         $t = Training::find($id);
         $t->training_plans()->detach();
@@ -110,7 +105,7 @@ class TrainingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(int $id)
     {
         return response()->json(Training::find($id));
     }
@@ -122,7 +117,7 @@ class TrainingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, int $id)
     {
         $data = $request->validate([
             'name' => 'string'
@@ -139,7 +134,7 @@ class TrainingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(int $id)
     {
         Training::destroy($id);
         return response()->json(['delete' => 'ok']);

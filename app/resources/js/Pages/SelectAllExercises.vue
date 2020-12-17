@@ -105,7 +105,7 @@
         },
         methods:{
             getExercises(){
-                axios.get('/exercise')
+                axios.get('/api/web/exercise')
                 .then((res) => {
                     this.exercises = res.data
                 }).catch((err) => {
@@ -113,7 +113,7 @@
                 });
             },
             editExerciseLink(id){
-                return "/editExercise/" + id
+                return "/exercise/" + id + "/edit"
             },
             delExercise(id){
                 this.delId = id;
@@ -131,7 +131,7 @@
                         {
                             title: 'Supprimer',
                             handler: () => {
-                                axios.delete('/exercise/' + this.delId + '/all')
+                                axios.delete('/api/web/exercise/' + this.delId + '/all')
                                 this.delId = null;
                                 this.getExercises();
                                 this.$modal.hide('dialog');

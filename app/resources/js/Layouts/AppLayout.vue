@@ -17,17 +17,17 @@
                             <jet-nav-link href="/dashboard" :active="$page.currentRouteName == 'dashboard'">
                                 Accueil
                             </jet-nav-link>
-                            <jet-nav-link href="/selectTrainingPlans" :active="$page.currentRouteName == 'selectTrainingPlans'">
+                            <jet-nav-link href="/trainingPlans" :active="$page.currentRouteName == 'trainingPlans'">
                                 Plans d'entraînement
                             </jet-nav-link>
-                            <jet-nav-link href="/selectAllTrainings" :active="$page.currentRouteName == 'selectAllTrainings'">
+                            <jet-nav-link href="/trainings" :active="$page.currentRouteName == 'trainings'">
                                 Entraînements
                             </jet-nav-link>
-                            <jet-nav-link href="/selectAllExercises" :active="$page.currentRouteName == 'selectAllExercises'">
+                            <jet-nav-link href="/exercises" :active="$page.currentRouteName == 'exercises'">
                                 Exercices
                             </jet-nav-link>
-                            <jet-nav-link href="/selectresults" :active="$page.currentRouteName == 'selectresults'">
-                                Resultats
+                            <jet-nav-link href="/results" :active="$page.currentRouteName == 'results'">
+                                Résultats
                             </jet-nav-link>
                         </div>
                     </div>
@@ -94,7 +94,19 @@
             <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
                 <div class="pt-2 pb-3 space-y-1">
                     <jet-responsive-nav-link href="/dashboard" :active="$page.currentRouteName == 'dashboard'">
-                        EZWorkout
+                        Accueil
+                    </jet-responsive-nav-link>
+                    <jet-responsive-nav-link href="/trainingPlans" :active="$page.currentRouteName == 'trainingPlans'">
+                         Plans d'entraînement
+                    </jet-responsive-nav-link>
+                    <jet-responsive-nav-link href="/trainings" :active="$page.currentRouteName == 'trainings'">
+                         Entraînements
+                    </jet-responsive-nav-link>
+                    <jet-responsive-nav-link href="/exercises" :active="$page.currentRouteName == 'exercises'">
+                         Exercices
+                    </jet-responsive-nav-link>
+                    <jet-responsive-nav-link href="/results" :active="$page.currentRouteName == 'results'">
+                         Résultats
                     </jet-responsive-nav-link>
                 </div>
 
@@ -123,7 +135,7 @@
                         <!-- Authentication -->
                         <form method="POST" @submit.prevent="logout">
                             <jet-responsive-nav-link as="button">
-                                Logout
+                                Se déconnecter
                             </jet-responsive-nav-link>
                         </form>
                     </div>
@@ -144,8 +156,8 @@
         </main>
 
         <!-- Modal Portal -->
-        <portal-target name="modal" multiple>
-        </portal-target>
+        <!--<portal-target name="modal" multiple>
+        </portal-target>-->
     </div>
 </template>
 

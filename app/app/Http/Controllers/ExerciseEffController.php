@@ -15,11 +15,13 @@ class ExerciseEffController extends Controller
      */
     public function index(Request $request)
     {
-        $a = array();
-        foreach (TrainingPlan::where('user_id', $request->user()->id)->get() as $tp) {
-            foreach ($tp->logbook_pages()->get() as $lbp) {
-                foreach ($lbp->training_effs()->get() as $te) {
-                    foreach ($te->exercise_effs()->get() as $ee) {
+        $tps = TrainingPlan::where('user_id', $request->user()->id)->with("logbook_pages.training_effs.exercise_effs")->get();
+        $a = [];
+        //used to avoid n to the power of 4 request to db
+        foreach($tps as $tp){ 
+            foreach ($tp['logbook_pages'] as $lbp) {
+                foreach ($lbp['training_effs'] as $te) {
+                    foreach ($te['exercise_effs'] as $ee) {
                         $a[] = $ee;
                     }
                 }
@@ -59,7 +61,7 @@ class ExerciseEffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(int $id)
     {
         return response()->json(ExerciseEff::find($id));
     }
@@ -71,7 +73,7 @@ class ExerciseEffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, int $id)
     {
         $data = $request->validate([
             'training_eff' => 'integer|min:1',
@@ -96,7 +98,7 @@ class ExerciseEffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(int $id)
     {
         ExerciseEff::destroy($id);
         return response()->json(['delete' => 'ok']);

@@ -15,9 +15,9 @@ class LogbookPageController extends Controller
      */
     public function index(Request $request)
     {
-        $a = array();
-        foreach(TrainingPlan::where('user_id', $request->user()->id)->get() as $tp){
-            foreach($tp->logbook_pages()->get() as $lbp){
+        $a = [];
+        foreach(TrainingPlan::where('user_id', $request->user()->id)->with('logbook_pages')->get() as $tp){
+            foreach($tp['logbook_pages'] as $lbp){
                 $a[] = $lbp;
             }
         }
@@ -47,7 +47,7 @@ class LogbookPageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(int $id)
     {
         return response()->json(LogbookPage::find($id));
     }
@@ -59,7 +59,7 @@ class LogbookPageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, int $id)
     {
         $l = LogbookPage::find($id);
         $l->save();
@@ -72,7 +72,7 @@ class LogbookPageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(int $id)
     {
         LogbookPage::destroy($id);
         return response()->json(['delete' => 'ok']);

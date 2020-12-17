@@ -18,18 +18,90 @@ class TrainingPlanController extends Controller
         return response()->json(TrainingPlan::where('user_id', $request->user()->id)->get());
     }
 
-            /**
-     * Return a training plan and containing all objects
+    /**
+     * Return all effective data and template for a given training plan
      * 
      * @param int $id
      * @return Response
      */
-    public function getAllInTrainingPlan($id){
-        $tabOutput = [];
+    public function getResultData($id){
 
-        $tp = TrainingPlan::with(["logbook_pages.training_effs.exercise_effs.series_effs" => function($query) use ($id) {
-            $query->where("id",$id);
-        }])->get();
+        $trainingPlanEffective = TrainingPlan::with("logbook_pages.training_effs.exercise_effs.series_effs")->get();
+        $trainingPlanTemplate = TrainingPlan::with("trainings.exercises")->get();
+
+        $templateNames = [];
+        $tabData = [];
+        $tabHeader = [];
+        
+        foreach ($trainingPlanTemplate as $tpTemplate)
+        {
+            if ($tpTemplate->id == $id)
+            {
+                foreach ($tpTemplate->trainings as $training)
+                {
+                    foreach ( $training->exercises as $exo)
+                    {
+                        //Fill the templateNames dictionary
+                        $templateNames[$exo->id] = $exo->name;
+                    }
+                }
+            }
+        }
+
+
+        foreach ($trainingPlanEffective as $tp)
+        {
+            if ($tp->id == $id)
+            {
+                $pageIndex = 0;
+                $tabHeader[0][0] = 0;
+                foreach ($tp->logbook_pages as $logPage)
+                {
+                    $exoIndex = 0;
+                    foreach ($logPage->training_effs as $trainingEff)
+                    {
+                        
+                        foreach ($trainingEff->exercise_effs as $exoEff)
+                        {
+                            //put the name of the exercise on first cell for each row
+                            $tabData[$exoIndex][0] = $templateNames[$exoEff->exercise_id];
+
+                            $serieIndex = 0;
+                            foreach ($exoEff->series_effs as $serie)
+                            {
+                                $tabData[$exoIndex][] = $serie;
+
+                                $serieIndex++;
+                            }
+                            $exoIndex++;
+                            if ($tabHeader[0][0] <  $serieIndex)//get the maximum number of series for one exercise
+                            {
+                                $tabHeader[0][0] = $serieIndex;
+                            }
+                        }
+                    }
+                    $tabHeader[1][] = $pageIndex;
+                    $pageIndex++;
+                }
+                $dataOutput = [
+                    "data" => $tabData,
+                    "header" => $tabHeader
+                ];
+                return response()->json($dataOutput);
+            }
+        }
+        return response()->json([]);
+    }
+
+    /**
+     * Return a training plan containing all objects (template only)
+     * 
+     * @param int $id
+     * @return Response
+     */
+    public function getAllTemplateInTrainingPlan($id){
+
+        $tp = TrainingPlan::with("trainings.exercises")->get();
 
         foreach ($tp as $currentTp)
         {

@@ -2,11 +2,10 @@
     <div>
         <app-layout>
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Results ?
+            <h2  class="font-semibold text-xl text-gray-800 leading-tight">
+                Results
             </h2>
-            {{training_plans.logbook_pages[0].training_effs[0].exercise_effs[0].series_effs[0].rep}}
-        </template>
+         </template>
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
@@ -15,23 +14,16 @@
                         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                         <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                             <table  class="border-collapse border border-gray-200">
-                                  <thead>
-                                    <tr v-for="page in training_plans.logbook_pages" :key="page.id">
-                                    <th class="border border-gray-200 ..." :colspan = "page.training_effs[0].exercise_effs[0].series_effs.length">Page {{page.id}}</th><!--TOFIX: display number and series number (keep only the max of series of the plan)  -->
+                                <thead>
+                                    <tr class="border border-collapse border-gray-200 ">
+                                        <th class="border border-collapse border-gray-400 " scope="col" >Exercice</th>
+                                        <th v-for="index in exercisesData.header[1]" :key="index" :colspan="exercisesData.header[0][0]" class="border border-collapse border-gray-400 " scope="col" >Semaine {{index}}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                    <td class="border border-gray-200 ...">Indiana</td>
-                                    <td class="border border-gray-200 ...">Indianapolis</td>
-                                    </tr>
-                                    <tr>
-                                    <td class="border border-gray-200 ...">Ohio</td>
-                                    <td class="border border-gray-200 ...">Columbus</td>
-                                    </tr>
-                                    <tr>
-                                    <td class="border border-gray-200 ...">Michigan</td>
-                                    <td class="border border-gray-200 ...">Detroit</td>
+                                    <tr v-for="exo in exercisesData.data" :key="exo[0]" class="border border-collapse border-gray-200 ">
+                                        <th class="border border-collapse border-gray-400 " scope="col" >{{exo[0]}}</th>
+                                        <td v-for="serie in exo.slice(1)" :key="serie.id" class="border border-collapse border-gray-200 " >{{serie.rep}}x{{serie.weight}}kg</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -57,29 +49,30 @@
 
         data(){
             return{
-                training_plans:{},
+                exercisesData:{
+                    data:[
+                        {
+                            id:0,
+                            rep:0,
+                            weight:0,
+                        }
+                    ],
+                    header:[]
+                },
             }
         },
         methods:{
-            getTrainingPlans(){
+            getTrainingPlansResults(){
                 axios.get("/trainingPlan/"+this.$parent.props.id+"/results")
                 .then((res) => {
-                    this.training_plans = res.data
+                    this.exercisesData = res.data
                 }).catch((err) => {
                     console.log(err)
                 });
             },
-            goToTrainingPlanResults(id){
-                window.location.href = "/Results/" + id
-            },
         },
         created(){
-            this.getTrainingPlans()
+            this.getTrainingPlansResults();
         },
-        computed: {
-            tp_present: function(){
-                return this.training_plans.length > 0
-            }
-        }
     }
 </script>

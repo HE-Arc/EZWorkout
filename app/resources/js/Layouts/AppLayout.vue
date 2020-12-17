@@ -26,7 +26,7 @@
                             <jet-nav-link href="/exercises" :active="$page.currentRouteName == 'selectAllExercises'">
                                 Exercices
                             </jet-nav-link>
-                            <jet-nav-link href="/results" :active="$page.currentRouteName == 'selectResults'">
+                            <jet-nav-link href="/results" :active="$page.currentRouteName == 'selectresults'">
                                 Résultats
                             </jet-nav-link>
                         </div>

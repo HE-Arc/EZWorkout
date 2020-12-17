@@ -20,7 +20,7 @@
             <div class="p-6">
                 <div class="flex items-center">
                     <font-awesome-icon icon="ruler-combined" class="w-8 h-8 text-gray-400"/>
-                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="/selectTrainingPlans">Vos plans d'entraînement</a></div>
+                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="/trainingPlans">Vos plans d'entraînement</a></div>
                 </div>
 
                 <div class="ml-8">
@@ -33,7 +33,7 @@
             <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l">
                 <div class="flex items-center">
                     <font-awesome-icon icon="chart-line" class="w-8 h-8 text-gray-400"/>
-                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="/selectresults">Vos résultats</a></div>
+                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="/results">Vos résultats</a></div>
                 </div>
 
                 <div class="ml-8">
@@ -46,7 +46,7 @@
             <div class="p-6 border-t border-gray-200">
                 <div class="flex items-center">
                     <font-awesome-icon icon="book" class="w-8 h-8 text-gray-400"/>
-                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="/selectAllTrainings">Bibliothèque des entraînements</a></div>
+                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="/trainings">Bibliothèque des entraînements</a></div>
                 </div>
 
                 <div class="ml-8">
@@ -59,7 +59,7 @@
             <div class="p-6 border-t border-gray-200 md:border-l">
                 <div class="flex items-center">
                     <font-awesome-icon icon="dumbbell" class="w-8 h-8 text-gray-400"/>
-                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="/selectAllExercises">Bibliothèque des exercices</a></div>
+                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="/exercises">Bibliothèque des exercices</a></div>
                 </div>
 
                 <div class="ml-8">

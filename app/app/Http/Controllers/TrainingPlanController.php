@@ -47,8 +47,6 @@ class TrainingPlanController extends Controller
                 }
             }
         }
-
-
         foreach ($trainingPlanEffective as $tp)
         {
             if ($tp->id == $id)

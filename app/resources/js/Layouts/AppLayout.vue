@@ -17,16 +17,16 @@
                             <jet-nav-link href="/dashboard" :active="$page.currentRouteName == 'dashboard'">
                                 Accueil
                             </jet-nav-link>
-                            <jet-nav-link href="/trainingPlans" :active="$page.currentRouteName == 'trainingPlans'">
+                            <jet-nav-link href="/trainingPlans" :active="$page.currentRouteName == 'selectTrainingPlans'">
                                 Plans d'entraînement
                             </jet-nav-link>
-                            <jet-nav-link href="/trainings" :active="$page.currentRouteName == 'trainings'">
+                            <jet-nav-link href="/trainings" :active="$page.currentRouteName == 'selectAllTrainings'">
                                 Entraînements
                             </jet-nav-link>
-                            <jet-nav-link href="/exercises" :active="$page.currentRouteName == 'exercises'">
+                            <jet-nav-link href="/exercises" :active="$page.currentRouteName == 'selectAllExercises'">
                                 Exercices
                             </jet-nav-link>
-                            <jet-nav-link href="/results" :active="$page.currentRouteName == 'results'">
+                            <jet-nav-link href="/results" :active="$page.currentRouteName == 'selectResults'">
                                 Résultats
                             </jet-nav-link>
                         </div>
@@ -96,16 +96,16 @@
                     <jet-responsive-nav-link href="/dashboard" :active="$page.currentRouteName == 'dashboard'">
                         Accueil
                     </jet-responsive-nav-link>
-                    <jet-responsive-nav-link href="/trainingPlans" :active="$page.currentRouteName == 'trainingPlans'">
+                    <jet-responsive-nav-link href="/trainingPlans" :active="$page.currentRouteName == 'selectTrainingPlans'">
                          Plans d'entraînement
                     </jet-responsive-nav-link>
-                    <jet-responsive-nav-link href="/trainings" :active="$page.currentRouteName == 'trainings'">
+                    <jet-responsive-nav-link href="/trainings" :active="$page.currentRouteName == 'selectAllTrainings'">
                          Entraînements
                     </jet-responsive-nav-link>
-                    <jet-responsive-nav-link href="/exercises" :active="$page.currentRouteName == 'exercises'">
+                    <jet-responsive-nav-link href="/exercises" :active="$page.currentRouteName == 'selectAllExercises'">
                          Exercices
                     </jet-responsive-nav-link>
-                    <jet-responsive-nav-link href="/results" :active="$page.currentRouteName == 'results'">
+                    <jet-responsive-nav-link href="/results" :active="$page.currentRouteName == 'selectresults'">
                          Résultats
                     </jet-responsive-nav-link>
                 </div>

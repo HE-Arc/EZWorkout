@@ -44,17 +44,17 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::apiResource('trainingEff', TrainingEffController::class);
         Route::apiResource('exerciseEff', ExerciseEffController::class);
         Route::apiResource('seriesEff', SeriesEffController::class);
-        Route::post('training/{id}/addToTrainingPlan', [TrainingController::class, 'attach']);
-        Route::post('training/{id}/removeFromTrainingPlan', [TrainingController::class, 'detach']);
-        Route::delete('training/{id}/all', [TrainingController::class, 'detachAll']);
-        Route::post('exercise/{id}/addToTraining', [ExerciseController::class, 'attach']);
-        Route::post('exercise/{id}/removeFromTraining', [ExerciseController::class, 'detach']);
-        Route::delete('exercise/{id}/all', [ExerciseController::class, 'detachAll']);
+        Route::post('training/{id}/addToTrainingPlan', [TrainingController::class, 'attach'])->whereNumber('id');
+        Route::post('training/{id}/removeFromTrainingPlan', [TrainingController::class, 'detach'])->whereNumber('id');
+        Route::delete('training/{id}/all', [TrainingController::class, 'detachAll'])->whereNumber('id');
+        Route::post('exercise/{id}/addToTraining', [ExerciseController::class, 'attach'])->whereNumber('id');
+        Route::post('exercise/{id}/removeFromTraining', [ExerciseController::class, 'detach'])->whereNumber('id');
+        Route::delete('exercise/{id}/all', [ExerciseController::class, 'detachAll'])->whereNumber('id');
 
-        Route::get('training/fromTP/{id}', [TrainingController::class, 'getFromTrainingPlan']);
-        Route::get('exercise/fromT/{id}', [ExerciseController::class, 'getFromTraining']);
+        Route::get('training/fromTP/{id}', [TrainingController::class, 'getFromTrainingPlan'])->whereNumber('id');
+        Route::get('exercise/fromT/{id}', [ExerciseController::class, 'getFromTraining'])->whereNumber('id');
 
-        Route::get('trainingPlan/{id}/results', [TrainingPlanController::class, 'getResultData']);
+        Route::get('trainingPlan/{id}/results', [TrainingPlanController::class, 'getResultData'])->whereNumber('id');
     });
 
 

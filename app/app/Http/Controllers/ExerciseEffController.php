@@ -15,11 +15,13 @@ class ExerciseEffController extends Controller
      */
     public function index(Request $request)
     {
+        $tps = TrainingPlan::where('user_id', $request->user()->id)->with("logbook_pages.training_effs.exercise_effs")->get();
         $a = [];
-        foreach (TrainingPlan::where('user_id', $request->user()->id)->get() as $tp) {
-            foreach ($tp->logbook_pages()->get() as $lbp) {
-                foreach ($lbp->training_effs()->get() as $te) {
-                    foreach ($te->exercise_effs()->get() as $ee) {
+        //used to avoid n to the power of 4 request to db
+        foreach($tps as $tp){ 
+            foreach ($tp['logbook_pages'] as $lbp) {
+                foreach ($lbp['training_effs'] as $te) {
+                    foreach ($te['exercise_effs'] as $ee) {
                         $a[] = $ee;
                     }
                 }

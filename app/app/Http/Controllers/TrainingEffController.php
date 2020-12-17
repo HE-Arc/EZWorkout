@@ -16,9 +16,9 @@ class TrainingEffController extends Controller
     public function index(Request $request)
     {
         $a = [];
-        foreach (TrainingPlan::where('user_id', $request->user()->id)->get() as $tp) {
-            foreach ($tp->logbook_pages()->get() as $lbp) {
-                foreach ($lbp->training_effs()->get() as $te) {
+        foreach (TrainingPlan::where('user_id', $request->user()->id)->with("logbook_pages.training_effs")->get() as $tp) {
+            foreach ($tp['logbook_pages'] as $lbp) {
+                foreach ($lbp['training_effs'] as $te) {
                     $a[] = $te;
                 }
             }

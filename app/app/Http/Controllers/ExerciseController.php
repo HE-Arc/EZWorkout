@@ -21,6 +21,7 @@ class ExerciseController extends Controller
         $final  = [];
         $ids = [];
 
+        //used to avoid n cube request on db
         foreach ($a as $tp) {
             foreach ($tp['trainings'] as $t) {
                 foreach ($t['exercises'] as $current) {

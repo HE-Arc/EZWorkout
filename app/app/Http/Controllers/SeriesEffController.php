@@ -16,11 +16,11 @@ class SeriesEffController extends Controller
     public function index(Request $request)
     {
         $a = [];
-        foreach (TrainingPlan::where('user_id', $request->user()->id)->get() as $tp) {
-            foreach ($tp->logbook_pages()->get() as $lbp) {
-                foreach ($lbp->training_effs()->get() as $te) {
-                    foreach ($te->exercise_effs()->get() as $ee) {
-                        foreach ($ee->series_effs()->get() as $se) {
+        foreach (TrainingPlan::where('user_id', $request->user()->id)->with("logbook_pages.training_effs.exercise_effs.series_effs")->get() as $tp) {
+            foreach ($tp['logbook_pages'] as $lbp) {
+                foreach ($lbp['training_effs'] as $te) {
+                    foreach ($te['exercise_effs'] as $ee) {
+                        foreach ($ee['series_effs'] as $se) {
                             $a[] = $se;
                         }
                     }

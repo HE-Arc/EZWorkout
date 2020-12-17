@@ -16,8 +16,8 @@ class LogbookPageController extends Controller
     public function index(Request $request)
     {
         $a = [];
-        foreach(TrainingPlan::where('user_id', $request->user()->id)->get() as $tp){
-            foreach($tp->logbook_pages()->get() as $lbp){
+        foreach(TrainingPlan::where('user_id', $request->user()->id)->with('logbook_pages')->get() as $tp){
+            foreach($tp['logbook_pages'] as $lbp){
                 $a[] = $lbp;
             }
         }

@@ -423,6 +423,52 @@ class DatabaseSeeder extends Seeder
                 'pause' => 58
             ]),
         ]);
+
+        $ef[10]->series_effs()->saveMany([
+            new SeriesEff([
+                'rep' => 5,
+                'weight' => 50,
+                'pause' => 60
+            ]),
+            new SeriesEff([
+                'rep' => 6,
+                'weight' => 30,
+                'pause' => 58
+            ]),
+            new SeriesEff([
+                'rep' => 7,
+                'weight' => 30,
+                'pause' => 58
+            ]),
+            new SeriesEff([
+                'rep' => 8,
+                'weight' => 30,
+                'pause' => 58
+            ]),
+        ]);
+
+        $ef[11]->series_effs()->saveMany([
+            new SeriesEff([
+                'rep' => 5,
+                'weight' => 50,
+                'pause' => 60
+            ]),
+            new SeriesEff([
+                'rep' => 6,
+                'weight' => 30,
+                'pause' => 58
+            ]),
+            new SeriesEff([
+                'rep' => 7,
+                'weight' => 30,
+                'pause' => 58
+            ]),
+            new SeriesEff([
+                'rep' => 8,
+                'weight' => 30,
+                'pause' => 58
+            ]),
+        ]);
     }
     
 }

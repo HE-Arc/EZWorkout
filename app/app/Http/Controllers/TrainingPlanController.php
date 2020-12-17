@@ -62,12 +62,9 @@ class TrainingPlanController extends Controller
                             //put the name of the exercise on first cell for each row
                             $tabData[$exoIndex][0] = $templateNames[$exoEff->exercise_id];
 
-                            $serieIndex = 1; // start at 1 because the first celle is the exercise name
                             foreach ($exoEff->series_effs as $serie)
                             {
-                                $tabData[$exoIndex][$serieIndex] = $serie;
-                                
-                                $serieIndex++;
+                                $tabData[$exoIndex][] = $serie;
                             }
                             $exoIndex++;
                         }

@@ -47,8 +47,6 @@ class TrainingPlanController extends Controller
                 }
             }
         }
-
-
         foreach ($trainingPlanEffective as $tp)
         {
             if ($tp->id == $id)
@@ -80,7 +78,7 @@ class TrainingPlanController extends Controller
                             }
                         }
                     }
-                    $tabHeader[1][] = $pageIndex;
+                    $tabHeader[1][] = $pageIndex+1;
                     $pageIndex++;
                 }
                 $dataOutput = [

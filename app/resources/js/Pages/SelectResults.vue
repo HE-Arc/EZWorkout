@@ -3,7 +3,7 @@
         <app-layout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Results
+                Resultats de vos plans d'entrainement
             </h2>
         </template>
         <div class="py-12">
@@ -16,7 +16,7 @@
                             <table  v-if="tp_present"  class="min-w-full divide-y divide-gray-200">
                                 <div v-if="!tp_present" class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                                     <div class="text-3xl font-bold leading-tight text-gray-900">
-                                        Vous n'avez aucun entraînement pour le moment.
+                                        Vous n'avez aucun plan d'entraînement pour le moment.
                                     </div>
                                 </div>
                             <thead>
@@ -44,7 +44,6 @@
                         </div>
                     </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -54,12 +53,10 @@
 
 <script>
     import AppLayout from './../Layouts/AppLayout'
-    import Welcome from './../Jetstream/Welcome'
 
     export default {
         components: {
             AppLayout,
-            Welcome,
         },
 
         data(){

@@ -54,29 +54,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::get('training/fromTP/{id}', [TrainingController::class, 'getFromTrainingPlan']);
         Route::get('exercise/fromT/{id}', [ExerciseController::class, 'getFromTraining']);
 
-        Route::get('trainingPlan/{id}/results', [TrainingPlanController::class, 'getAllInTrainingPlan']);
+        Route::get('trainingPlan/{id}/results', [TrainingPlanController::class, 'getResultData']);
     });
 
-    //TODO remove
-    Route::apiResource('trainingPlan', TrainingPlanController::class);
-    Route::apiResource('training', TrainingController::class);
-    Route::apiResource('exercise', ExerciseController::class);
-    Route::apiResource('logbookPage', LogbookPageController::class);
-    Route::apiResource('trainingEff', TrainingEffController::class);
-    Route::apiResource('exerciseEff', ExerciseEffController::class);
-    Route::apiResource('seriesEff', SeriesEffController::class);
-    Route::post('training/{id}/addToTrainingPlan', [TrainingController::class, 'attach']);
-    Route::post('training/{id}/removeFromTrainingPlan', [TrainingController::class, 'detach']);
-    Route::delete('training/{id}/all', [TrainingController::class, 'detachAll']);
-    Route::post('exercise/{id}/addToTraining', [ExerciseController::class, 'attach']);
-    Route::post('exercise/{id}/removeFromTraining', [ExerciseController::class, 'detach']);
-    Route::delete('exercise/{id}/all', [ExerciseController::class, 'detachAll']);
-
-    Route::get('training/fromTP/{id}', [TrainingController::class, 'getFromTrainingPlan']);
-    Route::get('exercise/fromT/{id}', [ExerciseController::class, 'getFromTraining']);
-
-    Route::get('trainingPlan/{id}/results', [TrainingPlanController::class, 'getResultData']);
-    Route::get('trainingPlan/{id}/resultsTemplate', [TrainingPlanController::class, 'getAllTemplateInTrainingPlan']);
 
     //vue
     Route::get('/selectresults', function () {

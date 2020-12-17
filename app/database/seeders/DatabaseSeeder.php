@@ -36,18 +36,18 @@ class DatabaseSeeder extends Seeder
         $trainings[0]->exercises()->saveMany([
             new Exercise([
                 'name' => 'Developpé couché',
-                'comment' => 'no comment',
+                'comment' => 'Barre libre',
                 'nbSerie' => 4,
                 'repMin' => 8,
                 'repMax' => 12,
-                'pauseSerie' => 60,
-                'pauseExercise' => 120
+                'pauseSerie' => 90,
+                'pauseExercise' => 160
             ]),
             new Exercise([
                 'name' => 'Kickback',
-                'comment' => 'no comment',
-                'nbSerie' => 4,
-                'repMin' => 8,
+                'comment' => '',
+                'nbSerie' => 5,
+                'repMin' => 10,
                 'repMax' => 12,
                 'pauseSerie' => 60,
                 'pauseExercise' => 120
@@ -57,7 +57,7 @@ class DatabaseSeeder extends Seeder
                 'comment' => '',
                 'nbSerie' => 3,
                 'repMin' => 8,
-                'repMax' => 12,
+                'repMax' => 10,
                 'pauseSerie' => 60,
                 'pauseExercise' => 120
             ]),
@@ -67,8 +67,8 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Tirage vertical',
                 'comment' => '',
                 'nbSerie' => 5,
-                'repMin' => 8,
-                'repMax' => 12,
+                'repMin' => 10,
+                'repMax' => 15,
                 'pauseSerie' => 60,
                 'pauseExercise' => 120
             ]),
@@ -205,23 +205,23 @@ class DatabaseSeeder extends Seeder
         $ef = ExerciseEff::all();
         $ef[0]->series_effs()->saveMany([
             new SeriesEff([
-                'rep' => 8,
+                'rep' => 10,
                 'weight' => 50,
                 'pause' => 60
             ]),
             new SeriesEff([
-                'rep' => 10,
-                'weight' => 50,
+                'rep' => 9,
+                'weight' => 55,
                 'pause' => 58
             ]),
             new SeriesEff([
-                'rep' => 14,
-                'weight' => 50,
+                'rep' => 8,
+                'weight' => 60,
                 'pause' => 58
             ]),
             new SeriesEff([
                 'rep' => 7,
-                'weight' => 50,
+                'weight' => 65,
                 'pause' => 58
             ]),
         ]);
@@ -229,44 +229,44 @@ class DatabaseSeeder extends Seeder
         $ef[1]->series_effs()->saveMany([
             new SeriesEff([
                 'rep' => 15,
-                'weight' => 50,
+                'weight' => 10,
                 'pause' => 60
             ]),
             new SeriesEff([
-                'rep' => 20,
-                'weight' => 50,
+                'rep' => 13,
+                'weight' => 12,
                 'pause' => 58
             ]),
             new SeriesEff([
-                'rep' => 25,
-                'weight' => 50,
+                'rep' => 13,
+                'weight' => 12,
                 'pause' => 58
             ]),
             new SeriesEff([
-                'rep' => 22,
-                'weight' => 50,
+                'rep' => 10,
+                'weight' => 15,
                 'pause' => 58
             ]),
         ]);
 
         $ef[2]->series_effs()->saveMany([
             new SeriesEff([
-                'rep' => 5,
-                'weight' => 50,
+                'rep' => 15,
+                'weight' => 30,
                 'pause' => 60
             ]),
             new SeriesEff([
-                'rep' => 6,
-                'weight' => 50,
+                'rep' => 13,
+                'weight' => 35,
                 'pause' => 58
             ]),
             new SeriesEff([
-                'rep' => 7,
-                'weight' => 50,
+                'rep' => 10,
+                'weight' => 45,
                 'pause' => 58
             ]),
             new SeriesEff([
-                'rep' => 8,
+                'rep' => 10,
                 'weight' => 50,
                 'pause' => 58
             ]),
@@ -274,55 +274,129 @@ class DatabaseSeeder extends Seeder
 
         $ef[3]->series_effs()->saveMany([
             new SeriesEff([
-                'rep' => 5,
+                'rep' => 15,
                 'weight' => 50,
                 'pause' => 60
             ]),
             new SeriesEff([
-                'rep' => 6,
-                'weight' => 50,
+                'rep' => 13,
+                'weight' => 55,
                 'pause' => 58
             ]),
             new SeriesEff([
-                'rep' => 7,
-                'weight' => 50,
+                'rep' => 10,
+                'weight' => 60,
                 'pause' => 58
             ]),
             new SeriesEff([
                 'rep' => 8,
-                'weight' => 50,
+                'weight' => 65,
                 'pause' => 58
             ]),
         ]);
 
         $ef[4]->series_effs()->saveMany([
             new SeriesEff([
-                'rep' => 5,
-                'weight' => 50,
+                'rep' => 15,
+                'weight' => 15,
                 'pause' => 60
             ]),
             new SeriesEff([
-                'rep' => 6,
-                'weight' => 30,
+                'rep' => 14,
+                'weight' => 15,
                 'pause' => 58
             ]),
             new SeriesEff([
-                'rep' => 7,
-                'weight' => 30,
+                'rep' => 13,
+                'weight' => 17,
                 'pause' => 58
             ]),
             new SeriesEff([
-                'rep' => 8,
-                'weight' => 30,
+                'rep' => 12,
+                'weight' => 20,
                 'pause' => 58
             ]),
         ]);
 
         $ef[5]->series_effs()->saveMany([
             new SeriesEff([
-                'rep' => 8,
-                'weight' => 50,
+                'rep' => 12,
+                'weight' => 15,
                 'pause' => 60
+            ]),
+            new SeriesEff([
+                'rep' => 10,
+                'weight' => 15,
+                'pause' => 58
+            ]),
+            new SeriesEff([
+                'rep' => 10,
+                'weight' => 17,
+                'pause' => 58
+            ]),
+            new SeriesEff([
+                'rep' => 8,
+                'weight' => 20,
+                'pause' => 58
+            ]),
+        ]);
+
+        $ef[6]->series_effs()->saveMany([
+            new SeriesEff([
+                'rep' => 10,
+                'weight' => 60,
+                'pause' => 60
+            ]),
+            new SeriesEff([
+                'rep' => 9,
+                'weight' => 65,
+                'pause' => 58
+            ]),
+            new SeriesEff([
+                'rep' => 8,
+                'weight' => 65,
+                'pause' => 58
+            ]),
+            new SeriesEff([
+                'rep' => 7,
+                'weight' => 70,
+                'pause' => 58
+            ]),
+        ]);
+
+        $ef[7]->series_effs()->saveMany([
+            new SeriesEff([
+                'rep' => 15,
+                'weight' => 15,
+                'pause' => 60
+            ]),
+            new SeriesEff([
+                'rep' => 13,
+                'weight' => 15,
+                'pause' => 58
+            ]),
+            new SeriesEff([
+                'rep' => 13,
+                'weight' => 17,
+                'pause' => 58
+            ]),
+            new SeriesEff([
+                'rep' => 10,
+                'weight' => 17,
+                'pause' => 58
+            ]),
+        ]);
+
+        $ef[8]->series_effs()->saveMany([
+            new SeriesEff([
+                'rep' => 15,
+                'weight' => 45,
+                'pause' => 60
+            ]),
+            new SeriesEff([
+                'rep' => 13,
+                'weight' => 50,
+                'pause' => 58
             ]),
             new SeriesEff([
                 'rep' => 10,
@@ -330,151 +404,77 @@ class DatabaseSeeder extends Seeder
                 'pause' => 58
             ]),
             new SeriesEff([
-                'rep' => 14,
-                'weight' => 50,
-                'pause' => 58
-            ]),
-            new SeriesEff([
-                'rep' => 7,
-                'weight' => 50,
-                'pause' => 58
-            ]),
-        ]);
-
-        $ef[6]->series_effs()->saveMany([
-            new SeriesEff([
-                'rep' => 15,
-                'weight' => 50,
-                'pause' => 60
-            ]),
-            new SeriesEff([
-                'rep' => 20,
-                'weight' => 50,
-                'pause' => 58
-            ]),
-            new SeriesEff([
-                'rep' => 25,
-                'weight' => 50,
-                'pause' => 58
-            ]),
-            new SeriesEff([
-                'rep' => 22,
-                'weight' => 50,
-                'pause' => 58
-            ]),
-        ]);
-
-        $ef[7]->series_effs()->saveMany([
-            new SeriesEff([
-                'rep' => 5,
-                'weight' => 50,
-                'pause' => 60
-            ]),
-            new SeriesEff([
-                'rep' => 6,
-                'weight' => 50,
-                'pause' => 58
-            ]),
-            new SeriesEff([
-                'rep' => 7,
-                'weight' => 50,
-                'pause' => 58
-            ]),
-            new SeriesEff([
-                'rep' => 8,
-                'weight' => 50,
-                'pause' => 58
-            ]),
-        ]);
-
-        $ef[8]->series_effs()->saveMany([
-            new SeriesEff([
-                'rep' => 5,
-                'weight' => 50,
-                'pause' => 60
-            ]),
-            new SeriesEff([
-                'rep' => 6,
-                'weight' => 50,
-                'pause' => 58
-            ]),
-            new SeriesEff([
-                'rep' => 7,
-                'weight' => 50,
-                'pause' => 58
-            ]),
-            new SeriesEff([
-                'rep' => 8,
-                'weight' => 50,
+                'rep' => 10,
+                'weight' => 55,
                 'pause' => 58
             ]),
         ]);
 
         $ef[9]->series_effs()->saveMany([
             new SeriesEff([
-                'rep' => 5,
-                'weight' => 50,
+                'rep' => 15,
+                'weight' => 55,
                 'pause' => 60
             ]),
             new SeriesEff([
-                'rep' => 6,
-                'weight' => 30,
+                'rep' => 13,
+                'weight' => 60,
                 'pause' => 58
             ]),
             new SeriesEff([
-                'rep' => 7,
-                'weight' => 30,
+                'rep' => 10,
+                'weight' => 65,
                 'pause' => 58
             ]),
             new SeriesEff([
                 'rep' => 8,
-                'weight' => 30,
+                'weight' => 70,
                 'pause' => 58
             ]),
         ]);
 
         $ef[10]->series_effs()->saveMany([
             new SeriesEff([
-                'rep' => 5,
-                'weight' => 50,
+                'rep' => 15,
+                'weight' => 17,
                 'pause' => 60
             ]),
             new SeriesEff([
-                'rep' => 6,
-                'weight' => 30,
+                'rep' => 14,
+                'weight' => 18,
                 'pause' => 58
             ]),
             new SeriesEff([
-                'rep' => 7,
-                'weight' => 30,
+                'rep' => 13,
+                'weight' => 20,
                 'pause' => 58
             ]),
             new SeriesEff([
-                'rep' => 8,
-                'weight' => 30,
+                'rep' => 12,
+                'weight' => 22,
                 'pause' => 58
             ]),
         ]);
 
         $ef[11]->series_effs()->saveMany([
             new SeriesEff([
-                'rep' => 5,
-                'weight' => 50,
+                'rep' => 12,
+                'weight' => 20,
                 'pause' => 60
             ]),
             new SeriesEff([
-                'rep' => 6,
-                'weight' => 30,
+                'rep' => 10,
+                'weight' => 22,
                 'pause' => 58
             ]),
             new SeriesEff([
-                'rep' => 7,
-                'weight' => 30,
+                'rep' => 10,
+                'weight' => 22,
                 'pause' => 58
             ]),
             new SeriesEff([
                 'rep' => 8,
-                'weight' => 30,
+                'weight' => 25,
                 'pause' => 58
             ]),
         ]);

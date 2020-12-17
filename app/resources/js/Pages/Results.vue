@@ -3,7 +3,7 @@
         <app-layout>
         <template #header>
             <h2  class="font-semibold text-xl text-gray-800 leading-tight">
-                Results
+                Performances
             </h2>
          </template>
         <div class="py-12">
@@ -13,7 +13,7 @@
                     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                         <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                            <table  class="border-collapse border border-gray-200">
+                            <table v-if="data_loaded" class="border-collapse border border-gray-200 m-0.5">
                                 <thead>
                                     <tr class="border border-collapse border-gray-200 ">
                                         <th class="border border-collapse border-gray-400 " scope="col" >Exercice</th>
@@ -27,11 +27,11 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <div v-else class="text-3xl font-bold leading-tight text-gray-900">Vous n'avez pas de résultats dans ce plan pour le moment</div>
                         </div>
                         </div>
                     </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -63,7 +63,7 @@
         },
         methods:{
             getTrainingPlansResults(){
-                axios.get("/trainingPlan/"+this.$parent.props.id+"/results")
+                axios.get("/api/web/trainingPlan/"+this.$parent.props.id+"/results")
                 .then((res) => {
                     this.exercisesData = res.data
                 }).catch((err) => {
@@ -74,5 +74,10 @@
         created(){
             this.getTrainingPlansResults();
         },
+        computed: {
+            data_loaded: function(){
+                return this.exercisesData.data.length > 0
+            }
+        }
     }
 </script>

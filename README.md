@@ -12,7 +12,7 @@ Les données des entraînements seront synchronisées depuis une app mobile à l
 
 accès au site: [ezw.dev.jojoc4.ch](https://ezw.dev.jojoc4.ch)
 
-[![Laravel Actions Status](https://github.com/HE-Arc/EZWorkout/workflows/Laravel/badge.svg)](https://github.com/HE-Arc/EZWorkout/actions)
+![Docker](https://github.com/HE-Arc/EZWorkout/workflows/Docker/badge.svg)
 [![Quality Gate Status](https://sonar.jojoc4.ch/api/project_badges/measure?project=ezworkout&metric=alert_status)](https://sonar.jojoc4.ch/dashboard?id=ezworkout)
 
 ## Dev Installation

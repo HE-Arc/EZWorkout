@@ -15,12 +15,13 @@
                         <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                             <table  class="border-collapse border border-gray-200">
                                 <thead>
-                                    <tr class="border border-collapse border-gray-400 ">
-                                        <th class="border border-collapse border-gray-200 " scope="col" >Exercice</th>
+                                    <tr class="border border-collapse border-gray-200 ">
+                                        <th class="border border-collapse border-gray-400 " scope="col" >Exercice</th>
+                                        <th v-for="index in exercisesData.header[1]" :key="index" :colspan="exercisesData.header[0][0]" class="border border-collapse border-gray-400 " scope="col" >Semaine {{index}}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="exo in exercisesData" :key="exo[0]" class="border border-collapse border-gray-400 ">
+                                    <tr v-for="exo in exercisesData.data" :key="exo[0]" class="border border-collapse border-gray-200 ">
                                         <th class="border border-collapse border-gray-200 " scope="col" >{{exo[0]}}</th>
                                         <td v-for="serie in exo.slice(1)" :key="serie.id" class="border border-collapse border-gray-200 " >{{serie.rep}}x{{serie.weight}}kg</td>
                                     </tr>
@@ -48,16 +49,16 @@
 
         data(){
             return{
-                exercisesData:[
-                    "",
-                    [
+                exercisesData:{
+                    data:[
                         {
                             id:0,
                             rep:0,
                             weight:0,
                         }
-                    ]
-                ],
+                    ],
+                    header:[]
+                },
             }
         },
         methods:{

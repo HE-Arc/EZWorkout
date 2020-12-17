@@ -31,6 +31,7 @@ class TrainingPlanController extends Controller
 
         $templateNames = [];
         $tabData = [];
+        $tabHeader = [];
         
         foreach ($trainingPlanTemplate as $tpTemplate)
         {
@@ -52,25 +53,41 @@ class TrainingPlanController extends Controller
         {
             if ($tp->id == $id)
             {
+                $pageIndex = 0;
+                $tabHeader[0][0] = 0;
                 foreach ($tp->logbook_pages as $logPage)
                 {
+                    $exoIndex = 0;
                     foreach ($logPage->training_effs as $trainingEff)
                     {
-                        $exoIndex = 0;
+                        
                         foreach ($trainingEff->exercise_effs as $exoEff)
                         {
                             //put the name of the exercise on first cell for each row
                             $tabData[$exoIndex][0] = $templateNames[$exoEff->exercise_id];
 
+                            $serieIndex = 0;
                             foreach ($exoEff->series_effs as $serie)
                             {
                                 $tabData[$exoIndex][] = $serie;
+
+                                $serieIndex++;
                             }
                             $exoIndex++;
+                            if ($tabHeader[0][0] <  $serieIndex)//get the maximum number of series for one exercise
+                            {
+                                $tabHeader[0][0] = $serieIndex;
+                            }
                         }
                     }
+                    $tabHeader[1][] = $pageIndex;
+                    $pageIndex++;
                 }
-                return response()->json($tabData);
+                $dataOutput = [
+                    "data" => $tabData,
+                    "header" => $tabHeader
+                ];
+                return response()->json($dataOutput);
             }
         }
         return response()->json([]);

@@ -53,7 +53,7 @@ class TrainingEffController extends Controller
         ]);
         $t = new TrainingEff();
         $t->date = $data['date'];
-        $t->logbookPage_id = $data['logbookPage'];
+        $t->logbook_page_id = $data['logbookPage'];
         $t->skipped = $data['skipped'];
         $t->training_id = $data['training'];
         $t->save();

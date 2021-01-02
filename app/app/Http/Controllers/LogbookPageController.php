@@ -24,6 +24,10 @@ class LogbookPageController extends Controller
         return response()->json($a);
     }
 
+    public function getFromTrainingPlan($id){
+        return response()->json(TrainingPlan::find($id)->logbook_pages()->get());
+    }
+
     /**
      * Store a newly created resource in storage.
      *

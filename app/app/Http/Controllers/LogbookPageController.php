@@ -24,7 +24,13 @@ class LogbookPageController extends Controller
         return response()->json($a);
     }
 
-    public function getFromTrainingPlan($id){
+    /**
+     * Get all logbook pages for the specified training plan
+     * 
+     * @param int $id trainingPlan id
+     * @return \Illuminate\Http\Response
+     */
+    public function getFromTrainingPlan(int $id){
         return response()->json(TrainingPlan::find($id)->logbook_pages()->get());
     }
 

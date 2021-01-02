@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\LogbookPage;
 use App\Models\TrainingEff;
 use App\Models\TrainingPlan;
 use Illuminate\Http\Request;
@@ -24,6 +25,16 @@ class TrainingEffController extends Controller
             }
         }
         return response()->json($a);
+    }
+
+    /**
+     * Get all effective trainings for the specified logbook page
+     * 
+     * @param int $id logbookPage id
+     * @return \Illuminate\Http\Response
+     */
+    public function getFromLogbookPage(int $id){
+        return response()->json(LogbookPage::find($id)->training_effs()->get());
     }
 
     /**

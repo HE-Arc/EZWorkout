@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ExerciseEff;
+use App\Models\TrainingEff;
 use App\Models\TrainingPlan;
 use Illuminate\Http\Request;
 
@@ -28,6 +29,16 @@ class ExerciseEffController extends Controller
             }
         }
         return response()->json($a);
+    }
+
+    /**
+     * Get all effective exercises for the specified effective training
+     * 
+     * @param int $id trainingEff id
+     * @return \Illuminate\Http\Response
+     */
+    public function getFromTrainingEff(int $id){
+        return response()->json(TrainingEff::find($id)->exercise_effs()->get());
     }
 
     /**

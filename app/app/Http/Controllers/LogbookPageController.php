@@ -46,7 +46,7 @@ class LogbookPageController extends Controller
             'trainigPlan' => 'integer|min:1'
         ]);
         $l = new LogbookPage();
-        $l->trainingPlan_id = $data['trainigPlan'];
+        $l->training_plan_id = $data['trainigPlan'];
         $l->save();
         return response()->json($l);
     }

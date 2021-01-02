@@ -7,6 +7,7 @@ use App\Http\Controllers\SeriesEffController;
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\TrainingEffController;
 use App\Http\Controllers\TrainingPlanController;
+use App\Models\LogbookPage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -39,6 +40,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     Route::get('training/fromTP/{id}', [TrainingController::class, 'getFromTrainingPlan'])->whereNumber('id');
     Route::get('exercise/fromT/{id}', [ExerciseController::class, 'getFromTraining'])->whereNumber('id');
+    Route::get('logbookPage/fromTP/{id}', [LogbookPage::class, 'getFromTrainingPlan'])->whereNumber('id');
 
 
     Route::get('user', function (Request $r) {

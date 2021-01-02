@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ExerciseEff;
 use App\Models\SeriesEff;
 use App\Models\TrainingPlan;
 use Illuminate\Http\Request;
@@ -28,6 +29,16 @@ class SeriesEffController extends Controller
             }
         }
         return response()->json($a);
+    }
+
+    /**
+     * Get all series for the specified effective exercise
+     * 
+     * @param int $id exerciseEff id
+     * @return \Illuminate\Http\Response
+     */
+    public function getFromExerciseEff(int $id){
+        return response()->json(ExerciseEff::find($id)->series_effs()->get());
     }
 
     /**

@@ -40,6 +40,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('training/fromTP/{id}', [TrainingController::class, 'getFromTrainingPlan'])->whereNumber('id');
     Route::get('exercise/fromT/{id}', [ExerciseController::class, 'getFromTraining'])->whereNumber('id');
     Route::get('logbookPage/fromTP/{id}', [LogbookPageController::class, 'getFromTrainingPlan'])->whereNumber('id');
+    Route::get('trainingEff/fromLBP/{id}', [TrainingEffController::class, 'getFromLogbookPage'])->whereNumber('id');
+    Route::get('exerciseEff/fromTE/{id}', [ExerciseEffController::class, 'getFromTrainingEff'])->whereNumber('id');
+    Route::get('seriesEff/fromEE/{id}', [SeriesEffController::class, 'getFromExerciseEff'])->whereNumber('id');
 
 
     Route::get('user', function (Request $r) {

@@ -44,6 +44,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('exerciseEff/fromTE/{id}', [ExerciseEffController::class, 'getFromTrainingEff'])->whereNumber('id');
     Route::get('seriesEff/fromEE/{id}', [SeriesEffController::class, 'getFromExerciseEff'])->whereNumber('id');
 
+    Route::get('trainingEff/fromLBPAndTraining/{idLBP}/{idTr}', [TrainingEffController::class, 'getFromLogbookPageAndTraining']);
+    Route::get('exerciseEff/fromTEAndExercise/{idETr}/{idEx}', [ExerciseEffController::class, 'getFromLogbookPageAndTraining']);
+
 
     Route::get('user', function (Request $r) {
         return $r->user();

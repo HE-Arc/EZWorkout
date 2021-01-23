@@ -41,6 +41,18 @@ class ExerciseEffController extends Controller
         return response()->json(TrainingEff::find($id)->exercise_effs()->get());
     }
 
+
+    /**
+     * Get effective exercise for the specified exercise and effective training
+     * 
+     * @param int $idETr effective training id
+     * @param int $idEx exercise id
+     * @return \Illuminate\Http\Response
+     */
+    public function getFromLogbookPageAndTraining(int $idETr, int $idEx){
+        return response()->json(ExerciseEff::where('training_eff_id', $idETr)->where('exercise_id', $idEx)->get());
+    }
+
     /**
      * Store a newly created resource in storage.
      *

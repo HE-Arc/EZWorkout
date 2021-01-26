@@ -35,6 +35,50 @@ class LogbookPageController extends Controller
     }
 
     /**
+     * return true if the logbookpage is completed
+     */
+    public function full(int $id){
+        $lbp = null;
+        foreach(LogbookPage::with("training_effs.exercise_effs.series_effs")->get() as $l){
+            if($l->id==$id){
+                $lbp = $l;
+            }
+        }
+        $tp = null;
+        foreach(TrainingPlan::with("trainings.exercises")->get() as $t){
+            if($t->id==$lbp->training_plan_id){
+                $tp = $t;
+            }
+        }
+
+
+        if(sizeof($lbp->training_effs)!=sizeof($tp->trainings)){
+            return response()->json(['delete' => 'false']);
+        }else{
+            foreach($tp->trainings as $tr){
+                foreach($lbp->training_effs as $etr){
+                    if($tr->id==$etr->training_id && $etr->skipped==false){
+                        if(sizeof($tr->exercises)!=sizeof($etr->exercise_effs)){
+                            return response()->json(['delete' => 'false']);
+                        }else{
+                            foreach($tr->exercises as $ex){
+                                foreach($etr->exercise_effs as $eex){
+                                    if($ex->id == $eex->exercise_id && $eex->skipped==false){
+                                        if($ex->nb_serie!=sizeof($eex->series_effs)){
+                                            return response()->json(['delete' => 'false']);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return response()->json(['delete' => 'true']);
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request

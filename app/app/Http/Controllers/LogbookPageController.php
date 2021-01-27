@@ -64,7 +64,7 @@ class LogbookPageController extends Controller
                             foreach($tr->exercises as $ex){
                                 foreach($etr->exercise_effs as $eex){
                                     if($ex->id == $eex->exercise_id && $eex->skipped==false){
-                                        if($ex->nb_serie>sizeof($eex->series_effs)){
+                                        if($ex->nbSerie>sizeof($eex->series_effs)){
                                             return response()->json(['delete' => 'false']);
                                         }
                                     }

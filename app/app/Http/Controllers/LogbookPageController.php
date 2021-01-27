@@ -58,13 +58,13 @@ class LogbookPageController extends Controller
             foreach($tp->trainings as $tr){
                 foreach($lbp->training_effs as $etr){
                     if($tr->id==$etr->training_id && $etr->skipped==false){
-                        if(sizeof($tr->exercises)!=sizeof($etr->exercise_effs)){
+                        if(sizeof($tr->exercises)>sizeof($etr->exercise_effs)){
                             return response()->json(['delete' => 'false']);
                         }else{
                             foreach($tr->exercises as $ex){
                                 foreach($etr->exercise_effs as $eex){
                                     if($ex->id == $eex->exercise_id && $eex->skipped==false){
-                                        if($ex->nb_serie!=sizeof($eex->series_effs)){
+                                        if($ex->nb_serie>sizeof($eex->series_effs)){
                                             return response()->json(['delete' => 'false']);
                                         }
                                     }
